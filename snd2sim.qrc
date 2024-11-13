@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>import_icon.png</file>
+        <file>simbuild.png</file>
+        <file>fiber_icon.png</file>
+        <file>cell_icon.png</file>
+        <file>conn_icon.png</file>
+        <file>delete_icon.png</file>
+        <file>quit_icon.png</file>
+        <file>build_syn.png</file>
+        <file>launch_icon.png</file>
+        <file>globals_icon.png</file>
+        <file>export_icon.png</file>
+        <file>uparrow.png</file>
+        <file>downarrow.png</file>
+        <file>leftarrow.png</file>
+        <file>rightarrow.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SimViewer</class>
+ <widget class="QMainWindow" name="SimViewer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1900</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>SimViewer</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="simviewer.qrc">
+    <normaloff>:/simviewer.png</normaloff>
+    <normalon>:/simviewer.png</normalon>:/simviewer.png</iconset>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="mouseTracking">
+    <bool>false</bool>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QSplitter" name="winSplitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSplitter:handle:horizontal {background:rgb(220,180,0)}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="midLineWidth">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>8</number>
+      </property>
+      <widget class="QFrame" name="leftFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>400</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3" stretch="6,5">
+        <item>
+         <widget class="QFrame" name="leftTopSubFrame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>505</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QCheckBox" name="showText">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>105</y>
+             <width>211</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Show/Hide Text</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QSlider" name="tbaseSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>181</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="mouseTracking">
+            <bool>true</bool>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>3000</number>
+           </property>
+           <property name="singleStep">
+            <number>1</number>
+           </property>
+           <property name="pageStep">
+            <number>100</number>
+           </property>
+           <property name="value">
+            <number>350</number>
+           </property>
+           <property name="tracking">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="invertedAppearance">
+            <bool>false</bool>
+           </property>
+           <property name="invertedControls">
+            <bool>false</bool>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>400</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="spaceLabel">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>231</y>
+             <width>261</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Row Height (pixels)</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="spaceText">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>251</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>100</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QSlider" name="voltmarkerSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>461</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>-1</number>
+           </property>
+           <property name="maximum">
+            <number>70</number>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>-1</number>
+           </property>
+           <property name="sliderPosition">
+            <number>-1</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="vgainText">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>321</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>1.5</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="voltmarkerLabel">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>441</y>
+             <width>261</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Voltage Markers Offset</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="colorOn">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>43</y>
+             <width>151</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Color On</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="voltmarkerText">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>461</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Off</string>
+           </property>
+          </widget>
+          <widget class="QSlider" name="vgainSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>321</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>400</number>
+           </property>
+           <property name="pageStep">
+            <number>5</number>
+           </property>
+           <property name="value">
+            <number>15</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>10</number>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="apVisible">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>2</y>
+             <width>151</width>
+             <height>33</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Action Potential
+ Visible</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="timemarkerText">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>391</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+           <property name="placeholderText">
+            <string>Off</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="tbaseLabel">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>161</y>
+             <width>271</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Time Scaling Factor</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="timeLable">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>371</y>
+             <width>251</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Time Marker Spacing  (milliseconds)</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="tbaseText">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>181</y>
+             <width>81</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>350</string>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="invertBW">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>77</y>
+             <width>211</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Invert Monochrome</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QSlider" name="spacingSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>251</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>10</number>
+           </property>
+           <property name="maximum">
+            <number>400</number>
+           </property>
+           <property name="pageStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>100</number>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>50</number>
+           </property>
+          </widget>
+          <widget class="QSlider" name="timemarkerSlider">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>391</y>
+             <width>271</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>8000</number>
+           </property>
+           <property name="pageStep">
+            <number>1000</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="tracking">
+            <bool>true</bool>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksBelow</enum>
+           </property>
+           <property name="tickInterval">
+            <number>1000</number>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_3">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>301</y>
+             <width>251</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Vertical Gain Scaling Factor</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="launchViewer">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>71</y>
+             <width>191</width>
+             <height>33</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Launch PDF Viewer
+ on Save</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="currXY">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>132</y>
+             <width>125</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="timeLabel">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>109</y>
+             <width>141</width>
+             <height>14</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Time Position</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="autoScale">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>2</y>
+             <width>191</width>
+             <height>33</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>Auto Scale Plot Gain
+To Fit</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="autoAntiClip">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>43</y>
+             <width>190</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the current vertical gain setting would cause a Y value to exceed the row height, adjust the gain for that row to keep the value inside the row height.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="text">
+            <string>Anti-clip Scale</string>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="currXYRaw">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>156</y>
+             <width>125</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="leftBottomSubframe">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPlainTextEdit" name="infoBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="undoRedoEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="rightFrame">
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QGraphicsView" name="plotView">
+          <property name="cursor" stdset="0">
+           <cursorShape>SizeFDiagCursor</cursorShape>
+          </property>
+          <property name="mouseTracking">
+           <bool>true</bool>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOn</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          </property>
+          <property name="interactive">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="dragMode">
+           <enum>QGraphicsView::NoDrag</enum>
+          </property>
+          <property name="transformationAnchor">
+           <enum>QGraphicsView::AnchorViewCenter</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1900</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit"/>
+    <addaction name="actionDebug_show_row_boxes"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFit"/>
+   <addaction name="separator"/>
+   <addaction name="actionChange_Directory"/>
+   <addaction name="separator"/>
+   <addaction name="actionRestart"/>
+   <addaction name="separator"/>
+   <addaction name="actionactionPDF"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="simviewer.qrc">
+     <normaloff>:/quit_icon.png</normaloff>:/quit_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionFit">
+   <property name="icon">
+    <iconset resource="simviewer.qrc">
+     <normaloff>:/fittoscreen_icon.png</normaloff>:/fittoscreen_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit To Screen</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Show Complete Horizontal Plot. The Vertical scale is not affected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionactionPDF">
+   <property name="icon">
+    <iconset resource="simviewer.qrc">
+     <normaloff>:/savetopdf_icon.png</normaloff>:/savetopdf_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save PDF</string>
+   </property>
+   <property name="toolTip">
+    <string>Create and optionally view a .pdf file.</string>
+   </property>
+  </action>
+  <action name="actionDebug_show_row_boxes">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Debug - show row boxes</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionChange_Directory">
+   <property name="icon">
+    <iconset resource="simviewer.qrc">
+     <normaloff>:/chdir_icon.png</normaloff>:/chdir_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Change Directory</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In stand-alone wave file mode, navigate to a directory with wave files. This is not used when simviewer is part of an active simulation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionRestart">
+   <property name="icon">
+    <iconset resource="simviewer.qrc">
+     <normaloff>:/restart_icon.png</normaloff>:/restart_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Restart</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;In stand-alone mode, read the wave files in the current directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="simviewer.qrc"/>
+ </resources>
+ <connections/>
+</ui>

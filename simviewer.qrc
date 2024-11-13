@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>quit_icon.png</file>
+        <file>fittoscreen_icon.png</file>
+        <file>savetopdf_icon.png</file>
+        <file>chdir_icon.png</file>
+        <file>restart_icon.png</file>
+        <file>simviewer.png</file>
+        <file>simbuild.png</file>
+        <file>simviewer.ico</file>
+        <file>simviewert.png</file>
+    </qresource>
+</RCC>

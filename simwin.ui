@@ -1,0 +1,4556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SimWin</class>
+ <widget class="QMainWindow" name="SimWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1908</width>
+    <height>1002</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>SimBuild</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="simbuild.qrc">
+    <normaloff>:/simbuild.png</normaloff>
+    <normalon>:/simbuild.png</normalon>:/simbuild.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>4</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QSplitter:handle:horizontal {background:rgb(220,180,0)}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>6</number>
+      </property>
+      <widget class="QFrame" name="leftFrame">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="2,6">
+        <item>
+         <widget class="QFrame" name="leftTopFrame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="3,4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frame_7">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QTextBrowser" name="currXY">
+              <property name="geometry">
+               <rect>
+                <x>430</x>
+                <y>10</y>
+                <width>81</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="verticalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="horizontalScrollBarPolicy">
+               <enum>Qt::ScrollBarAlwaysOff</enum>
+              </property>
+              <property name="overwriteMode">
+               <bool>true</bool>
+              </property>
+              <property name="acceptRichText">
+               <bool>false</bool>
+              </property>
+              <property name="cursorWidth">
+               <number>0</number>
+              </property>
+              <property name="textInteractionFlags">
+               <set>Qt::NoTextInteraction</set>
+              </property>
+              <property name="openLinks">
+               <bool>false</bool>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="selAll">
+              <property name="geometry">
+               <rect>
+                <x>288</x>
+                <y>2</y>
+                <width>130</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Select All Objects</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="lineLayer">
+              <property name="geometry">
+               <rect>
+                <x>144</x>
+                <y>2</y>
+                <width>130</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To be able to click on all of an Axon line, you need to bring it to the foreground so it is on top of the other items. After you are done editing, click on this again to send it to the background.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Lines On Top
+To Edit Connectors</string>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="fitToView">
+              <property name="geometry">
+               <rect>
+                <x>3</x>
+                <y>1</y>
+                <width>130</width>
+                <height>41</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Fit To View</string>
+              </property>
+             </widget>
+             <widget class="QLineEdit" name="currFile">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>47</y>
+                <width>421</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_6">
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPlainTextEdit" name="chatterBox">
+                <property name="undoRedoEnabled">
+                 <bool>false</bool>
+                </property>
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="leftBotFrame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTabWidget" name="paramTabs">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="tabPosition">
+              <enum>QTabWidget::North</enum>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <property name="documentMode">
+              <bool>false</bool>
+             </property>
+             <property name="tabBarAutoHide">
+              <bool>false</bool>
+             </property>
+             <widget class="QWidget" name="cellPage">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <attribute name="title">
+               <string>Cell Parameters</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="cellParam">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QFrame" name="cellTopFrame">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>871</width>
+                    <height>151</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <widget class="QRadioButton" name="standardCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>6</y>
+                     <width>100</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Standard</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="bursterCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>27</y>
+                     <width>100</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Burster</string>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="psrCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>47</y>
+                     <width>100</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>PSR</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellShowTarg">
+                   <property name="geometry">
+                    <rect>
+                     <x>110</x>
+                     <y>0</y>
+                     <width>160</width>
+                     <height>30</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Show Retrograde</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellShowSrc">
+                   <property name="geometry">
+                    <rect>
+                     <x>110</x>
+                     <y>39</y>
+                     <width>160</width>
+                     <height>30</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Show Anterograde</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellSendLaunchBdt">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>0</y>
+                     <width>186</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This adds a row to the SimLauncher BDT table in for a cell in this population. Spike trains for a cell in this population will be included in the .bdt file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Send to Launcher
+BDT Table</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellSendLaunchPlot">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>280</x>
+                     <y>46</y>
+                     <width>186</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This adds a row to the SimLauncher SimViewer table in for a cell in this population. Information about one or more cells in this population will be plotted in the SimViewer window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Send to Launcher
+Simview Table</string>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="lungPhrenicCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>69</y>
+                     <width>111</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This cell population is used in the lung model. The Comment field must contain the word PHRENIC. Case is not important. If more than one popuation is used, numbers must follow the word PHRENIC, such as PHRENIC1, PHRENIC2, and so on. See the Globals page for where this information is used. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Phrenic</string>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="lungInspiLarCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>110</y>
+                     <width>181</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This cell population is used in the lung model. It is an Inspiratory Laryngeal population. The Comment field must contain the word ILM or PCA. Case is not important. See the Globals page for where this information is used. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Inspiratory Laryngeal</string>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="lungExpirLarCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>130</y>
+                     <width>181</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This cell population is used in the lung model. It is an Expiratory Laryngeal population. The Comment field must contain the word ELM or TA. Case is not important. See the Globals page for where this information is used. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Expiratory Laryngeal</string>
+                   </property>
+                  </widget>
+                  <widget class="QRadioButton" name="lungLumbarCell">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>89</y>
+                     <width>111</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This cell population is used in the lung model. The Comment field must contain the word LUMBAR. Case is not important. If more than one popuation is used, numbers must follow the word LUMBAR, such as LUMBAR1, LUMBAR2, and so on. See the Globals page for where this information is used. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Lumbar</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellUndo">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>478</x>
+                     <y>0</y>
+                     <width>120</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Undo Changes</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="cellApply">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>478</x>
+                     <y>46</y>
+                     <width>120</width>
+                     <height>40</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Apply Changes</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QFrame" name="cellMidFrame">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>164</y>
+                    <width>481</width>
+                    <height>301</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="baseSize">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QTabWidget" name="cellTypes">
+                   <property name="geometry">
+                    <rect>
+                     <x>20</x>
+                     <y>10</y>
+                     <width>451</width>
+                     <height>281</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="tabPosition">
+                    <enum>QTabWidget::East</enum>
+                   </property>
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <property name="documentMode">
+                    <bool>true</bool>
+                   </property>
+                   <property name="tabBarAutoHide">
+                    <bool>true</bool>
+                   </property>
+                   <widget class="QWidget" name="cellTab">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <attribute name="title">
+                     <string>Normal Cells</string>
+                    </attribute>
+                    <widget class="QDoubleSpinBox" name="cellAccom">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>20</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>500.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_6">
+                     <property name="geometry">
+                      <rect>
+                       <x>221</x>
+                       <y>190</y>
+                       <width>181</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Accommodation Parameter</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_2">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>48</y>
+                       <width>201</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Potassium Conductance Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_17">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>0</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>DC Injected Current</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_3">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>96</y>
+                       <width>221</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Membrane Time Constant</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_4">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>48</y>
+                       <width>151</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Resting Threshold</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>0</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Accommodation Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellAccomParam">
+                     <property name="geometry">
+                      <rect>
+                       <x>221</x>
+                       <y>212</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="minimum">
+                      <double>-100.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.300000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_5">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>144</y>
+                       <width>231</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>K conductance change with AP</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellDCInj">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>20</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellKCondChg">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>164</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="decimals">
+                      <number>7</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-100000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>20.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellKCond">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>68</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>0.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>7.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellRestThresh">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>68</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="minimum">
+                      <double>-99.989999999999995</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellMembTC">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>116</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>9.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_8">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>96</y>
+                       <width>151</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>SD of Threshold if NZ</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="cellRestThreshSD">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>116</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="cellPopSize">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>210</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <number>16777215</number>
+                     </property>
+                     <property name="value">
+                      <number>100</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="accTimeLabel_7">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>190</y>
+                       <width>151</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Population Size</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="noiseAmp">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>164</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="showGroupSeparator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="suffix">
+                      <string> nanosiemens</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-1000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="noiseAmpLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>144</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Noise Amplitude</string>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="injectedExpression">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>255</y>
+                       <width>360</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="injectedExpressionLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>236</y>
+                       <width>201</width>
+                       <height>17</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Injected Expression</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="bursterTab">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <attribute name="title">
+                     <string>Burster</string>
+                    </attribute>
+                    <widget class="QLabel" name="bursterSlopeHLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>49</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Slope for h</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterThreshVLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>7</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Threshold Voltage</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterHalfVAct">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>114</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterDeltaHLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>141</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta_h @ h=0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterHalfVHLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>49</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Half voltage for h</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterHalfVActLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>94</y>
+                       <width>201</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Half voltage for activation</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterSlopeH">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>69</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterAppliedCurr">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>208</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> picoamps</string>
+                     </property>
+                     <property name="maximum">
+                      <double>1000.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterResetVLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>188</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Reset Voltage @h=0</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterHalfVH">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>69</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="showGroupSeparator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterAppliedCurrLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>188</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Applied Current (Iapp)</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterThreshV">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>27</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="minimum">
+                      <double>-100000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterSlopeAct">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>161</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-10000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterSlopeActLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>141</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Slope for activation</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterResetV">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>208</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="suffix">
+                      <string> millivolts</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-100000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterDeltaH">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>161</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="maximum">
+                      <double>1000.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterTimeConst">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>27</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="showGroupSeparator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterTimeConstLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>7</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Time Constant for h</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterKCond">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>114</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="showGroupSeparator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="suffix">
+                      <string> nanosiemens</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursterKCondLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>94</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>NaP Conductance</string>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="bursterCellPopSize">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>249</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <number>16777215</number>
+                     </property>
+                     <property name="value">
+                      <number>100</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="burstPopSizeLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>230</y>
+                       <width>151</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Population Size</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="bursterNoiseAmp">
+                     <property name="geometry">
+                      <rect>
+                       <x>220</x>
+                       <y>249</y>
+                       <width>170</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="specialValueText">
+                      <string/>
+                     </property>
+                     <property name="showGroupSeparator" stdset="0">
+                      <bool>false</bool>
+                     </property>
+                     <property name="suffix">
+                      <string> nanosiemens</string>
+                     </property>
+                     <property name="decimals">
+                      <number>2</number>
+                     </property>
+                     <property name="minimum">
+                      <double>-1000.000000000000000</double>
+                     </property>
+                     <property name="maximum">
+                      <double>10000.000000000000000</double>
+                     </property>
+                     <property name="value">
+                      <double>0.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="bursteNoiseAmpLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>218</x>
+                       <y>230</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Noise Amplitude</string>
+                     </property>
+                    </widget>
+                   </widget>
+                   <widget class="QWidget" name="psrTab">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <attribute name="title">
+                     <string>PSR</string>
+                    </attribute>
+                    <widget class="QDoubleSpinBox" name="psrOutThreshSd">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>187</y>
+                       <width>140</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <double>100.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="psrRiseT">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>27</y>
+                       <width>140</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="maximum">
+                      <double>1000.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="psrOutThresh">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>137</y>
+                       <width>140</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <double>1000.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="psrOutThreshSdLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>167</y>
+                       <width>171</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>SD of Threshold if NZ</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="psrRiseLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>7</y>
+                       <width>111</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Rise Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="psrFallLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>62</y>
+                       <width>59</width>
+                       <height>14</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Fall Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="psrFallT">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>82</y>
+                       <width>140</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> milliseconds</string>
+                     </property>
+                     <property name="maximum">
+                      <double>1000.000000000000000</double>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="psrOutThreshLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>117</y>
+                       <width>140</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Output Threshold</string>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="psrCellPopSize">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>240</y>
+                       <width>140</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <number>16777215</number>
+                     </property>
+                     <property name="value">
+                      <number>100</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="psrPopLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>1</x>
+                       <y>220</y>
+                       <width>151</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Population Size</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </widget>
+                 </widget>
+                 <widget class="QFrame" name="cellBotFrame">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>452</y>
+                    <width>471</width>
+                    <height>201</height>
+                   </rect>
+                  </property>
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QLabel" name="cellPopLabel">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>5</y>
+                     <width>210</width>
+                     <height>14</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Cell Population Comment</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="cellComment">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>25</y>
+                     <width>430</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="maxLength">
+                    <number>99</number>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="cellGroup">
+                   <property name="geometry">
+                    <rect>
+                     <x>109</x>
+                     <y>68</y>
+                     <width>321</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="maxLength">
+                    <number>63</number>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>not in group</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="cellGroupLabel">
+                   <property name="geometry">
+                    <rect>
+                     <x>114</x>
+                     <y>48</y>
+                     <width>59</width>
+                     <height>15</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Group</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="cellObjId">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>0</y>
+                     <width>201</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="acceptDrops">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="frame">
+                    <bool>true</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>intentionally invisible control</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="cellPopNumLabel">
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>48</y>
+                     <width>91</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>Population</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="cellPopNum">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>69</y>
+                     <width>91</width>
+                     <height>20</height>
+                    </rect>
+                   </property>
+                   <property name="maxLength">
+                    <number>63</number>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                   <property name="placeholderText">
+                    <string>not in group</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="fiberPage">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <attribute name="title">
+               <string>Fiber Parameters</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="fiberPopFrame">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_5" stretch="2,6,4">
+                  <item>
+                   <widget class="QFrame" name="fiberTopFrame">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QPushButton" name="fiberShowTarg">
+                     <property name="geometry">
+                      <rect>
+                       <x>117</x>
+                       <y>0</y>
+                       <width>150</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Show Anterograde</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="fiberSendLaunchBdt">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>277</x>
+                       <y>0</y>
+                       <width>169</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This adds a row to the SimLauncher BDT table in for a cell in this population. Spike trains for a cell in this population will be included in the .bdt file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string>Send to Launcher
+BDT Table</string>
+                     </property>
+                    </widget>
+                    <widget class="QRadioButton" name="fiberNormal">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>6</y>
+                       <width>191</width>
+                       <height>21</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Normal</string>
+                     </property>
+                     <property name="checked">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QRadioButton" name="fiberElectric">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>23</y>
+                       <width>121</width>
+                       <height>41</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Electric
+Stimulation</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="fiberSendLaunchPlot">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>277</x>
+                       <y>50</y>
+                       <width>169</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="toolTip">
+                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This adds a row to the SimLauncher SimViewer table in for a cell in this population. Information about one or more cells in this population will be plotted in the SimViewer window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                     </property>
+                     <property name="text">
+                      <string>Send to Launcher
+Simview Table</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="fiberUndo">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>457</x>
+                       <y>0</y>
+                       <width>129</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Undo Changes</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="fiberApply">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>457</x>
+                       <y>50</y>
+                       <width>129</width>
+                       <height>40</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Apply Changes</string>
+                     </property>
+                    </widget>
+                    <widget class="QRadioButton" name="fiberAfferent">
+                     <property name="geometry">
+                      <rect>
+                       <x>10</x>
+                       <y>60</y>
+                       <width>161</width>
+                       <height>31</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Afferent</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="fiberMidFrame">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QTabWidget" name="fiberTypes">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>10</y>
+                       <width>701</width>
+                       <height>321</height>
+                      </rect>
+                     </property>
+                     <property name="tabPosition">
+                      <enum>QTabWidget::North</enum>
+                     </property>
+                     <property name="currentIndex">
+                      <number>2</number>
+                     </property>
+                     <property name="documentMode">
+                      <bool>true</bool>
+                     </property>
+                     <property name="tabBarAutoHide">
+                      <bool>true</bool>
+                     </property>
+                     <widget class="QWidget" name="fiberNormTab">
+                      <attribute name="title">
+                       <string>Normal Fiber</string>
+                      </attribute>
+                      <widget class="QSpinBox" name="fibNumPop">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>140</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="maximum">
+                        <number>10000</number>
+                       </property>
+                       <property name="displayIntegerBase">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_2">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>119</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to begin firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fibStartFire">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>140</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="maximum">
+                        <double>99999999999.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>179</y>
+                         <width>121</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to end firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_4">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>65</y>
+                         <width>161</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Random Number Seed</string>
+                       </property>
+                      </widget>
+                      <widget class="QSpinBox" name="fibRndSeed">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>85</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="maximum">
+                        <number>2147483647</number>
+                       </property>
+                       <property name="value">
+                        <number>12345</number>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>65</y>
+                         <width>131</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Probability of Firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fibProbFire">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>85</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="decimals">
+                        <number>7</number>
+                       </property>
+                       <property name="maximum">
+                        <double>1.000000000000000</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.010000000000000</double>
+                       </property>
+                       <property name="value">
+                        <double>0.050000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fibEndFire">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>200</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the down arrow to select a value less than zero to indicate firing continues until the end of the simulation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="specialValueText">
+                        <string>Never</string>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="minimum">
+                        <double>-1.000000000000000</double>
+                       </property>
+                       <property name="maximum">
+                        <double>99999999999999.000000000000000</double>
+                       </property>
+                       <property name="value">
+                        <double>-1.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_5">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>119</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Fibers in population</string>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="fiberElecTab">
+                      <attribute name="title">
+                       <string>Electric Stimulation</string>
+                      </attribute>
+                      <widget class="QLabel" name="fiberElectricFreqLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>65</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Frequency</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberElectricFreq">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>85</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="suffix">
+                        <string> Hz</string>
+                       </property>
+                       <property name="maximum">
+                        <double>2147483647.000000000000000</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.100000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberElectricStartTime">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>140</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="maximum">
+                        <double>9999999999.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="fiberElectricStartLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>119</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to begin firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberElectricStopTime">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>200</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the down arrow to select a value less than zero to indicate firing continues until the end of the simulation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="specialValueText">
+                        <string>Never</string>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="minimum">
+                        <double>-1.000000000000000</double>
+                       </property>
+                       <property name="maximum">
+                        <double>999999999999.000000000000000</double>
+                       </property>
+                       <property name="value">
+                        <double>-1.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="fiberElectricStopTImeLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>1</x>
+                         <y>179</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to end firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="fiberElectricDeterministic">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>10</y>
+                         <width>181</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>The stimulation will occur at a fixed ticks determined by the frequency.</string>
+                       </property>
+                       <property name="text">
+                        <string>Deterministic Frequency</string>
+                       </property>
+                       <property name="checked">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                      <widget class="QRadioButton" name="fiberElectricFuzzy">
+                       <property name="geometry">
+                        <rect>
+                         <x>10</x>
+                         <y>33</y>
+                         <width>181</width>
+                         <height>21</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The stimulation will occur at some random tick in the Fuzzy Frequency Width. This occurs on or after the deterministic tick.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="text">
+                        <string>Fuzzy Frequency</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberElectricFuzzyRange">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>140</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>If using Fuzzy Frequency, this is the width in seconds of the range where the electrical stimulation will occur. The range is centered on ticks determined by the frequency. </string>
+                       </property>
+                       <property name="suffix">
+                        <string> milliseconds</string>
+                       </property>
+                       <property name="maximum">
+                        <double>2147483647.000000000000000</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.100000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="fiberElectricRangeLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>120</y>
+                         <width>161</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A random tick inside this window of time will be selected as when the electric stim is applied.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="text">
+                        <string>Fuzzy Frequency Width</string>
+                       </property>
+                       <property name="textFormat">
+                        <enum>Qt::PlainText</enum>
+                       </property>
+                      </widget>
+                      <widget class="QSpinBox" name="fiberElectricSeed">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>85</y>
+                         <width>170</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="maximum">
+                        <number>2147483642</number>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="fiberElectricSeedLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>190</x>
+                         <y>65</y>
+                         <width>161</width>
+                         <height>12</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Random Number Seed</string>
+                       </property>
+                      </widget>
+                     </widget>
+                     <widget class="QWidget" name="fiberAfferentTab">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>681</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <attribute name="title">
+                       <string>Afferent</string>
+                      </attribute>
+                      <widget class="QLineEdit" name="afferentFileName">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>22</y>
+                         <width>431</width>
+                         <height>25</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="maxLength">
+                        <number>1023</number>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="afferentFileLabel">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>220</width>
+                         <height>17</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Afferent File</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="afferentFileButton">
+                       <property name="geometry">
+                        <rect>
+                         <x>449</x>
+                         <y>18</y>
+                         <width>128</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Browse For File</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberAfferentStopFire">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>159</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the down arrow to select a value less than zero to indicate firing continues until the end of the simulation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="specialValueText">
+                        <string>Never</string>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="minimum">
+                        <double>-1.000000000000000</double>
+                       </property>
+                       <property name="maximum">
+                        <double>99999999999999.000000000000000</double>
+                       </property>
+                       <property name="value">
+                        <double>-1.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_12">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>138</y>
+                         <width>121</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to end firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QDoubleSpinBox" name="fiberAfferentStartFire">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>113</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="suffix">
+                        <string> seconds</string>
+                       </property>
+                       <property name="decimals">
+                        <number>3</number>
+                       </property>
+                       <property name="maximum">
+                        <double>99999999999.000000000000000</double>
+                       </property>
+                      </widget>
+                      <widget class="QSpinBox" name="fiberAfferentNumPop">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>208</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="maximum">
+                        <number>10000</number>
+                       </property>
+                       <property name="displayIntegerBase">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_13">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>92</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Time to begin firing</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_14">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>187</y>
+                         <width>151</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Fibers in population</string>
+                       </property>
+                      </widget>
+                      <widget class="QTableView" name="afferentTable">
+                       <property name="geometry">
+                        <rect>
+                         <x>328</x>
+                         <y>80</y>
+                         <width>311</width>
+                         <height>191</height>
+                        </rect>
+                       </property>
+                       <property name="editTriggers">
+                        <set>QAbstractItemView::AnyKeyPressed</set>
+                       </property>
+                       <property name="showDropIndicator" stdset="0">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dragEnabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="dragDropOverwriteMode">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dragDropMode">
+                        <enum>QAbstractItemView::NoDragDrop</enum>
+                       </property>
+                       <property name="defaultDropAction">
+                        <enum>Qt::MoveAction</enum>
+                       </property>
+                       <property name="alternatingRowColors">
+                        <bool>true</bool>
+                       </property>
+                       <property name="selectionMode">
+                        <enum>QAbstractItemView::SingleSelection</enum>
+                       </property>
+                       <property name="sortingEnabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="cornerButtonEnabled">
+                        <bool>false</bool>
+                       </property>
+                       <attribute name="horizontalHeaderMinimumSectionSize">
+                        <number>100</number>
+                       </attribute>
+                       <attribute name="horizontalHeaderDefaultSectionSize">
+                        <number>120</number>
+                       </attribute>
+                       <attribute name="horizontalHeaderHighlightSections">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="horizontalHeaderStretchLastSection">
+                        <bool>true</bool>
+                       </attribute>
+                       <attribute name="verticalHeaderCascadingSectionResizes">
+                        <bool>false</bool>
+                       </attribute>
+                      </widget>
+                      <widget class="QPushButton" name="delAfferentRow">
+                       <property name="geometry">
+                        <rect>
+                         <x>202</x>
+                         <y>131</y>
+                         <width>110</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Delete Row</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="addAfferentRow">
+                       <property name="geometry">
+                        <rect>
+                         <x>200</x>
+                         <y>80</y>
+                         <width>110</width>
+                         <height>40</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Add Row</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="aff_seed_label">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>47</y>
+                         <width>161</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Random Number Seed</string>
+                       </property>
+                      </widget>
+                      <widget class="QSpinBox" name="fiberAffSeed">
+                       <property name="geometry">
+                        <rect>
+                         <x>2</x>
+                         <y>67</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="maximum">
+                        <number>2147483647</number>
+                       </property>
+                       <property name="value">
+                        <number>12345</number>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_15">
+                       <property name="geometry">
+                        <rect>
+                         <x>172</x>
+                         <y>222</y>
+                         <width>131</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Signal Offset&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                      </widget>
+                      <widget class="QSpinBox" name="fiberAfferentOffset">
+                       <property name="geometry">
+                        <rect>
+                         <x>172</x>
+                         <y>243</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is added or subtracted to the value of the signal. For example, if the smallest signal value was 80, setting this to -80 displays that value as zero. &lt;/p&gt;&lt;p&gt;This is useful for making maximum use of the simviewer plot rows in that the value of 80 will be seen as 0. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="minimum">
+                        <number>-10000000</number>
+                       </property>
+                       <property name="maximum">
+                        <number>10000000</number>
+                       </property>
+                       <property name="displayIntegerBase">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                      <widget class="slopeSpin" name="fiberAfferentScale">
+                       <property name="geometry">
+                        <rect>
+                         <x>176</x>
+                         <y>194</y>
+                         <width>140</width>
+                         <height>24</height>
+                        </rect>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;p&gt;If this number is non-zero, the slope between the current value and previous value is multiplied by the scaling value and added to the interpolated probability for the current value. If the value is zero, the text &quot;Not Used&quot; is displayed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="specialValueText">
+                        <string extracomment="Not Used">0</string>
+                       </property>
+                       <property name="decimals">
+                        <number>4</number>
+                       </property>
+                       <property name="minimum">
+                        <double>-20000.000000000000000</double>
+                       </property>
+                       <property name="maximum">
+                        <double>20000.000000000000000</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.100000000000000</double>
+                       </property>
+                       <property name="stepType">
+                        <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="label_16">
+                       <property name="geometry">
+                        <rect>
+                         <x>176</x>
+                         <y>173</y>
+                         <width>131</width>
+                         <height>16</height>
+                        </rect>
+                       </property>
+                       <property name="text">
+                        <string>Slope Scaling</string>
+                       </property>
+                      </widget>
+                      <zorder>afferentFileName</zorder>
+                      <zorder>afferentFileLabel</zorder>
+                      <zorder>afferentFileButton</zorder>
+                      <zorder>fiberAfferentStopFire</zorder>
+                      <zorder>label_12</zorder>
+                      <zorder>fiberAfferentStartFire</zorder>
+                      <zorder>fiberAfferentNumPop</zorder>
+                      <zorder>label_13</zorder>
+                      <zorder>label_14</zorder>
+                      <zorder>delAfferentRow</zorder>
+                      <zorder>afferentTable</zorder>
+                      <zorder>addAfferentRow</zorder>
+                      <zorder>aff_seed_label</zorder>
+                      <zorder>fiberAffSeed</zorder>
+                      <zorder>label_15</zorder>
+                      <zorder>fiberAfferentOffset</zorder>
+                      <zorder>fiberAfferentScale</zorder>
+                      <zorder>label_16</zorder>
+                     </widget>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="fiberBottomFrame">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QLineEdit" name="fibComment">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>42</y>
+                       <width>430</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="maxLength">
+                      <number>99</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_11">
+                     <property name="geometry">
+                      <rect>
+                       <x>5</x>
+                       <y>22</y>
+                       <width>221</width>
+                       <height>14</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Fiber Population Comment</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="fiberGroupLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>114</x>
+                       <y>71</y>
+                       <width>91</width>
+                       <height>14</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Group</string>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="fiberGroup">
+                     <property name="geometry">
+                      <rect>
+                       <x>109</x>
+                       <y>91</y>
+                       <width>321</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="maxLength">
+                      <number>63</number>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>not in group</string>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="fiberObjId">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>110</y>
+                       <width>231</width>
+                       <height>25</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>intentionally invisible control</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="fiberPopNumLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>5</x>
+                       <y>71</y>
+                       <width>91</width>
+                       <height>14</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Population</string>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="fiberPopNum">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>92</y>
+                       <width>91</width>
+                       <height>18</height>
+                      </rect>
+                     </property>
+                     <property name="maxLength">
+                      <number>63</number>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string>not in group</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="synapsePage">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <attribute name="title">
+               <string>Synapse Parameters</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QFrame" name="frame_9">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_6" stretch="4,8">
+                  <item>
+                   <widget class="QFrame" name="frame">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <widget class="QLabel" name="synToLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>354</x>
+                       <y>107</y>
+                       <width>128</width>
+                       <height>17</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Antero Population</string>
+                     </property>
+                    </widget>
+                    <widget class="QDoubleSpinBox" name="synapseSynStren">
+                     <property name="geometry">
+                      <rect>
+                       <x>224</x>
+                       <y>20</y>
+                       <width>138</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="decimals">
+                      <number>7</number>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="synFrom">
+                     <property name="geometry">
+                      <rect>
+                       <x>214</x>
+                       <y>129</y>
+                       <width>87</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_9">
+                     <property name="geometry">
+                      <rect>
+                       <x>224</x>
+                       <y>53</y>
+                       <width>158</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Random Number Seed</string>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="synapseMaxCond">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>73</y>
+                       <width>131</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> time steps</string>
+                     </property>
+                     <property name="maximum">
+                      <number>1000</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_7">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>53</y>
+                       <width>191</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Maximum Conduction Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="synapseRndSeed">
+                     <property name="geometry">
+                      <rect>
+                       <x>224</x>
+                       <y>73</y>
+                       <width>128</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <number>2147483647</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_6">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>2</y>
+                       <width>191</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Minimum Conduction Time</string>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="synapseMinCond">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>22</y>
+                       <width>131</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="suffix">
+                      <string> time steps</string>
+                     </property>
+                     <property name="prefix">
+                      <string/>
+                     </property>
+                     <property name="maximum">
+                      <number>1000</number>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_8">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>107</y>
+                       <width>160</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Number of terminals</string>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="synFromLabel">
+                     <property name="geometry">
+                      <rect>
+                       <x>214</x>
+                       <y>107</y>
+                       <width>118</width>
+                       <height>17</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Retro Population</string>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="synTo">
+                     <property name="geometry">
+                      <rect>
+                       <x>354</x>
+                       <y>129</y>
+                       <width>87</width>
+                       <height>20</height>
+                      </rect>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QSpinBox" name="synapseNumTerm">
+                     <property name="geometry">
+                      <rect>
+                       <x>20</x>
+                       <y>129</y>
+                       <width>131</width>
+                       <height>23</height>
+                      </rect>
+                     </property>
+                     <property name="maximum">
+                      <number>2000</number>
+                     </property>
+                    </widget>
+                    <widget class="QLineEdit" name="synapseObjId">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>380</x>
+                       <y>22</y>
+                       <width>110</width>
+                       <height>25</height>
+                      </rect>
+                     </property>
+                     <property name="frame">
+                      <bool>true</bool>
+                     </property>
+                     <property name="readOnly">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                    <widget class="QLabel" name="label_10">
+                     <property name="geometry">
+                      <rect>
+                       <x>224</x>
+                       <y>2</y>
+                       <width>158</width>
+                       <height>16</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Synapse Strength</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="synapseUndo">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>508</x>
+                       <y>21</y>
+                       <width>120</width>
+                       <height>30</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Undo Changes</string>
+                     </property>
+                    </widget>
+                    <widget class="QPushButton" name="synapseApply">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
+                     <property name="geometry">
+                      <rect>
+                       <x>508</x>
+                       <y>61</y>
+                       <width>120</width>
+                       <height>30</height>
+                      </rect>
+                     </property>
+                     <property name="text">
+                      <string>Apply Changes</string>
+                     </property>
+                    </widget>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="Synapses">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_12">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="synView" name="synapseList">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="editTriggers">
+                        <set>QAbstractItemView::NoEditTriggers</set>
+                       </property>
+                       <property name="showDropIndicator" stdset="0">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dragDropOverwriteMode">
+                        <bool>false</bool>
+                       </property>
+                       <property name="alternatingRowColors">
+                        <bool>true</bool>
+                       </property>
+                       <property name="selectionMode">
+                        <enum>QAbstractItemView::SingleSelection</enum>
+                       </property>
+                       <property name="selectionBehavior">
+                        <enum>QAbstractItemView::SelectRows</enum>
+                       </property>
+                       <property name="itemsExpandable">
+                        <bool>false</bool>
+                       </property>
+                       <property name="allColumnsShowFocus">
+                        <bool>false</bool>
+                       </property>
+                       <attribute name="headerStretchLastSection">
+                        <bool>false</bool>
+                       </attribute>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="buildTab">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <attribute name="title">
+               <string>Synapse Types</string>
+              </attribute>
+              <layout class="QHBoxLayout" name="horizontalLayout_9">
+               <item>
+                <widget class="QFrame" name="frame_11">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_3" stretch="2,8">
+                  <item>
+                   <widget class="QFrame" name="frame_12">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout">
+                     <item>
+                      <layout class="QGridLayout" name="gridLayout_2">
+                       <item row="1" column="0">
+                        <widget class="QPushButton" name="buildUndo">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Undo Changes</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QPushButton" name="buildAddPre">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Add Presynaptic</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QPushButton" name="buildApply">
+                         <property name="enabled">
+                          <bool>false</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>120</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Apply Changes</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QPushButton" name="buildAdd">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Add Synapse</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="2">
+                        <widget class="QPushButton" name="buildAddPost">
+                         <property name="enabled">
+                          <bool>true</bool>
+                         </property>
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Add Postsynaptic</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="4">
+                        <layout class="QHBoxLayout" name="horizontalLayout_7">
+                         <item>
+                          <widget class="QPushButton" name="buildDel">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>130</width>
+                             <height>30</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>Delete Row</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item row="0" column="4">
+                        <widget class="QPushButton" name="buildAddLearn">
+                         <property name="minimumSize">
+                          <size>
+                           <width>130</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Add Learn</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Preferred</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_13">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_2">
+                     <item>
+                      <widget class="QTreeView" name="buildSynapsesView">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::NoFrame</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Plain</enum>
+                       </property>
+                       <property name="sizeAdjustPolicy">
+                        <enum>QAbstractScrollArea::AdjustToContents</enum>
+                       </property>
+                       <property name="editTriggers">
+                        <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+                       </property>
+                       <property name="tabKeyNavigation">
+                        <bool>true</bool>
+                       </property>
+                       <property name="dragEnabled">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dragDropOverwriteMode">
+                        <bool>false</bool>
+                       </property>
+                       <property name="dragDropMode">
+                        <enum>QAbstractItemView::InternalMove</enum>
+                       </property>
+                       <property name="defaultDropAction">
+                        <enum>Qt::MoveAction</enum>
+                       </property>
+                       <property name="alternatingRowColors">
+                        <bool>true</bool>
+                       </property>
+                       <property name="selectionMode">
+                        <enum>QAbstractItemView::SingleSelection</enum>
+                       </property>
+                       <property name="selectionBehavior">
+                        <enum>QAbstractItemView::SelectRows</enum>
+                       </property>
+                       <property name="indentation">
+                        <number>20</number>
+                       </property>
+                       <property name="itemsExpandable">
+                        <bool>false</bool>
+                       </property>
+                       <property name="expandsOnDoubleClick">
+                        <bool>false</bool>
+                       </property>
+                       <attribute name="headerCascadingSectionResizes">
+                        <bool>false</bool>
+                       </attribute>
+                       <attribute name="headerStretchLastSection">
+                        <bool>false</bool>
+                       </attribute>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="globalsTab">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <attribute name="title">
+               <string>Globals</string>
+              </attribute>
+              <widget class="QFrame" name="frame_10">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>801</width>
+                 <height>631</height>
+                </rect>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QWidget" name="gridLayoutWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>30</x>
+                  <y>10</y>
+                  <width>756</width>
+                  <height>431</height>
+                 </rect>
+                </property>
+                <layout class="QGridLayout" name="globalGridLayout" rowstretch="2,1,1,1,1,1,1,1,1,1,1,1,1,1,1" columnstretch="0,0,0,0">
+                 <property name="verticalSpacing">
+                  <number>0</number>
+                 </property>
+                 <item row="6" column="0">
+                  <widget class="QRadioButton" name="globalBdt">
+                   <property name="maximumSize">
+                    <size>
+                     <width>52</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecting this will create a bdt file that contains the simulator results. The step size is fixed at 0.5 millisceonds. You can enable or disable saving the file in the Simulation Launcher window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>BDT</string>
+                   </property>
+                   <property name="checked">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="13" column="0" colspan="4">
+                  <widget class="QLabel" name="iLmElmRateLabel">
+                   <property name="text">
+                    <string>ILM and ELM Firing Rate for Maximum Activation for Lung Model</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="9" column="0" colspan="4">
+                  <widget class="QLabel" name="globPhrenicRecruitLabel">
+                   <property name="text">
+                    <string>Phrenic recruitment equation for Lung Model</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0" colspan="4">
+                  <widget class="QLineEdit" name="globComment"/>
+                 </item>
+                 <item row="8" column="0" colspan="4">
+                  <widget class="QLineEdit" name="globKEqPot"/>
+                 </item>
+                 <item row="12" column="0" colspan="4">
+                  <widget class="QLineEdit" name="globLumbarRecruit"/>
+                 </item>
+                 <item row="5" column="0" colspan="4">
+                  <widget class="QLabel" name="globStepTimeLabel">
+                   <property name="text">
+                    <string>Simulation step size in milliseconds</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="10" column="0" colspan="4">
+                  <widget class="QLineEdit" name="globPhrenicRecruit"/>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="QLineEdit" name="globStepTime">
+                   <property name="text">
+                    <string>0.5000</string>
+                   </property>
+                   <property name="maxLength">
+                    <number>20</number>
+                   </property>
+                   <property name="readOnly">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QRadioButton" name="globalEdt">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecting this will create an edt file that contains the simulator results. The step size is fixed at 0.1 milliseconds. You can enable or disable saving the file in the Simulation Launcher window.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>EDT</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="11" column="0" colspan="4">
+                  <widget class="QLabel" name="globalLumbarRecruitLabel">
+                   <property name="text">
+                    <string>Lumbar Recruitment equation for Lung Model</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0" colspan="4">
+                  <widget class="QLabel" name="globLengthLabel">
+                   <property name="text">
+                    <string>Length of simulation in seconds</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0" colspan="4">
+                  <widget class="QLineEdit" name="globLength"/>
+                 </item>
+                 <item row="7" column="0" colspan="4">
+                  <widget class="QLabel" name="globPotEqPotLabel">
+                   <property name="text">
+                    <string>Potassium Equilibrium Potential</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="14" column="0" colspan="4">
+                  <widget class="QLineEdit" name="iLmElmFiringRate"/>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="QRadioButton" name="globalOther">
+                   <property name="toolTip">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Selecting this will create a bdt file that uses a custom step size that contains the simulator results. You can enable or disable saving the file in the Simulation Launcher window. Note that the time values in some of the tools that process bdt files will be incorrect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                   <property name="text">
+                    <string>Custom</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" colspan="4">
+                  <widget class="QLabel" name="globCommentLabel">
+                   <property name="text">
+                    <string>Global Comment</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0" colspan="4">
+                  <widget class="QFrame" name="globButtonsFrame">
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QPushButton" name="globApply">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="geometry">
+                     <rect>
+                      <x>140</x>
+                      <y>10</y>
+                      <width>106</width>
+                      <height>30</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Apply Changes</string>
+                    </property>
+                   </widget>
+                   <widget class="QPushButton" name="globUndo">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="geometry">
+                     <rect>
+                      <x>24</x>
+                      <y>10</y>
+                      <width>103</width>
+                      <height>30</height>
+                     </rect>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>30</height>
+                     </size>
+                    </property>
+                    <property name="text">
+                     <string>Undo Changes</string>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QFrame" name="rightFrame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="SimView" name="simView">
+          <property name="maximumSize">
+           <size>
+            <width>2000</width>
+            <height>2000</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Century Schoolbook L</family>
+            <pointsize>7</pointsize>
+            <stylestrategy>NoAntialias</stylestrategy>
+            <kerning>false</kerning>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QStyle::SH_ToolTip_WakeUpDelay(0):QStyle::SH_ToolTip_FallAsleepDelay(0)</string>
+          </property>
+          <property name="dragMode">
+           <enum>QGraphicsView::ScrollHandDrag</enum>
+          </property>
+          <property name="cacheMode">
+           <set>QGraphicsView::CacheBackground</set>
+          </property>
+          <property name="viewportUpdateMode">
+           <enum>QGraphicsView::MinimalViewportUpdate</enum>
+          </property>
+          <property name="rubberBandSelectionMode">
+           <enum>Qt::ContainsItemBoundingRect</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1908</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="mouseTracking">
+     <bool>true</bool>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionLoad_snd_File"/>
+    <addaction name="actionSave_snd_File"/>
+    <addaction name="actionSave_sim_File"/>
+    <addaction name="actionSave_Model_as_PDF"/>
+    <addaction name="actionupdateChgLog"/>
+    <addaction name="actionShell"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionOne_Shot_Add"/>
+    <addaction name="actionDisplay_Model_as_Monochrome"/>
+    <addaction name="actionUnsaved_Changes_Warning_Off"/>
+    <addaction name="actionPrompt_For_Change_Log"/>
+    <addaction name="actionUseSndName"/>
+    <addaction name="actionLaunch_Window_Always_On_Top"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionOpen_Updated_Manual_in_progress"/>
+    <addaction name="actionView_Change_Log"/>
+    <addaction name="actionOpen_Release_Notes"/>
+    <addaction name="actionOpen_Users_Manual"/>
+   </widget>
+   <widget class="QMenu" name="menuGroups">
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="tabletTracking">
+     <bool>false</bool>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;See the Help - Group page for more on Grouping operations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="statusTip">
+     <string>bob</string>
+    </property>
+    <property name="title">
+     <string>&amp;Groups</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="actionCreate_Group"/>
+    <addaction name="actionSelect_Group"/>
+    <addaction name="actionExport_Group"/>
+    <addaction name="actionImport_Group"/>
+    <addaction name="actionUngroup"/>
+   </widget>
+   <widget class="QMenu" name="menuFind">
+    <property name="title">
+     <string>Find</string>
+    </property>
+    <addaction name="actionFind"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuFind"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuGroups"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font">
+    <font>
+     <family>DejaVu Sans</family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionBuild_Synapse_Globals"/>
+   <addaction name="separator"/>
+   <addaction name="actionEdit_Globals"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpen_Launcher"/>
+   <addaction name="actionAdd_Fiber"/>
+   <addaction name="actionAddCell"/>
+   <addaction name="actionAddConnector"/>
+   <addaction name="separator"/>
+   <addaction name="actionDeleteSelected"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuit_2"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionQuit_2">
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/quit_icon.png</normaloff>:/quit_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::TextHeuristicRole</enum>
+   </property>
+  </action>
+  <action name="actionAdd_Fiber">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/fiber_icon.png</normaloff>:/fiber_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Fiber Population</string>
+   </property>
+   <property name="iconText">
+    <string>Add Fi&amp;ber Population</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-F&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Add Fiber Population&lt;/p&gt;&lt;p&gt;Spacebar to turn off.&lt;/p&gt;&lt;p&gt;Select Options-&amp;gt;One Shot Add to insert just one Fiber population and then toggle out of Add mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionAddCell">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/cell_icon.png</normaloff>:/cell_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Cell Population</string>
+   </property>
+   <property name="iconText">
+    <string>Add Cell Population</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-C&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Add Cell Population&lt;/p&gt;&lt;p&gt;Spacebar to turn off&lt;/p&gt;&lt;p&gt;Select Options-&amp;gt;One Shot Add to insert just one Cell population and then toggle out of Add mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+C</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionAddConnector">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/conn_icon.png</normaloff>:/conn_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add Axon/Synapse</string>
+   </property>
+   <property name="iconText">
+    <string>Add Axon/Synapse</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-A&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Add Axon/Synapse. Click inside the hot zone (dotted line) of the beginning Fiber or Cell, click anywhere in the drawing to create new line segments, then finally click within the hot zone of the destination Fiber or Cell. Press ESC to abort drawing an Axon/Synapse.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="shortcut">
+    <string>Shift+A</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionDeleteSelected">
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/delete_icon.png</normaloff>:/delete_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete Selected</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;THERE IS NO UNDO FOR DELETIONS!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: ALT-Delete&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Delete Selected items. You can select an item by clicking on it. You can select items in a bounding box by holding down the left mouse button and dragging to create a rectangle. You can select a set of items by holding down the CTRL key and clicking one item at a time. If you delete a Cell or Fiber node, connectors to and from other Cells and Fibers will also be deleted.&lt;/p&gt;&lt;p&gt;If you accidentally delete items, you must reload the file to recover deleted items. You will lose any changes you made since the last save.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Del</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionLoad_snd_File">
+   <property name="text">
+    <string>&amp;Load .snd Model File</string>
+   </property>
+   <property name="toolTip">
+    <string>Load .snd File</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+L</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="iconText">
+    <string>&amp;New</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+N</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSave_snd_File">
+   <property name="text">
+    <string>&amp;Save .snd Model File</string>
+   </property>
+   <property name="iconText">
+    <string>Save .snd File</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSave_sim_File">
+   <property name="text">
+    <string>Save .si&amp;m Simrun File</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+M</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionShell">
+   <property name="text">
+    <string>Open Shell</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionRun_Simulation">
+   <property name="text">
+    <string>Open Simulator Launcher Control</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionBuild_Synapse_Globals">
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/build_syn.png</normaloff>:/build_syn.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Synapse Types</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-T&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Edit Synapse Types&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+T</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionOne_Shot_Add">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>One Shot Add</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add just one Cell or Fiber population then terminate add mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="actionUnsaved_Changes_Warning_Off">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="iconText">
+    <string>Do Not Warn About Unsaved Changes</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Turn off warning that changes have not been applied when a new object is selectected or when exiting the program and changes have not been saved to a file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionOpen_Launcher">
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/launch_icon.png</normaloff>:/launch_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open Launcher</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-L&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Open the Launcher window to start and control a simulation.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+L</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionView_Change_Log">
+   <property name="text">
+    <string>View Change Log</string>
+   </property>
+  </action>
+  <action name="actionOpen_Users_Manual">
+   <property name="text">
+    <string>View Older Manual</string>
+   </property>
+  </action>
+  <action name="actionEdit_Globals">
+   <property name="icon">
+    <iconset resource="simbuild.qrc">
+     <normaloff>:/globals_icon.png</normaloff>:/globals_icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Edit Globals</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut: Shift-G&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Edit Globals&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+G</string>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionupdateChgLog">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>&amp;Update Change Log</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+U</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionPrompt_For_Change_Log">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Do Not Prompt For Change Log</string>
+   </property>
+   <property name="iconText">
+    <string>Do Not Prompt For Change Log</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Do not ask user if they want to update the changelog file if changes have been made when saving a file. &lt;/p&gt;&lt;p&gt;Note that selecting this means that changes will not be saved to a changelog file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionSet_Change_Log_Editor">
+   <property name="text">
+    <string>Set Change Log Editor</string>
+   </property>
+  </action>
+  <action name="actionCreate_Group">
+   <property name="text">
+    <string>&amp;Assign To Group</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Assign selected items to a group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+A</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionUngroup">
+   <property name="text">
+    <string>&amp;Remove From Group</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select one or more items in an group, then click on this menu item to remove them from the group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+R</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionExport_Group">
+   <property name="text">
+    <string>&amp;Export Group</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a group, then click on this to export the group. You will be prompted to save the group to a file named basename.sndlib.&lt;/p&gt;&lt;p&gt;You can enter a different basename that indicates the function of the group.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+E</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionImport_Group">
+   <property name="text">
+    <string>&amp;Import Group</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a file to import, then click on the location in the model where you want the imported items to be drawn.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+I</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionSelect_Group">
+   <property name="text">
+    <string>&amp;Select Group</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click on this, then click on any Cell or Fiber node that is in a group. All members of the group will then be selected. If you pick a node that is not in a group, all items that are not in a group will be selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WidgetShortcut</enum>
+   </property>
+  </action>
+  <action name="actionUseSndName">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Include .snd File Name As Part Of Change Log Name</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you use several models in the same working directory, selecting this includes the .snd file name as part of the changelog name. The default is to put all changes in one file, ChangeLog.txt. This lets the user keep track of changes to each model independently.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionLaunch_Window_Always_On_Top">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Launch Window Always On Top Of Simbuild</string>
+   </property>
+   <property name="toolTip">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By default, the Launch window is a child of the main window and will always be on top it. If you want to see the main window, you have to move the Launch window out of the way.&lt;/p&gt;&lt;p&gt; Select this to detach the Launch window and have it operate as an independent window. You can then click on the main window to display it over the top of the Launch window.&lt;/p&gt;&lt;p&gt; Deselect this to make the Launch window a child of the main window, so it will always be on top of the main window.&lt;/p&gt;&lt;p&gt;Note that when the Launch window is detached, displaying the main window will not also display the Launch window. You will also see two icons on a program toolbar or the Alt-Tab selector.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </action>
+  <action name="actionOpen_Updated_Manual_in_progress">
+   <property name="text">
+    <string>View Manual</string>
+   </property>
+  </action>
+  <action name="actionOpen_Release_Notes">
+   <property name="text">
+    <string>View Release Notes</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="text">
+    <string>Find</string>
+   </property>
+  </action>
+  <action name="actionSave_Model_as_PDF">
+   <property name="text">
+    <string>Save Model as PDF</string>
+   </property>
+  </action>
+  <action name="actionDisplay_Model_as_Monochrome">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Display Model as Monochrome</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SimView</class>
+   <extends>QGraphicsView</extends>
+   <header>simview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>synView</class>
+   <extends>QTreeView</extends>
+   <header>synview.h</header>
+  </customwidget>
+  <customwidget>
+   <class>slopeSpin</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>slope_spin.h</header>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>fitToView</tabstop>
+  <tabstop>lineLayer</tabstop>
+  <tabstop>selAll</tabstop>
+  <tabstop>currXY</tabstop>
+  <tabstop>chatterBox</tabstop>
+  <tabstop>standardCell</tabstop>
+  <tabstop>cellShowTarg</tabstop>
+  <tabstop>bursterCell</tabstop>
+  <tabstop>psrCell</tabstop>
+  <tabstop>cellShowSrc</tabstop>
+  <tabstop>cellSendLaunchBdt</tabstop>
+  <tabstop>cellSendLaunchPlot</tabstop>
+  <tabstop>lungPhrenicCell</tabstop>
+  <tabstop>lungInspiLarCell</tabstop>
+  <tabstop>lungExpirLarCell</tabstop>
+  <tabstop>lungLumbarCell</tabstop>
+  <tabstop>cellTypes</tabstop>
+  <tabstop>cellAccom</tabstop>
+  <tabstop>cellAccomParam</tabstop>
+  <tabstop>cellDCInj</tabstop>
+  <tabstop>cellKCondChg</tabstop>
+  <tabstop>cellKCond</tabstop>
+  <tabstop>cellRestThresh</tabstop>
+  <tabstop>cellMembTC</tabstop>
+  <tabstop>cellRestThreshSD</tabstop>
+  <tabstop>cellPopSize</tabstop>
+  <tabstop>noiseAmp</tabstop>
+  <tabstop>injectedExpression</tabstop>
+  <tabstop>bursterHalfVAct</tabstop>
+  <tabstop>bursterSlopeH</tabstop>
+  <tabstop>bursterAppliedCurr</tabstop>
+  <tabstop>bursterHalfVH</tabstop>
+  <tabstop>bursterThreshV</tabstop>
+  <tabstop>bursterSlopeAct</tabstop>
+  <tabstop>bursterResetV</tabstop>
+  <tabstop>bursterDeltaH</tabstop>
+  <tabstop>bursterTimeConst</tabstop>
+  <tabstop>bursterKCond</tabstop>
+  <tabstop>psrOutThreshSd</tabstop>
+  <tabstop>psrRiseT</tabstop>
+  <tabstop>psrOutThresh</tabstop>
+  <tabstop>psrFallT</tabstop>
+  <tabstop>cellObjId</tabstop>
+  <tabstop>cellComment</tabstop>
+  <tabstop>cellUndo</tabstop>
+  <tabstop>cellApply</tabstop>
+  <tabstop>fibProbFire</tabstop>
+  <tabstop>fibStartFire</tabstop>
+  <tabstop>fibEndFire</tabstop>
+  <tabstop>fibRndSeed</tabstop>
+  <tabstop>fibNumPop</tabstop>
+  <tabstop>fibComment</tabstop>
+  <tabstop>fiberShowTarg</tabstop>
+  <tabstop>fiberSendLaunchBdt</tabstop>
+  <tabstop>fiberApply</tabstop>
+  <tabstop>fiberUndo</tabstop>
+  <tabstop>fiberObjId</tabstop>
+  <tabstop>synapseSynStren</tabstop>
+  <tabstop>synapseList</tabstop>
+  <tabstop>synapseNumTerm</tabstop>
+  <tabstop>synapseUndo</tabstop>
+  <tabstop>synapseMinCond</tabstop>
+  <tabstop>synapseObjId</tabstop>
+  <tabstop>synFrom</tabstop>
+  <tabstop>synTo</tabstop>
+  <tabstop>synapseRndSeed</tabstop>
+  <tabstop>synapseMaxCond</tabstop>
+  <tabstop>synapseApply</tabstop>
+  <tabstop>simView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="simbuild.qrc"/>
+ </resources>
+ <connections/>
+</ui>

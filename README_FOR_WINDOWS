@@ -1,0 +1,117 @@
+                         README_FOR_WINDOWS
+                           April 30, 2020
+
+The latest version of the usfsim package has been released.
+
+It is version 1.0.25. It is available on all of the Linux systems. There may be
+later versions available, this document is not always kept up to date.
+
+There is a Windows version.  All of the Windows files are in a .zip file
+that is named based on the version. For this release, the file is:
+
+usfsim_win_1.0.25.zip
+
+On the lab's local system, the .zip file is located in /usr/local/share/usfsim.
+On the bolser systems, a copy is in /datastore1/home/public. 
+
+The file contains:
+
+1. Executables
+
+   simbuild.exe
+   simrun.exe
+   simviewer.exe
+   simmsg.exe
+
+2. Default values for creating models. You can edit these to be whatever you
+   want. These are optional and defaults will be provided if they are not found
+   in the current working directory.
+
+   def_cell.sned
+   def_fiber.sned
+   def_syn.sned
+   globals.sned
+
+3. An example model
+
+   example_modelWIN.snd  
+   example_modelWIN.ols
+
+4. Bitmaps you can use as icons. These are also include in the executables, so 
+   you do not really need these.
+
+   simbuild.png
+   simviewer.png
+
+5. Documents
+
+   README  
+   README_FOR_WINDOWS (this document)
+   ReleaseNotes.pdf
+   sim.pdf
+   usfsim.pdf
+
+The usesim.pdf is an update of the Users Manaual.
+
+To get started on a Windows PC, make a working directory somewhere in your work
+area, get a copy of the zip file and unzip the zip file into this directory.
+Some people have unzipped it to the desktop, but you don't want to do this. It
+can create a few thousand wave files, and they all wind up on your desktop.
+Really, make a working directory, even it if in something like C:\usfsim.
+
+Create a desktop shortcuts to simbuild.exe and simviewer.exe and make the working
+directory be the "Start in:" directory.
+
+Start simbuild.exe.
+
+If you want to have several working directories, you may want to set your PATH
+environment variable to include the path to the directory where you unzipped
+the zip file. The methods to do this vary in different versions of Windows. If
+you do not know how to do this, there are many web pages that explain how to do
+this. Once the executables are on your PATH, you can run it from any directory.
+
+
+Simulate away!
+
+
+                            THE FINE PRINT
+
+Some of what follows is out of date. You can safely ignore this (mostly.)
+
+The biggest difference between the Linux and Windows versions is the format of
+the text files.
+
+Linux lines end in a single value, 10, or hex 0x0a.
+Windows lines end in two values, 13 10, or hex 0x0d 0x0a.
+
+While I have tried to make this transparent to all versions of the programs, I
+have not tested this extensively, so some of the code may still have issues
+with the foreign format. If there are compatibilty issues, there are Linux
+utilities that will convert one format to the other, such as dos2unix and
+unix2dos on Linux systems. A handy editor for Windows can be found at:
+
+https://notepad-plus-plus.org
+
+There is an Edit -> EOL Conversion selection that will convert between formats.
+
+If you want to use models that were created on a Linux system (and at this
+point that would be ALL of them), do this:
+
+1. Copy .snd and .ols files to your Windows machine.
+2. Run simbuild.exe and load the .snd file.
+3. Save it to a different name. I have been adding "WIN" somewhere in the new file name.
+4. A new .ols file will be created for you with the same base name.
+5. Load the new WIN file.
+
+If you copy a new model you made on a Windows machine to a Linux machine, load
+the WIN file and save it out without the WIN in the name.  The simbuild program
+can read both formats and will write files in the local format.
+
+The bdt and edt files that the Windows version create are an exception. I
+created these a binary files and force each line to end with only 0x0a. Since
+the only tools that use these are Linux ones, I did not see the need for
+Windows versions of the files. Scope, in particular, really did not like the
+WIN text format.
+
+I'm sure there will be problems. Let me know about them.
+

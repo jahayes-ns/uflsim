@@ -1,0 +1,161 @@
+SIMRUN version 1.0.34
+SIMRUN: Got simbuild port: 50519
+Init son64 
+simmsg cmd is start "" "Z:\home\coughguy\src\usfsim-1.0.34\simmsg.exe "
+SIMRUN: simbuild connection host: localhost port: 50519
+SIMRUN: Connected to simbuild.
+SIMRUN: Connect port is 22469
+Connected to simbuild
+Got script, 953 bytes
+Got sim, 54390 bytes
+Got snd, 791765 bytes
+SIMRUN: Got viewer host: localhost, port: 36797
+SIMRUN: Got socket 152
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+SIMRUN: No connection with simviewer, try again later
+errno: 0
+Got the essentials
+Temp name is simrunbcc23c6b.tmp
+temp file okay
+Reading script
+SIMRUN: Building network. . .
+185 connections
+sample cell seed: 1665541057
+network built, running sim
+Got script
+motor pops are: phrenic 25 44, abdominal 42 33, elm/ta 40, ilm/pca 39
+baby_lung_flag not set, VrcFRC = Vrc0 = 7.013
+PicaTLC: 69.5196, PicaRV: -22.0493
+PrcTLC: 55.2797, PrcRV: -6.30507
+f_TLC: 0.15, f_RV: 0.63721
+PdiTLC: 41.5883, PdiRV: 20
+PLTLC: 26.7164, PLRV: 0
+Pdirc: 1.67161, Pabrc: -1.10246
+Pdimax: 279.569
+	RV	FRC	TLC
+Vdi:	3.36736	2.967	0.589788
+Vab:	2.00397	2.21877	3.82494
+Vrc:	6.51013	7.013	9.10255
+VL:	1.38677	2.29	6.75677
+ 1 0.002
+simloop exited
+I and E detection not performed because parameter(s) are zero.
+simloop function returning
+clean up son64 

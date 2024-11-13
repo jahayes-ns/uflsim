@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2025/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: usfsim.aux
+The style file: apalike.bst
+Database file #1: references.bib
+Warning--empty publisher in Newton1687
+You've used 51 entries,
+            1935 wiz_defined-function locations,
+            829 strings with 13327 characters,
+and the built_in function-call counts, 22229 in all, are:
+= -- 2121
+> -- 998
+< -- 22
++ -- 349
+- -- 341
+* -- 2062
+:= -- 3857
+add.period$ -- 160
+call.type$ -- 51
+change.case$ -- 420
+chr.to.int$ -- 51
+cite$ -- 52
+duplicate$ -- 735
+empty$ -- 1552
+format.name$ -- 414
+if$ -- 4348
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 56
+newline$ -- 263
+num.names$ -- 155
+pop$ -- 331
+preamble$ -- 1
+purify$ -- 425
+quote$ -- 0
+skip$ -- 541
+stack$ -- 0
+substring$ -- 1732
+swap$ -- 65
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 296
+warning$ -- 1
+while$ -- 155
+width$ -- 0
+write$ -- 672
+(There was 1 warning)

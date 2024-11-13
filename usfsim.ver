@@ -1,0 +1,22 @@
+\begin {longtable}{@{}ll>{\hsize =\vhAuthorColWidth }X>{\hsize =\vhChangeColWidth }X@{}}
+\textbf {\vhversionname }
+ & \textbf {\vhdatename }
+ & \textbf {\vhauthorname }
+ & \textbf {\vhchangename }\\[1ex]
+1.0
+ & 13-Dec-2019
+ & \listset {DS}
+ & Created from sim.tex. Initial release.\\
+1.1
+ & 10-Jun-2020
+ & \listset {DS}
+ & Add Afferent Signal Fiber Population.\\
+1.2
+ & 26-Aug-2020
+ & \listset {DS}
+ & Add Hebbian Learning Syanpse Support.\\
+1.3
+ & 30-Nov-2020
+ & \listset {DS}
+ & Add Afferent slope scaling, I and E smoothing parameters.\\
+\end {longtable}

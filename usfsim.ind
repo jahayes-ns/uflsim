@@ -1,0 +1,96 @@
+\begin{theindex}
+  \providecommand*\lettergroupDefault[1]{}
+  \providecommand*\lettergroup[1]{%
+      \par\textbf{#1}\par
+      \nopagebreak
+  }
+
+  \lettergroup{A}
+  \item Axon/Synapse
+    \subitem Add, \hyperpage{11}
+    \subitem Learning, \hyperpage{12}
+    \subitem Parameters, \hyperpage{29}
+    \subitem Postsynaptic, \hyperpage{12}
+    \subitem Presynaptic, \hyperpage{12}
+    \subitem Types, \hyperpage{12}
+
+  \indexspace
+
+  \lettergroup{C}
+  \item Cell
+    \subitem Add, \hyperpage{11}
+    \subitem Parameters
+      \subsubitem Hybrid IF, \hyperpage{22}
+      \subsubitem MacGregor, \hyperpage{18}
+      \subsubitem PSR, \hyperpage{24}
+
+  \indexspace
+
+  \lettergroup{F}
+  \item Fiber
+    \subitem Add, \hyperpage{11}
+    \subitem Parameters
+      \subsubitem Electric Stimulation
+        \subsubsubitem Deterministic, \hyperpage{27}
+        \subsubsubitem Fuzzy, \hyperpage{28}
+      \subsubitem Normal, \hyperpage{25}
+  \item Files
+    \subitem ols, \hyperpage{5}, \hyperpage{37}, \hyperpage{43}
+    \subitem sim, \hyperpage{5}
+    \subitem snd, \hyperpage{5}
+    \subitem wave, \hyperpage{2}
+
+  \indexspace
+
+  \lettergroup{H}
+  \item History, \hyperpage{1}
+  \item Hot Zone, \hyperpage{10}
+
+  \indexspace
+
+  \lettergroup{I}
+  \item Installation
+    \subitem Linux, \hyperpage{3}
+    \subitem Windows, \hyperpage{3}
+
+  \indexspace
+
+  \lettergroup{L}
+  \item Launches
+    \subitem Limitations, \hyperpage{16}
+    \subitem Number, \hyperpage{16}
+  \item Launching Simulation, \hyperpage{4}
+  \item Linux, \hyperpage{2}
+  \item Lung Model, \hyperpage{40}
+
+  \indexspace
+
+  \lettergroup{M}
+  \item Mid-Run Update, \hyperpage{17}
+    \subitem Limitations, \hyperpage{17}
+  \item Models
+    \subitem Creating, \hyperpage{2}, \hyperpage{5}
+    \subitem Editing, \hyperpage{9}
+    \subitem Loading, \hyperpage{7}
+    \subitem Saving, \hyperpage{7}
+  \item Motor Populations, \hyperpage{40}
+
+  \indexspace
+
+  \lettergroup{S}
+  \item simbuild, \hyperpage{2}, \hyperpage{3}, \hyperpage{7}
+  \item simrun, \hyperpage{2}
+  \item Simulator Launcher Control Window, \hyperpage{12}
+  \item simviewer, \hyperpage{2}, \hyperpage{3}
+
+  \indexspace
+
+  \lettergroup{T}
+  \item Tutorial, \hyperpage{6}
+
+  \indexspace
+
+  \lettergroup{W}
+  \item Work Flow, \hyperpage{5}
+
+\end{theindex}

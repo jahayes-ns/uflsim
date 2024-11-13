@@ -1,0 +1,86 @@
+\contentsline {chapter}{\numberline {1}Overview}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Installation}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Installing on Windows}{2}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}The Cygwin UNIX Environment}{2}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Installing Cygwin}{2}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Installing the Simulator}{3}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Installing on UNIX}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Running the Simulator}{4}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Model Parameters}{4}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}MacGregor Cell Parameters}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Hybrid IF Cell Parameters}{9}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Pulmonary Stretch Receptor Parameters}{11}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Fiber Population Parameters}{12}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Axon/Synapse Parameters}{14}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Synapse Type Parameters}{16}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Global Parameters}{18}{subsection.3.1.7}%
+\contentsline {section}{\numberline {3.2}The NEWSNED Network Editor}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Overview of NEWSNED}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}The Right Click Menu}{21}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}The File Menu}{23}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Miscellaneous}{23}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Spawn}{24}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}Parallel Simulations}{27}{subsubsection.3.2.3.3}%
+\contentsline {subsection}{\numberline {3.2.4}The Build Menu}{28}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}The Option Menu}{29}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}The Simulator}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Cell Coordinates}{29}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}OLS Generation}{31}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Power Spectrum}{32}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Simulator Options}{32}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}SNEDSKOP Waveform Display}{36}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}SNEDSKOP File Menu}{37}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}SNEDSKOP Option Menu}{37}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Timebase Menu}{38}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Spacing Menu}{38}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Vertical Gain Menu}{38}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Time Markers Menu}{38}{subsection.3.4.6}%
+\contentsline {subsection}{\numberline {3.4.7}Voltage Markers Menu}{38}{subsection.3.4.7}%
+\contentsline {section}{\numberline {3.5}The Lung Model}{40}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Interface to the Network Model}{40}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Motor Populations}{40}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Recruitment Equations}{41}{subsubsection.3.5.1.2}%
+\contentsline {subsubsection}{\numberline {3.5.1.3}Pulmonary Stretch Receptors}{41}{subsubsection.3.5.1.3}%
+\contentsline {subsubsection}{\numberline {3.5.1.4}Variable Plots}{41}{subsubsection.3.5.1.4}%
+\contentsline {section}{\numberline {3.6}Utilities}{42}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}renumber}{42}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}pickwave}{43}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}pickedt}{44}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}spectrum}{45}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}txt2flt}{46}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}wave2ps}{47}{subsection.3.6.6}%
+\contentsline {subsection}{\numberline {3.6.7}merge}{47}{subsection.3.6.7}%
+\contentsline {subsection}{\numberline {3.6.8}power\_spectrum.sh}{47}{subsection.3.6.8}%
+\contentsline {chapter}{\numberline {4}Lung Model Internals}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The Top Level}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}The Motor Outputs}{50}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}The Pressure Equations}{50}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Pressure balance on the rib cage}{51}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Pressure balance on the lung}{51}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Pressure balance on the diaphragm}{51}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Pressure balance on the abdominal wall}{52}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Pressure drop across the larynx}{52}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Deriving the Model Equations from the Pressure Equations}{52}{section.4.3}%
+\contentsline {section}{\numberline {4.4}The Volume Equations}{53}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Abdominal Volume}{53}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Rib Cage Volume}{54}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Tracheal Flow}{54}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Airway Resistance}{55}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Recoil Pressure of the Lung}{56}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Abdominal Fraction of Rib Cage}{56}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Recoil Pressure of the Diaphragm}{58}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}\texttt {Ffl}}{58}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}\texttt {Ldi\_min}}{59}{subsubsection.4.9.1.1}%
+\contentsline {subsection}{\numberline {4.9.2}\texttt {Ffv}}{59}{subsection.4.9.2}%
+\contentsline {section}{\numberline {4.10}Pressure of the Intercostal and Accessory Muscles}{60}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Recoil Pressure of the Rib Cage}{61}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}\texttt {Vrc\_max}}{61}{subsection.4.11.1}%
+\contentsline {subsection}{\numberline {4.11.2}\texttt {Vrc\_min}}{61}{subsection.4.11.2}%
+\contentsline {subsection}{\numberline {4.11.3}\texttt {Vrc\_div}}{61}{subsection.4.11.3}%
+\contentsline {subsection}{\numberline {4.11.4}\texttt {Vrc\_add}}{62}{subsection.4.11.4}%
+\contentsline {section}{\numberline {4.12}\texttt {Recoil Pressure of the Abdominal Wall}}{62}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}\texttt {Ffl}}{63}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}LCE}{63}{subsubsection.4.12.1.1}%
+\contentsline {subsection}{\numberline {4.12.2}\texttt {Ffv}}{63}{subsection.4.12.2}%
+\contentsline {section}{\numberline {4.13}Volume Parameters}{64}{section.4.13}%
+\contentsline {chapter}{Bibliography}{66}{chapter*.33}%

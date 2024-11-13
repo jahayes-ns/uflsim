@@ -1,0 +1,114 @@
+
+Changes for usfsim -  Fri Aug 31 2018
+=====================================
+ The usfsim package is an upgrade of the USF simulator package. The Motif-based
+ user interface has been replaced with the Qt framework. The workflow
+ has also been completely overhauled. Some rarely used features of the
+ simulator package have been removed.
+ 
+ There are three main programs:
+
+   simbuild:   Used for creating and editing models. It has a child
+               window, simlaunch, used to start and manage the
+               simulation.  This could be a fourth standalone program,
+               but it couples so strongly with its simbuild parent
+               that it makes more sense to have it be a child window.
+
+   simrun:     This is the simulation engine. It has no user interface.
+               The inputs are from files produced by simbuild and also
+               by commands sent directly to it from simbuild using a
+               network interface (sockets). The simrun program can
+               produce a .bdt file and/or a set of wave files that can
+               be used to plot the results of the simulation.
+
+   simviewer:  This program plots the results of the simulation. The
+               selection of what to plot are made in the simlaunch
+               window.
+
+
+PSR or other external objects
+=============================
+
+A "PSR" type cell in the simulator has an output firing rate that is
+proportional to the input firing rate, but with some delay when firing
+starts, and a different delay when it stops.  The output firing rate
+ramps up exponentially after the input starts, with a time constant
+called (in newsned) Rise Time.  The output firing rate dies off
+exponentially after input firing stops, with a time constant called
+(in newsned) Fall Time.  
+
+The output firing pattern is random.  The output firing rate is
+represented inside the simulator as a probability of firing at each
+time step.  It is this value that rises and falls exponentially
+depending on the input firing rate.  
+
+The user can also specify an Output Threshold parameter, which is an
+amount by which to reduce what would otherwise have been the
+probability of firing at each time step.  If the difference is
+negative, the cell does not fire.
+
+To specify a PSR type cell population in newsned, select a PSR cell
+type in the Cell Parameter page.  The Rise Time and Fall Time are in
+milliseconds, and the Output Threshold is an offset to the probability
+of firing at each time step.
+
+When making connections to a PSR population, a Synapse Strength of 1
+will result in a steady state output firing rate equal to the input
+firing rate, and the output firing rate contribution of this
+connection is proportional to the strength parameter.
+
+The Synapse Equilibrium Potential has no effect on the PSR cell.
+A long Synapse Time Constant will tend to smooth out the effect of the
+incoming spikes.
+
+Hybrid I/F (burster) cell
+=========================
+
+A Hybrid I/F (burster) cell in the simulator is an implementation of
+the model in B. Breen, W. C. Gerken, and R. J. Butera. "Hybrid
+Integrate-and-Fire model of a bursting neuron." Neural
+Computation. (2003) 15:2843-2862.
+
+To specify a burster cell population in newsned, select the Burster
+cell type in the Cell parameter page.  The Applied Current (Iapp)
+parameter is in picoamps, and is the same as the parameter by the same
+name in the paper.
+
+In the absence of synaptic input, with Iapp set to 15, the cell emits
+bursts of spikes at an interval of about 4 seconds.  Iapp = 20 gives 2
+seconds.  Iapp = 0 results in no spikes, and Iapp = 25 results in
+tonic firing.
+
+The cell can also be made to fire with synaptic input, but the
+bursting pattern will be obscured by the randomness of the input.
+
+Other recent changes
+====================
+
+	./configure; make; make install
+
+and you should be able to run simbuild, simrun, or simviewer regardless of
+what directory you are in.  You might need to have admin privileges on
+your system to run the "make install" part.
+
+In newnsed's Synapse Selection Panel, you can now specify a minimum
+conduction time as well as a maximum.  The actual times will be
+uniformly distributed between the two.
+
+Plotting state variables other than Vm
+======================================
+
+For Hybrid IF cells (which use absolute membrane potentials rather
+than relative to resting potential), the plotted Vm and threshold
+values are offset by 50mV so that they will line up with the MacGregor
+membrane potentials.
+
+For Hybrid IF cells, the gating variable "h" is plotted, and for
+MacGregor cells, the potassium conductance is plotted.
+
+The value of "h" can vary from 0 to 1, which will correspond to -30mV
+to +30mV on the plot.
+
+The potassium conductance is a non-negative number.  0 will be plotted
+at -20mV with a scale of 10mV for each unit of potassium conductance.
+

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=simbuild
+Exec=/usr/local/bin/simbuild
+Icon=/usr/local/share/usfsim/simbuild.png
+Terminal=false
