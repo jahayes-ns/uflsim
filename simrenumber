@@ -1,0 +1,12 @@
+#!/usr/bin/perl -i.orig
+
+while (<>) {
+    @fld = split;
+    if (@fld == 4) {
+        printf "%d %s %s %s\n", $num++, @fld[1..3];
+    }
+    else {
+        $num = 0;
+        print;
+    }
+}

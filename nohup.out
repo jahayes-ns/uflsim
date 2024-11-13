@@ -1,0 +1,20 @@
+SIMRUN version 1.0.34
+SIMRUN: Got simbuild port: 37289
+SIMRUN: simbuild connection host: localhost port: 37289
+SIMRUN: Connected to simbuild.
+SIMRUN: Connect port is 43409
+SIMVIEWER: launch 0 simbuild port 0
+Got script, 66 bytes
+Got sim, 2035 bytes
+Got snd, 42117 bytes
+Got the essentials
+Reading script
+Using direct connect image
+SIMRUN: Building network. . .
+0 connections
+sample cell seed: 1665541057
+network built, running sim
+Got script
+Lung model is not used
+simloop exited
+simloop function returning

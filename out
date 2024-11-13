@@ -1,0 +1,13 @@
+g++ -DPACKAGE_NAME=\"usfsim\" -DPACKAGE_TARNAME=\"usfsim\" -DPACKAGE_VERSION=\"1.0.34\" -DPACKAGE_STRING=\"usfsim\ 1.0.34\" -DPACKAGE_BUGREPORT=\"dshuman@usf.edu\" -DPACKAGE_URL=\"\" -DPACKAGE=\"usfsim\" -DVERSION=\"1.0.34\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_WCHAR_H=1 -DSTDC_HEADERS=1 -D_ALL_SOURCE=1 -D_DARWIN_C_SOURCE=1 -D_GNU_SOURCE=1 -D_HPUX_ALT_XOPEN_SOCKET_API=1 -D_NETBSD_SOURCE=1 -D_OPENBSD_SOURCE=1 -D_POSIX_PTHREAD_SEMANTICS=1 -D__STDC_WANT_IEC_60559_ATTRIBS_EXT__=1 -D__STDC_WANT_IEC_60559_BFP_EXT__=1 -D__STDC_WANT_IEC_60559_DFP_EXT__=1 -D__STDC_WANT_IEC_60559_FUNCS_EXT__=1 -D__STDC_WANT_IEC_60559_TYPES_EXT__=1 -D__STDC_WANT_LIB_EXT2__=1 -D__STDC_WANT_MATH_SPEC_FUNCS__=1 -D_TANDEM_SOURCE=1 -D__EXTENSIONS__=1 -DHAVE_LIBJUDY=1 -DHAVE_FLOAT_H=1 -DHAVE_LIMITS_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_UNISTD_H=1 -DHAVE__USR_INCLUDE_MALLOC_H=1 -DSIZEOF_SIZE_T=8 -DHAVE_STRCHR=1 -DHAVE_ARGP_PARSE=1 -I.  -O2 -DVERSION=\"1.0.34\" -I/usr/include/x86_64-linux-gnu/qt5/QtNetwork -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I/usr/include/x86_64-linux-gnu/qt5  -O2 -Wall -std=c++17 -fPIC -Wno-unused-value -Wno-unused-result -Wno-deprecated-copy  -MT sim_impl.o -MD -MP -MF .deps/sim_impl.Tpo -c -o sim_impl.o sim_impl.cpp
+sim_impl.cpp: In member function ‘void SimWin::saveSim(const QString*)’:
+sim_impl.cpp:665:21: error: ‘filename’ was not declared in this scope; did you mean ‘fileName’?
+  665 |    QString *fName = filename;
+      |                     ^~~~~~~~
+      |                     fileName
+sim_impl.cpp:688:14: error: request for member ‘length’ in ‘fName’, which is of pointer type ‘QString*’ (maybe you meant to use ‘->’ ?)
+  688 |    if (fName.length())
+      |              ^~~~~~
+sim_impl.cpp:690:7: error: ‘info’ was not declared in this scope
+  690 |       info.setFile(fName);  // make sure a .sim extension
+      |       ^~~~
+make: *** [Makefile:1119: sim_impl.o] Error 1
