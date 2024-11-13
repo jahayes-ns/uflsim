@@ -1,0 +1,56 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#DH_VERBOSE = 1
+
+# see EXAMPLES in dpkg-buildflags(1) and read /usr/share/dpkg/*
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
+
+# see FEATURE AREAS in dpkg-buildflags(1)
+#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+# see ENVIRONMENT in dpkg-buildflags(1)
+# package maintainers to append CFLAGS
+#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
+# package maintainers to append LDFLAGS
+#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+
+
+# main packaging script based on dh7 syntax
+%:
+	dh $@
+
+#this is where things get installed.  The default is /usr 
+override_dh_auto_configure:
+	dh_auto_configure -- --prefix=/usr/local --disable-option-checking
+
+# this complains and causes an error that stops things, 
+# we don't need it, so do nothing 
+override_dh_usrlocal:
+
+# on the lab build system, the mxe qt version is later than the
+# linux one. The test check: target in the makefile tries to 
+# rebuild the moc*.cpp files, but since the mxe moc program
+# runs last and builds them again, linux cannot compile the new versions with
+# old version of moc mostly because the .h files are different.  One solution,
+# don't run the test target, it doesn't help us
+override_dh_auto_test:
+
+# sometimes weird race conditions with parallel builds. We'll wait.
+override_dh_auto_build:
+	make -j1
+
+
+# debmake generated override targets
+# This is example for Cmake (See http://bugs.debian.org/641051 )
+#override_dh_auto_configure:
+#	dh_auto_configure -- \
+#	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
+
+
+
+
+
+
+

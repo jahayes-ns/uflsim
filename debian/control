@@ -1,0 +1,60 @@
+Source: usfsim
+Section: local
+Priority: extra
+Maintainer: Dale Shuman <dshuman@usf.edu>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev,
+ locales,
+ libdpkg-perl,
+ debhelper,
+ perl-modules,
+ dpkg-dev,
+ liblocale-gettext-perl,
+ perl,
+ libsigsegv2,
+ x11proto-core-dev,
+ gawk,
+ libjudydebian1,
+ mime-support,
+ libx11-dev,
+ libfftw3-single3,
+ libxmu-dev,
+ libxt-dev,
+ libsm-dev,
+ libice-dev,
+ libc6-dev,
+ libjudy-dev,
+ libfftw3-dev,
+ libmuparser-dev,
+ gperf,
+ libgsl-dev,
+ latexmk,
+ qtbase5-dev,
+ qtcreator,
+ qt5-doc,
+ qt5-doc-html,
+ pkg-config,
+ libreadline8,
+ local-son64,
+ xindy
+Standards-Version: 4.2.1
+Homepage: cisc3
+
+Package: usfsim
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, gv, xindy
+Suggests: dos2unix
+Description: neural simulator
+ This program is a re-implementation of Ronald J. MacGregor’s SYSTM11
+ simulator as documented in his 1987 book Neural and Brain Modeling,
+ together with the NEWSNED network editor and the SNEDSKOP waveform
+ display program.  NEWSNED enables the user to generate the network
+ model with a graphical display of the cell populations and the
+ synaptic connections, and to launch the simulator.  SNEDSKOP displays
+ the simulation results, which are also available as a .bdt file.  The
+ simulator also includes a mechanical model of the respiratory system,
+ which can be integrated with the neural model.
+ The usfsim package is an upgrade of the USF simulator package. The Motif-based
+ user interface was replaced with the Qt framework. The workflow has also been
+ completely overhauled. Some rarely used features of the simulator package have
+ been removed.
+ 
