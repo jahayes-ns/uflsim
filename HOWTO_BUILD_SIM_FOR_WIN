@@ -1,0 +1,146 @@
+
+Fri 01 Nov 2019 02:34:16 PM EDT
+We use the MXE cross-compile environment to build a version of brainstem 
+or the simulator that will run on windows.  
+
+(1) Get MXE
+Decide where to put it.  /opt is a good choice.
+You need write permission in /opt. Type this:
+
+cd /opt
+git clone https://github.com/mxe/mxe.git
+
+[added]
+to update to current versions, clone won't work. 
+cd to the /opt/mxe directory and type this:
+
+git pull origin master
+
+In both cases, git may complain that a package it depends on 
+(such as lzip) is not installed. Someone with root access will have 
+to install missing packages.
+
+
+Tue Oct 19 04:13:00 PM EDT 2021
+the cmake build failed for qtbase because qt5-style-plugins was not installed.
+the build did not complain about this. Installing it fixed the build and
+qtbase was installed okay.
+
+(2) Build MXE and install packages we need
+To build for creating 64-bit executables, type this:
+
+cd /opt/mxe 
+make MXE_TARGETS=x86_64-w64-mingw32.static qtbase
+make MXE_TARGETS=x86_64-w64-mingw32.static gsl
+make MXE_TARGETS=x86_64-w64-mingw32.static fftw
+make MXE_TARGETS=x86_64-w64-mingw32.static libgnurx
+
+One of the above now pulls in boost, can skip this
+but no harm in running it
+make MXE_TARGETS=x86_64-w64-mingw32.static boost
+
+run make_muparser.sh (see below for more)
+in the local_libson directory, run:
+make setupMXE
+
+Note: If you just type make, it makes EVERYTHING in MXE. Lots of stuff
+we do not need. Might take days.
+
+If you make qt instead of qtbase, quite a lot more gets built.
+You can pick what subsets to build if you want.
+
+In any case, the above will take a while since many dependencies will be
+installed.
+
+Tue Oct 19 04:13:00 PM EDT 2021
+the cmake build failed for qtbase because qt5-style-plugins was not installed.
+
+(2A) Uprgrading
+When I built a Windows .dll so I could build a Windows version of edt2spike2,
+I discovered that the default gcc compiler version (5.5.0) does not support c++14 
+or later features. To update to gcc 8 is complicated. Some of this may be useful:
+
+in the /opt/mxe (or wherever) dir:
+
+make check-update-package-gcc
+This may indicate an update is available. If so:
+
+make update-package-gcc
+
+This just downloads sources.
+
+In /opt/mxe/src, edit gcc-1-fixes.patch and go down to where you find this:
+
+diff --git a/libcpp/lex.c b/libcpp/lex.c
+index 1111111..2222222 100644
+--- a/libcpp/lex.c   2015-04-06 10:01:50.000000000 -0700
++++ b/libcpp/lex.c   2018-10-13 18:55:33.693558942 -0700
+@@ -550,7 +550,7 @@
+     {
+       vc m_nl, m_cr, m_bs, m_qm;
+
+-      data = *((const vc *)s);
++      data = __builtin_vec_vsx_ld (0, s);
+       s += 16;
+
+ADDED Oct 20201
+With v 11 of gcc, there are a lot of things in the patch
+file that fail. I commented them out 1 by 1 until I got a clean
+build. In the future, after installing mxe, 
+copy gcc-1-fixes.patch.works.with.gcc11 to /opt/mxe/src/gcc-1-fixes.patch
+
+Then, the install failed. I had to do this:
+
+mkdir -p /opt/mxe/usr/x86_64-pc-linux-gnu/include/mingw/include
+mkdir -p /opt/mxe/usr/x86_64-pc-linux-gnu/include/mingw/lib
+
+
+(3) COMPLICATTIONS
+The muparser package has a problem building a static library because it only
+builds the C binding code when building a DLL (shared library). We have to override
+a couple of defines to get it to build a static lib that includes the C
+binding code.  Save the next lines to make_muparser.sh and make it executable,
+then run it in the /opt/mxe dir to possibly download and then build the muparser package.
+
+#!/bin/bash
+export MAKEFLAGS="CXXFLAGS+=-DMUPARSER_DLL CXXFLAGS+=-DMUPARSERLIB_EXPORTS"
+make MXE_TARGETS=x86_64-w64-mingw32.static muparser
+export MAKEFLAGS=
+
+Unfortunately, when we #include the MuParserDLL.h file, it selects function
+names are that the import names. It is expected that there is a
+libmuparser.dll. that maps the import names to the export names. This is only
+built if you build a shared library. What a mess. What we do in the code is
+this:
+
+if defined WIN32
+#undef _UNICODE             // gets set on win builds, but not when lib was built.
+#define MUPARSERLIB_EXPORTS // to get unmangled muparser names
+#endif
+#include muParserDLL.h
+
+(4) Set up path to mxe executables
+Add this to your .bashrc file, or the .rc file for your shell of choice.
+export PATH=/opt/mxe/usr/bin:$PATH
+
+(5) SIMRUN needs the CED spike2 .smr file code. To avoid having a .dll file, we
+use static linking. Unfortunately, the CED code is part of the daq2spike2
+package. So, the makefiles here have been modified to provide a path the the .h
+and libson64.a file that we need to build a static program. This is UGLY UGLY
+UGLY. Unfortunately, the CED files use relative paths to the include files. We
+either have an ugly dependency OR we rewrite some of the CED .c, .ccp, and .h
+files to flatten everything out so we could copy the .h and .a files to the
+/opt/MXE area. The solution is to embrace the ugly and leave the CED files
+alone. This package depends on daq2spike2, you just have to have it, so there.
+
+(6) Create the Makefiles
+The Makefile.am has instructions for building the Makefiles for win builds.
+These should be automatically built if there are changes to their dependencies.
+
+(7) Build the programs
+   make 
+   You can make just one target, e.g.
+   make simbuild
+   make simrun.exe
+
+

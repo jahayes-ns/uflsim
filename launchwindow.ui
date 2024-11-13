@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>launchWindow</class>
+ <widget class="QDialog" name="launchWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1908</width>
+    <height>1004</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Simulator Launcher Control</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="simbuild.qrc">
+    <normaloff>:/simbuild.png</normaloff>:/simbuild.png</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="3,14">
+   <item>
+    <widget class="QFrame" name="launchTopFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="launchCopyToNextButton">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>231</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Copy Values To Next Launch Slot</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="launchNum">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>231</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="prefix">
+       <string>Launch #</string>
+      </property>
+      <property name="maximum">
+       <number>20</number>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="lungCheck">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>77</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Baby Lung</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="condiCheck">
+      <property name="geometry">
+       <rect>
+        <x>109</x>
+        <y>77</y>
+        <width>141</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Create Condi File</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="launchKill">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>60</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kill Current Launch #</string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="autoPause">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>60</y>
+        <width>160</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Pause the simulation of this many seconds of simulation time has elapsed.&lt;/p&gt;&lt;p&gt;You can increase this during the pause to have the simulation pause again later.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::UpDownArrows</enum>
+      </property>
+      <property name="specialValueText">
+       <string>No Auto Pause</string>
+      </property>
+      <property name="suffix">
+       <string> secs </string>
+      </property>
+      <property name="prefix">
+       <string>Pause after </string>
+      </property>
+      <property name="minimum">
+       <number>0</number>
+      </property>
+      <property name="singleStep">
+       <number>1</number>
+      </property>
+      <property name="value">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="launchButton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>10</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Launch Simulator</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pauseResume">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>10</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Pause</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="midRunUpdateButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>10</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>Mid-Run Update</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="launchCancel">
+      <property name="geometry">
+       <rect>
+        <x>815</x>
+        <y>10</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>This closed this window. It does not stop the simulation.</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: darkred;
+font-style:bold
+</string>
+      </property>
+      <property name="text">
+       <string>Close Window</string>
+      </property>
+     </widget>
+     <zorder>launchNum</zorder>
+     <zorder>launchCopyToNextButton</zorder>
+     <zorder>lungCheck</zorder>
+     <zorder>condiCheck</zorder>
+     <zorder>launchKill</zorder>
+     <zorder>autoPause</zorder>
+     <zorder>launchButton</zorder>
+     <zorder>pauseResume</zorder>
+     <zorder>midRunUpdateButton</zorder>
+     <zorder>launchCancel</zorder>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="launchMiddleFrame">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,4,9">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="launchBDTFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="6,24">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="bdtTopFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <widget class="QPushButton" name="bdtDelSelected">
+            <property name="geometry">
+             <rect>
+              <x>238</x>
+              <y>10</y>
+              <width>150</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Delete Selected Row</string>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="selLaunchBdt">
+            <property name="geometry">
+             <rect>
+              <x>4</x>
+              <y>6</y>
+              <width>221</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Create a bdt file. This will use a step time value of 0.5 milliseconds and ignore the value in the global step size.</string>
+            </property>
+            <property name="text">
+             <string>Create bdt File</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="selLaunchSmr">
+            <property name="geometry">
+             <rect>
+              <x>4</x>
+              <y>30</y>
+              <width>221</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create an smr file. This is a file that the spike2 program can read. This is a product of Cambridge Electronic Design Limited.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Create smr File</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="bdtBotFrame">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTableView" name="launchBdtList">
+              <property name="editTriggers">
+               <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::InternalMove</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>false</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="launchAnalogFrame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <widget class="QCheckBox" name="selLaunchAnalog">
+         <property name="geometry">
+          <rect>
+           <x>23</x>
+           <y>6</y>
+           <width>211</width>
+           <height>46</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Add analog entries to the .bdt/.edt file. Note, if you do not create a .bdt/.edt file, the analog entries will not be saved.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="text">
+          <string>Create Analog Entries
+In bdt and smr Files</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="analogId">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>90</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>3</number>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="analogIntTime">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>150</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string/>
+         </property>
+         <property name="decimals">
+          <number>4</number>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>40.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="analogRate">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>91</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>1001</number>
+         </property>
+         <property name="value">
+          <number>200</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="analogCellPop">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>90</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="analogScale">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>150</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>4</number>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.025000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="analogIdLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>70</y>
+           <width>64</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Analog ID</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="analogCellPopLabel">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>70</y>
+           <width>101</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Cell Population #</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="analogRateLabel">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>70</y>
+           <width>81</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Rate</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="analogIntTimeLabel">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>128</y>
+           <width>171</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Integration Time K (ms)</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="analogScaleLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>130</y>
+           <width>111</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Scaling Factor</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period1StartLabel">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>240</y>
+           <width>81</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period1CodeLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>212</y>
+           <width>101</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Period One
+
+Marker Code</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period1Code">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>260</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will add this marker code at the start and end times selected below to the BDT/EDT file. This is optional and a code of zero will result in no code added.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="value">
+          <number>51</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period1Start">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>260</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> ms</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>7200000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period1End">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>260</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> ms</string>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>7200000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period1EndLabel">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>240</y>
+           <width>81</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>End</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period2Code">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>366</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This will add this marker code at the start and end times selected below to the BDT/EDT file. This is optional and a code of zero will result in no code added.&lt;/p&gt;&lt;p&gt;The times for this code should be after the times for the first period markers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="value">
+          <number>57</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period2CodeLabel">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>320</y>
+           <width>101</width>
+           <height>40</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Period Two
+
+Marker Code</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period2Start">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>366</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> ms</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>7200000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="period2End">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>366</y>
+           <width>90</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="suffix">
+          <string> ms</string>
+         </property>
+         <property name="prefix">
+          <string/>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>7200000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period2EndLabel">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>347</y>
+           <width>61</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>End</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="period2StartLabel">
+         <property name="geometry">
+          <rect>
+           <x>132</x>
+           <y>347</y>
+           <width>61</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_title">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>420</y>
+           <width>291</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>I E Pulse Smoothing Parameters</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_label3">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>450</y>
+           <width>171</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Critical Slope Plus</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_label2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>509</y>
+           <width>141</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Sample array size</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="ie_plus">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>470</y>
+           <width>80</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to determine I locations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-50000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>50000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="ie_smooth">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>470</y>
+           <width>80</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the analog signal more or less looks like a phrenic signal, this is the size of the smoothing array used to determine where I and E markers are added to a .bdt file.&lt;/p&gt;&lt;p&gt;If this is zero, the I and E processing is not performed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>100000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_label1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>450</y>
+           <width>151</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Smoothing Array Size</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="ie_minus">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>530</y>
+           <width>80</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Used to determine E locations.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-50000.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>50000.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="ie_freq">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>590</y>
+           <width>80</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The frequency used to determine the number of ticks between analog events.  If this is zero, the I and E processing is not performed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="maximum">
+          <number>100000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_label5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>570</y>
+           <width>131</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Frequency</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="ie_label4">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>509</y>
+           <width>131</width>
+           <height>17</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Critical Slope Minus</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="ie_sample">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>530</y>
+           <width>80</width>
+           <height>26</height>
+          </rect>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This the size of the interval that is examined for I and E locations. &lt;/p&gt;&lt;p&gt;If this zero, the I and E processing is not performed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="minimum">
+          <number>0</number>
+         </property>
+         <property name="maximum">
+          <number>100000</number>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="launchSnedFrame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2" stretch="6,24">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="snedTopFrame">
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <widget class="QRadioButton" name="selLaunchPlot">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>280</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select this option If you want to review the result of a simulation later. The simrun program will create a set of wave files. These will be displayed during the simulation and can be viewed at a later time by the simviewer program.&lt;/p&gt;&lt;p&gt;Select Send Plot Data Directly To Simviewer if you do not want to create wave files. This avoids creating a lot of files on your disk and is a bit faster.&lt;/p&gt;&lt;p&gt;Only one of these can be selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Save Plot Data To Files</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="launchDelSelected">
+            <property name="geometry">
+             <rect>
+              <x>300</x>
+              <y>10</y>
+              <width>160</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Delete Selected Row</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="launchAddLung">
+            <property name="geometry">
+             <rect>
+              <x>475</x>
+              <y>10</y>
+              <width>160</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Add Lung Plot</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="selLaunchPlotSocket">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>6</y>
+              <width>280</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select this option if you do not want to save the simulation result in wave files. If this option is selected, the simrun program will send the simulation results directly to the simviewer program.&lt;/p&gt;&lt;p&gt;Select &amp;quot;Optionally Save Plot Data To Files&amp;quot; if you want to examine the plotting data later.&lt;/p&gt;&lt;p&gt;Only one of these can be selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Send Plot Data Directly To Simviewer</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="hostNameLabel">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>655</x>
+              <y>10</y>
+              <width>171</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The simulation typically runs on the same computer as the builder and viewer programs. In such a case, leave this blank. If you have install simrun on another computer, enter the host name of that computer here. It can a symbolic name or an ip address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>SIMRUN Host Name</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="launcherHostName">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>650</x>
+              <y>30</y>
+              <width>191</width>
+              <height>25</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The simulation typically runs on the same computer as the builder and viewer programs. Leave this blank if that is the case.&lt;/p&gt;&lt;p&gt;If you have install simrun on another computer, enter the host name of that computer here. It can a symbolic name or an ip address.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>THIS IS NOT DISPLAYED</string>
+            </property>
+            <property name="maxLength">
+             <number>64</number>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="selLaunchNoPlot">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>54</y>
+              <width>280</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select this option if you do not want to save the simulation result in wave files. If this option is selected, the simrun program will send the simulation results directly to the simviewer program.&lt;/p&gt;&lt;p&gt;Select &amp;quot;Optionally Save Plot Data To Files&amp;quot; if you want to examine the plotting data later.&lt;/p&gt;&lt;p&gt;Only one of these can be selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Do Not Generate Plot Data</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+           <widget class="QCheckBox" name="selLaunchSmrWave">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>80</y>
+              <width>221</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Create an smr file that contains the waveform values that are shown in simviewer. This is a file that the spike2 program can read.&lt;/p&gt;&lt;p&gt;This is independent of the choices above. If you select this and select Do Not Generate Plot Data, the smr file will still be created.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Create smr Waveform File</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="launchSnedBotFrame">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Plain</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTableView" name="launchPlotView">
+              <property name="editTriggers">
+               <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed</set>
+              </property>
+              <property name="dragEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="dragDropOverwriteMode">
+               <bool>false</bool>
+              </property>
+              <property name="dragDropMode">
+               <enum>QAbstractItemView::InternalMove</enum>
+              </property>
+              <property name="defaultDropAction">
+               <enum>Qt::MoveAction</enum>
+              </property>
+              <property name="alternatingRowColors">
+               <bool>true</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::SingleSelection</enum>
+              </property>
+              <property name="selectionBehavior">
+               <enum>QAbstractItemView::SelectRows</enum>
+              </property>
+              <property name="sortingEnabled">
+               <bool>true</bool>
+              </property>
+              <property name="cornerButtonEnabled">
+               <bool>false</bool>
+              </property>
+              <attribute name="horizontalHeaderHighlightSections">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="verticalHeaderHighlightSections">
+               <bool>true</bool>
+              </attribute>
+              <attribute name="verticalHeaderStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>launchNum</tabstop>
+  <tabstop>launchCopyToNextButton</tabstop>
+  <tabstop>lungCheck</tabstop>
+  <tabstop>condiCheck</tabstop>
+  <tabstop>launchButton</tabstop>
+  <tabstop>launchKill</tabstop>
+  <tabstop>midRunUpdateButton</tabstop>
+  <tabstop>pauseResume</tabstop>
+  <tabstop>autoPause</tabstop>
+  <tabstop>launchCancel</tabstop>
+  <tabstop>selLaunchBdt</tabstop>
+  <tabstop>selLaunchSmr</tabstop>
+  <tabstop>bdtDelSelected</tabstop>
+  <tabstop>launchBdtList</tabstop>
+  <tabstop>selLaunchAnalog</tabstop>
+  <tabstop>analogId</tabstop>
+  <tabstop>analogCellPop</tabstop>
+  <tabstop>analogRate</tabstop>
+  <tabstop>analogScale</tabstop>
+  <tabstop>analogIntTime</tabstop>
+  <tabstop>period1Code</tabstop>
+  <tabstop>period1Start</tabstop>
+  <tabstop>period1End</tabstop>
+  <tabstop>period2Code</tabstop>
+  <tabstop>period2Start</tabstop>
+  <tabstop>period2End</tabstop>
+  <tabstop>selLaunchPlotSocket</tabstop>
+  <tabstop>selLaunchPlot</tabstop>
+  <tabstop>selLaunchNoPlot</tabstop>
+  <tabstop>selLaunchSmrWave</tabstop>
+  <tabstop>launchDelSelected</tabstop>
+  <tabstop>launchPlotView</tabstop>
+  <tabstop>launchAddLung</tabstop>
+  <tabstop>launcherHostName</tabstop>
+ </tabstops>
+ <resources>
+  <include location="simbuild.qrc"/>
+ </resources>
+ <connections/>
+</ui>

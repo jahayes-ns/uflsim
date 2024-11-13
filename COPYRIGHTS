@@ -1,0 +1,16 @@
+
+The USF Neural software uses Qt 5.12, which is
+Copyright: 2016 (C) The Qt Company Ltd.
+Contact: https://www.qt.io/licensing/
+License: GPL-3
+
+Source for this will be provided upon request.
+
+
+The USF Neural software uses the SON data library, which is
+Copyright (C) Cambridge Electronic Design Limited 2012-2019
+Web: ced.co.uk
+License: GPL-3
+
+Source for this will be provided upon request.
+

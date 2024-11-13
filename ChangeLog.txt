@@ -1,0 +1,49 @@
+
+***************************************************
+Mon November 28 2022 04:47:26 pm
+File: /home/coughguy/src/usfsim-1.0.34/example_modelWIN.snd
+Current Launch Number: 0
+Changed fiber population 1 time to begin firing from 10000000 to 5000000.
+Changed fiber population 1 time to end firing from 10000000 to 5000000.
+Changed fiber population 2 time to begin firing from 10000000 to 5000000.
+Changed fiber population 2 time to end firing from 10000000 to 5000000.
+Changed fiber population 3 time to begin firing from 10000000 to 5000000.
+Changed fiber population 3 time to end firing from 10000000 to 5000000.
+Changed fiber population 4 time to begin firing from 10000000 to 5000000.
+Changed fiber population 4 time to end firing from 10000000 to 5000000.
+Changed fiber population 5 time to begin firing from 10000000 to 5000000.
+Changed fiber population 5 time to end firing from 10000000 to 5000000.
+Changed fiber population 7 time to begin firing from 240000 to 120000.
+Changed fiber population 7 time to end firing from 360000 to 180000.
+Changed fiber population 8 time to begin firing from 1000000 to 500000.
+Changed fiber population 8 time to end firing from 1000000 to 500000.
+Changed fiber population 9 time to begin firing from 1000000 to 500000.
+Changed fiber population 9 time to end firing from 1000000 to 500000.
+Changed fiber population 10 time to begin firing from 10000000 to 5000000.
+Changed fiber population 10 time to end firing from 10000000 to 5000000.
+Changed fiber population 11 time to begin firing from 10000000 to 5000000.
+Changed fiber population 11 time to end firing from 10000000 to 5000000.
+
+***************************************************
+Fri December 09 2022 11:54:12 am
+File: /home/coughguy/src/usfsim-1.0.34/Control.snd
+No changes detected.
+Note: Changes to Launcher window are not currently checked for.
+
+***************************************************
+Mon April 03 2023 02:03:59 pm
+Change log file created.
+File: /home/hayesjohn/src/usfsim-1.0.34/test.snd
+
+***************************************************
+Mon April 03 2023 02:04:43 pm
+File: /home/hayesjohn/src/usfsim-1.0.34/test.snd
+Current Launch Number: 0
+Simulation length changed from 12 seconds to 60 seconds.
+
+***************************************************
+Mon April 03 2023 02:13:33 pm
+File: /home/hayesjohn/src/usfsim-1.0.34/test.snd
+Current Launch Number: 0
+Added Cell Population 1, Comment is: I-DEC.
+Changed cell population 2 to cell target 1 added.

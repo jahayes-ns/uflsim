@@ -1,0 +1,8 @@
+Simulation_length:
+24000
+Potasium_eq_potential:
+-10.0
+Max_cond_time_plus_one:
+5
+Step_size:
+0.5000

@@ -1,0 +1,4 @@
+From Dale's email 10/12/22: 
+
+If you want to debug this or just step through the code, change the DEBUG_OR_NOT variable to --gdb3. You'll need to do a make clean, then make lin, to generate the debug info. You can use qtcreator as the GUI front end for debugging.
+

@@ -1,0 +1,2774 @@
+2021-10-14  dshuman@usf.edu
+
+	* simmain.cpp: fix bug, was looking for an argument for -d, but there isn't
+	one, so program crashes.
+
+2021-09-27  dshuman@usf.edu
+
+	* sim_impl.cpp: Replace deprecated Qt functions and enums with stuff that
+	compiles without warnings. No functional changes.
+	* simviewer_impl.cpp: Ditto.
+
+2020-11-30  dshuman@usf.edu
+
+	* usfsim.tex: Update to include new features.
+	* configure.ac: Bump to 1.0.32. Also remove support for web assembly. 
+	Never really worked in browser.
+
+2020-11-24  dshuman@usf.edu
+
+	* add_IandE.cpp: fix bug where if a time gap in input file, never moved
+	along the data set, resulting in infinite loop.
+
+2020-11-20  dshuman@usf.edu
+
+	* simloop.c: Add the afferent signal offset to the wave. The type field is
+	not used for this type. This lets simviewer display correct values for the
+	waveform.
+	* simviewer_impl.cpp: Some cosmetic mods to afferent signals. Pick up the
+	offset from the wave file to display the accurate value of the waverform.
+
+2020-11-18  dshuman@usf.edu
+
+	* sim_impl.cpp: Add in recent file list to the Files menu.
+
+2020-11-03  dshuman@usf.edu
+
+	* add_IandE.cpp: Creates I and I markers and optionally period markers and
+	merges them and the spawn?.bdt/edt file into a second bdt/edt file.
+	* launchwindow.ui: add period marker support to analog panel
+	* simloop.c: Add support for adding I and E and other makers.
+	* usfsim.tex: Update to include description of the I and E markers.
+	* configure.ac: Bump to 1.0.31.
+
+2020-10-16  dshuman@usf.edu
+
+	* sim2build.cpp: Fix minor bug where pre-v6 files did not get the fiber
+	subpop type set, and also fiber start/stop times not adjusted.
+
+2020-10-06  dshuman@usf.edu
+
+	* simrun_wrap.cpp: Fix bug that would show itself if the first chan in an
+	afferent input file was not the first ADC chan.
+
+2020-09-24  dshuman@usf.edu
+
+	* simloop.c: Address performance issue where a lot of unneccessary
+	processing for hebbian learning was done when it not needed.
+	* sim2build.cpp: ditto
+	* configure.ac: Bump to 1.0.30
+
+2020-08-27  dshuman@usf.edu
+
+	* configure.ac: Bump to 1.0.29. Time to release.
+
+2020-08-26  dshuman@usf.edu
+
+	* node_mgr.c: Add in function to remove targets from fibers/cells when the
+	target cell has been deleted. Had orphan targets with connectors to
+	nowhere.
+	* usfsim.tex: Add in support for learning synapses.
+
+2020-08-14  dshuman@usf.edu
+
+	* launch_model.cpp: The drag and drop was broken. Rows were copied to the
+	drop location, not moved. Fix was to set the select property to rows, not
+	items. No idea when it changed.
+	* simviewer_impl.cpp: minor bug, fiber # in plot view was always 1, pick up
+	from correct var.
+	* simloop.c: minor bug, check to see if cell or fiber population in plot
+	list exists and provide 0 as data if not.
+	* simloop.c: The first cut as using the plasticity neuron type. 
+
+
+2020-08-10  dshuman@usf.edu
+
+	* sim.c: Check for failure to open script file and fail gracefully.
+
+2020-08-06  dshuman@usf.edu
+
+	* inode.h: Begin adding in learning synapes, Hebbian learning algorithm at
+	first, but going to keep things general in case we use a different algo.
+i 
+
+2020-06-26  dshuman@usf.edu
+
+	* sim2build.cpp: Fix bug in adjusting time in v5 and older v6 files. Test
+	was wrong way. Results in sim time of 0, which means forever.
+
+2020-06-24  dshuman@usf.edu
+
+	* sim_impl.cpp: add stylesheet for the scroll area scrollbars so they won't
+	be confused with the drawing area's.
+	* configure.ac: bump to 1.0.28.
+
+2020-06-19  dshuman@usf.edu
+
+	* launch_impl.cpp: fix lingering problem of the main DB and the plot Db
+	getting out of sync. Changing the fiber type requires changes to the info
+	in the plot view table, or else we wind up indexing to things that do not
+	exist. I don't think this happens with the cells, they all get the same
+	list of plot types.
+	* launch_model.cpp: Put in a check for index into combo box out of bounds,
+	related to the above work.
+
+2020-06-10  dshuman@usf.edu
+
+	* usfsim.tex: Update to include afferent signal documentation.
+
+2020-06-08  dshuman@usf.edu
+
+	* chglog.cpp: addin afferent fiber type change checking.
+	* launch_impl.cpp: change where in close sequence settings are saved. If
+	the OS kills the program, settings could be saved for windows that no
+	longer exist.
+	* simviewer.cpp: ditto
+	* simwin.cpp: ditto
+	* launch_impl.cpp: Pass debug flag to simrun so we can control debug from
+	gui, not just cmd line.
+
+2020-05-21  dshuman@usf.edu
+
+	* simscene.cpp: Add in support for afferent fiber pop type.
+	* simwin.h: ditto.
+	* simwin.cpp: ditto.
+	* simnodes.cpp: ditto. 
+	* simnodes.h: ditto.
+	* sim2build.cpp: ditto.
+	* sim2build.cpp: ditto.
+	* simulator.h: ditto.
+	* build_network.c: ditto.
+	* simloop.c: ditto.
+
+2020-05-11  dshuman@usf.edu
+
+	* sample_cells.c: handle pathological case of an model with, e.g., just one
+	fiber population in it. simrun assumes there is at least one connection. If
+	not, some ptrs are null.
+	* simwin.ui: Tighten the cell param controls so the bottom panel can be
+	seen oin lower-res monitors. It is a bit tight, but at least you can usually
+	see the controls.
+
+2020-05-08  dshuman@usf.edu
+
+	* launch_impl.cpp: fix bug in unlinking files in Windows. If the file does
+	not exit, the delete returns an error we can safely ignore. If an access
+	error, another app has it open or there are permission problems.
+	* launch_impl.cpp: was a path through creating the script?.txt file where
+	two required lines could be left out. Many combinations.
+
+
+2020-05-06  dshuman@usf.edu
+
+	* simscene.cpp: Enable/disable sendto buttons if the fiber or cell has been
+	changed. If you don't apply, what you see is not what gets sent to the
+	launcher tables. Save the changes, then send them.
+	* simscene.cpp: If a fiber pop is changed to estim and the pop is in the
+	bdt and/or pop launcher table and if none of the members are 1, change one
+	to 1. Otherwise, no events will occur because there is only 1 member in an
+	estim pop. Mods to support his.
+	* launch_impl.cpp:  ditto.
+	* configure.ac: bump up to rev 1.0.26
+
+2020-05-01  dshuman@usf.edu
+
+	* simwin.ui: moved the undo and apply buttons from bottom to top. In
+	lower-res monitors, the bottom buttons are sometimes completely hidden. We
+	have more horizontal room than vertical. People will have to relearn.
+	* launchwindow.ui: resize the control regions above the tables. In lower
+	res monitors, sometimes the bottom portion of the controls are cut off.
+
+2020-04-30  dshuman@usf.edu
+
+	* simviewer_impl.cpp: Add fiber pop comment/name to the plot row text
+	instead of always just "Events". Also make the fit-to-screen function
+	actuall do that.
+	* sim.c: missed a check of the smr_wave flag.
+	* launch_impl.cpp: If no bdt file, no file name saved, so _wave.smr file
+	had random filename. Need at least an N for analog info and bdt file name
+	even if not saving a bdt file.
+
+
+2020-04-24  dshuman@usf.edu
+
+	* simviewer_impl.cpp: discover I was doing some calcs, such as the
+	timelines, as ints when the space they are plotted in are reals. This made
+	the time lines jumpy, not moving 1 pixel at a time.
+
+2020-04-23  dshuman@usf.edu
+
+	* fileio.h: Bump up subversion from 1 to 2. The new version adds some stuff
+	that will break earlier versions.
+	* simscene.cpp: Add in support for sending fiber populations to the plot
+	table and support for generating fiber events, plotting them in simviewer,
+	and writing them to the wave files the spike2 smr files.
+	* launch_impl.cpp: ditto.
+	* launch_model.cpp: ditto.
+	* simviewer.h: ditto.
+	* simviewer.h: ditto.
+	* simviewer_impl.cpp: ditto.
+	* simrun_wrap.cpp: ditto.
+	* configure.ac: Bump 10 1.0.25
+
+2020-04-15  dshuman@usf.edu
+
+	* launch_model.cpp: Mods to support sending fiber pops to the plot table.
+
+2020-03-27  dshuman@usf.edu
+
+	* configure.ac: Bump to version 1.0.24.
+
+2020-03-25  dshuman@usf.edu
+
+	* simrun_wrap.cpp: add in support for saving waveform data to a .smr file.
+	* simloop.c: ditto.
+	* sim.c: ditto.
+
+2020-03-12  dshuman@usf.edu
+
+	* simviewer_impl.cpp: Fix regression when using wave files. After the first
+	file, the check is for executable, not readable, and they are never
+	executable.  An R got replaced with an X. Don't know why, typing error?
+
+2020-02-24  dshuman@usf.edu
+
+	* simviewer_impl.cpp: Make sure there are cell rows to zoom before zooming.
+	Fixes crash on empty canvas.  
+	The raw XY coords are now always visible. 
+	Add in text to explain what top row text is, start/end time, and display
+	difference (which is width of the drawing area.)
+
+
+2020-02-20  dshuman@usf.edu
+
+	* configure.ac: bump to 1.0.23
+	* simviewer_impl.cpp: Add in support for saving model to pdf and for
+	monochrome mode with white background for printing and docs;
+	* simwin.h: ditto
+	* simwin.cpp: ditto
+	* sim_impl.cpp: ditto
+	* sim_impl.cpp: ditto
+	* simnodes.h: ditto
+	* simscene.h: ditto
+	* simscene.cpp: ditto
+	* simnodes.cpp: ditto
+
+2020-02-13  dshuman@usf.edu
+
+	* Makefile.am: Don't add zip files to git repo.
+
+2020-02-12  dshuman@usf.edu
+
+	* simwin.cpp: Added the suggested GPL notice in every file, not just this
+	one. Too many to list.
+
+2020-02-11  dshuman@usf.edu
+
+	* Makefile.am: remove -pg flag, profiling in production code seems
+	undesirable.
+	* configure.ac: Bump to 1.0.22.
+
+2020-02-10  dshuman@usf.edu
+
+	* read_sim.c: 
+	* sample_cells.c: 
+	* lung.c: 
+	* get_cell_coords.c: 
+	* simloop.c: 
+	* fileio.c: add in support to all of these for input and output paths for 
+	simrun. Useful for simcore.
+
+2020-02-07  dshuman@usf.edu
+
+	* sim.c: default to write files if neither file or socket cmd line option
+	set.
+	* launch_model.cpp: Fix bug, when deleting rows from plot and bdt tables, 
+	used == instead of =.
+
+2020-01-16  dshuman@usf.edu
+
+	* configure.ac: Bump to 1.0.21.
+
+2020-01-15  dshuman@usf.edu
+
+	* sim_impl.cpp: Add in check function to see if an incomplete connector is
+	in the drawing. Must complete or delete it before continuing, such as
+	saving, importing group, etc. Otherwise, we wind up with incomplete lines
+	in the drawing that we don't know what to do with, and when you load the
+	.snd file later, you cannot select it, complete it, delete it, etc. Best
+	way to handle errors is not make them.
+	* simscene_export.cpp: Add in call to checking function mentioned above.
+	* simwin.h: add in chkForDrawing method.
+	* simscene.cpp: Fixed bug. When deleting incomplete connectors, need to
+	clear out some of the cell or fiber graphic items vars. There were refs to
+	line objects that no longer exist, next stop, crash city.
+
+2020-01-06  dshuman@usf.edu
+
+	* sim.c: Fixed networking issues. When a socket is closed, buffered packets
+	are discarded. Simulations that run faster than simviewer can display them
+	results in lost results. Mod the networking so simrun sends an EOF packet
+	and then waits for a simviewer handshake before closing the socket.
+	* simloop.c: ditto.
+	* simviewer_impl.cpp: ditto.
+	* wavemarkers.h: Add an EOF value.
+	* wavemarkers.c: ditto.
+	* configure.ac: Bump to version 1.0.20
+
+2019-12-18  dshuman@usf.edu
+
+	* debian/control: add depends on xindy
+	* usfsim.tex: Many mods, editing, bringing up to date, add index.
+	* Makefile.am: Mod to how usfsim.pdf is build from usfsim.tex.
+
+2019-12-12  dshuman@usf.edu
+
+	* simpower_spectrum.sh: Fix bug, intended to use a var for a file name, but
+	the $ was left off. Multiple launch instances would clobber the file. Also
+	remove plotmtv. This is a 20+ year old program that has not been maintained
+	since 1995. Use gnuplot, which is available on both Linux and Windows. 
+
+2019-12-05  dshuman@usf.edu
+
+	* launch_model.h: correct spelling, hybrid, not hibird.
+	* read_sim.c: while updating manual, notice condi files do not use launch
+	num, so multiple invocations will overwrite the condi file. Add in launch
+	num field in fnames, where appropriate, for the output files of simrun.
+
+2019-12-04  dshuman@usf.edu
+
+	* sim_impl.cpp: While updating manual, notice newsned does not save .ols
+	file along with .sim file from File -> save .sim file. simbuild does.
+
+2019-11-25  dshuman@usf.edu
+
+	* launch_impl.cpp: Alter logic where we bail out at the first 0 in
+	population or member for bdt and plot tables. The newsned allowed deletions
+	in the lists by the convention of writing a 0 to one or both of theses
+	fields. Simbuild followed this convention because there are exiting .ols
+	files that used this trick to delete some of the list. The newsned method
+	is very limiting. Simbuild has more generalized editing features. If a
+	users loads a legacy ols file and there are unexpected rows in the table,
+	they are free to really delete them. The motivation to do this is that bugs
+	or operator error sometimes inadvertently "deletes" a big chunk of the
+	table and does not understand why things are not being added to the bdt
+	file or not being plotted. Whew.
+	* launch_model.cpp: alter the error-checking logic while entering
+	population member numbers in the bdt and plot columns. User can enter any
+	crazy thing up to, oh, a million.
+	* launch_impl.cpp: Get the real max pop number when loading a .ols file.
+	Just guessed at it before, which lets the user enter out-of-range values.
+	* configure.ac: Bump to 1.0.19. Time for a new release.
+
+
+2019-11-21  dshuman@usf.edu
+
+	* sim_impl.cpp: Fix bug where toggling Add Axon/Synapse button from on to
+	off state did not change the internal state, so was still in draw-connector
+	mode.
+
+2019-11-12  dshuman@usf.edu
+
+	* launch_model.cpp: Fix bug where some lung model values were being cleared
+	out, which caused everything after the row to fail to plot.
+
+2019-11-01  dshuman@usf.edu
+
+	* c_globals.h: moved currModel from launchwindow to global space, for
+	historical reasons. Need it for the changelog and it's a long way up and
+	back down the parent hierarchy for chglog.cpp to get the current launch number. 
+	* chglog.cpp: Add the current launch number to the output if there are any
+	changes.
+	
+
+2019-10-25  dale@health.usf.edu
+
+	* configure.ac: Bump to 1.0.18. Time to release.
+
+2019-10-24  dale@health.usf.edu
+
+	* read_sim.c: Remove slice support. Nobody ever used this and it
+	complicates the code and the Users Manual.
+	* simloop.c: ditto.
+	* update.c:  ditto.
+	* Makefile.am: remove get_cell_coords, only used for slicing, which nobody
+	has ever done.
+
+2019-10-23  dale@health.usf.edu
+
+	* launch_model.cpp: There was a second place where an infinite loop bug
+	occurred when adding a population that needs a random number when all
+	members of a population have already been added to the bdt table. Don't add
+	the duplicate.
+	* simwin.cpp: Add in Open Release Notes to help menu and code to do that.
+	* README_FOR_WINDOWS: Update for this release.
+	* usfsim.tex: This will eventuall be the User's Manual for this package.
+
+2019-10-16  dale@health.usf.edu
+
+	* simviewer.cpp: Add in auto anti clip scaling, so rows that do not need
+	scaling are left as is. Just scale so plot would not clip. Also notice
+	several settings loaded from settings file do not take effect. Make sure
+	the do now.
+	* simviewer_impl.cpp: Ditto ^^^.
+
+2019-10-15  dale@health.usf.edu
+
+	* simviewer.h: Remove unused constants that are confusing hold-overs from
+	sneddesktop.
+	* simviewer_impl.cpp: Fix problem where the spacing of the vertical red
+	time markers was wrong. Also make it dependent on the stepsize in the .wave
+	packet/file. 
+
+2019-10-11  dale@health.usf.edu
+
+	* build_network.c: Find a very bad bug, a line of code got, in effect,
+	commented out because it was included in a if(Debug){..} block. It is a
+	wonder that it works at all.
+	* c_globals.c: add in array for hostnames. Users will not see this in this
+	verison.
+	* get_cell_coords.c: add in support for in-memory .snd files.
+	* launch_model.cpp: add hostnames to the launch models.
+	* launchwindow.cpp: ditto.
+	* configure.ac: Bump to reve 1.0.17. Build package and release.
+
+2019-10-10  dale@health.usf.edu
+
+	* HOWTO_BUILD_SIM_FOR_WIN: Minor update.
+
+2019-10-07  dale@health.usf.edu
+
+	* selectaxonsyn.cpp: Table sorting was broken, fixed it. Don't see how it
+	ever worked correctly.
+
+2019-10-03  dale@health.usf.edu
+
+	* launch_impl.cpp: mods to support sending the script and sim file directly
+	to simrun over the network connection. No longer use --script flag, but can
+	use it if running simrun is stand-alone mode.
+
+2019-09-27  dale@health.usf.edu
+
+	* simscene.cpp: Fix bug. Was not checking for dirty connector when
+	deselecting the current one. Now prompt to save or undo.
+	* update.c: remove read_sim turbo flag, read_sim does not expect it any
+	more.
+
+2019-09-18  dale@health.usf.edu
+
+	* simviewer_impl.cpp: Add in mouse click handlers to change cursor from
+	arrow to hand when holding down the mouse button.
+
+2019-09-17  dale@health.usf.edu
+
+	* launch_impl.cpp: zero the in-memory launcher arrays, there can be junk in
+	them from edits.
+	* simscene.cpp: on Apply command, update def_cell and def_fiber vars with
+	current values, so next cell/fiber added will pick up the current values.
+
+2019-09-13  dale@health.usf.edu
+
+	* launch_model.cpp: Fix infinite loop bug when adding a population that
+	needs a random number when all members of a population have already been added 
+	to the bdt table. Don't add the duplicate.
+	* launch_impl.cpp: Cosmetic bug, when printing elapsed seconds, change
+	precision of 2 to 4 because anything > 99 seconds was printed in sci
+	notataion.
+	* sim_impl.cpp: Was adding space at end of changelog filename. Added quotes
+	around filename to deal with spaces, so the space is seen as part of file
+	name. Fixed.
+
+2019-09-11  dale@health.usf.edu
+
+	* simwin.cpp: Add feature to make launch window always on top of parent
+	optional. It gets in the way sometimes and is annoying. Particularly
+	annoying in a single monitor system.
+	* simwin.cpp: ditto.
+	* sim_impl.cpp: ditto.
+	* launchwindow.cpp: 
+
+2019-09-10  dale@health.usf.edu
+
+	* simmain.cpp: Set Debug flag earlier because now some parts of the app 
+	tests for it while being created.
+	* launch_impl.cpp: The Q_OS_WINDOWS flag appears to be changed to Q_OS_WIN.
+	Code previously build just for Windows no longer builds. Fixed.
+	* sim_impl.cpp: ditto.
+	* simviewer_impl.cpp: ditto.
+	* configure.ac: Bump to version 1.0.15 for new test release for Windows
+	users.
+	* build_network.c: Fiber start and stop times now in milliseconds, not
+	ticks, so adjust back to ticks.
+
+2019-09-09  dale@health.usf.edu
+
+	* Makefile.am: add in a .snd .ols demo set that is a simple model.
+	* configure.ac: bump to 1.0.14.  This is more or less same as 1.0.13 but
+	with more troublshooting on Windows code.
+	* sim_impl.cpp: some mods to changelog. May just want to look at one if no
+	snd file is loaded. Also, for shelling out to cmd.exe, must switch / to \
+	in path names.
+
+2019-09-06  dale@health.usf.edu
+
+	* configure.ac: bump to version 13. This is an in-progress release that has
+	some diagnostics to help troubleshoot problems on Windows. Socket errors?
+	WHo knows?
+
+2019-08-27  dale@health.usf.edu
+
+	* simloop.c: add in additional arg for simpower_sprectrum.sh to open .bdt or
+	.edt file.
+	* sim2build.cpp: add in adjusting fiber begin, end times to be in
+	milliseconds, not ticks. That way, you can change the tick value and have
+	events occur in absolute time, not relative to tick value.
+
+2019-08-26  dale@health.usf.edu
+
+	* simscene.cpp: Fix an undo problem. was clobbering the pop_subtype so was
+	no cell or fiber subtype to undo.
+
+2019-08-21  dale@health.usf.edu
+
+	* simloop.c: More support for multiple fiber types.
+	* sim_impl.cpp: ditto.
+	* simscene.cpp: what he said.
+
+2019-08-16  dale@health.usf.edu
+
+	* inode.h: Add in support for a new fiber type, electric stimulation.
+
+2019-08-15  dale@health.usf.edu
+
+	* sim.c: Oops, forgot to add in the windows socket code for sending wave
+	info to simviewer.
+	* configure.ac: bump to version 1.0.12
+
+2019-08-14  dale@health.usf.edu
+
+	* configure.ac: bump to version 1.0.11 and release package.
+
+2019-08-06  dale@health.usf.edu
+
+	* simviewer_impl.cpp: Convert from fopen to std::ifstream as preliminary
+	for adding a socket interface between simviewer and simrun.
+	* simscene_draw.cpp: Add in handling the case where an endpoint from a file
+	fails to be in the hot zone of a node. Move the start or add in another
+	line for the end.
+
+2019-08-01  dale@health.usf.edu
+
+	* chglog.cpp: Remove duplicate report of fiber pop change. Add in group
+	change report. Pick up absolute path from .snd name as save location for
+	ChagneLog.txt. Sometimes users change CWD browsing around and the changelog
+	is not where they expect it to be.
+	* swap.h: the register keyword is deprecated in c++17. Remove the
+	specifier.
+	* simscene.cpp: Disable drag mode when in one of the add-an-item-to-drawing
+	mode.
+	* sim_impl.cpp: Enable the Update Changelog button after saving a file. We
+	previously enabled only after loading one.
+
+2019-07-30  dale@health.usf.edu
+
+	* simscene_export.cpp: Many mods to support any number of groups. Add group
+	menu item and remove group toolbar buttons. Too much cluster. The import
+	function seems to work, more testing to be sure.
+
+2019-07-22  dale@health.usf.edu
+
+	* sim_impl.cpp: expiratory laryngeal cells must have "ELM" in name, not
+	"EXP".
+	* simscene.cpp: Same fix as above.
+
+2019-07-19  dale@health.usf.edu
+
+	* sim_impl.cpp: create load/save file dialogs by hand instead of using
+	convenience functions to customize appearance and behavior.
+
+2019-07-18  dale@health.usf.edu
+
+	* sim2build.cpp: I think the node_number was being incorrectly set to max
+	for a deleted cell or fiber node. This seems to be not right. Commented the
+	code out for now, we'll see what breaks.
+
+2019-04-15  dale@health.usf.edu
+
+	* simscene_export.cpp: fix crash bug. If try to save group without a file
+	name for current model, use current dir as path to save. Defaults to "/",
+	which you normally cannot write to.
+
+2019-03-22  dale@health.usf.edu
+
+	* launch_model.h: Initialize currModel in a couple of classes.
+
+2018-12-18  dale@health.usf.edu
+
+	* sim2build.cpp: zero out unused connector coords. It makes debugging
+	confusing.
+
+2018-12-13  dale@health.usf.edu
+
+	* simloop.c: put power spectrum calc in linux-only ifdef.
+	* simscene_export.cpp: The export function mostly works. If you
+	select everything, the exported file is almost the same as the original.
+	Need to make sure it is.
+
+2018-12-10  dale@health.usf.edu
+
+	* Makefile.am: zip up the windows files into one file to make distribution
+	easier.
+
+2018-12-07  dale@health.usf.edu
+
+	* sim.c: since this can run in Windows and there is no way at present to
+	view .bdt files, open the bdt in binary mode and write an explicit 0x0a as
+	the newline char. Result is same file in both Linux and Windows.
+	* simloop.c: ditto the above.
+	* configure.ac: bump to version 1.0.9 for release.
+	* simviewer_impl.cpp: After release of 1.0.9, add in ability to use this as
+	a real wave file browser. Can chdir, change launch #, restart.
+
+2018-12-05  dale@health.usf.edu
+
+	* lin2ms.c: This localizes things that are different in linux or windows.
+
+2018-12-03  dale@health.usf.edu
+
+	* configure.ac: bump to version 1.0.8. Time to release.
+
+2018-11-29  dale@health.usf.edu
+
+	* Makefile.am: add in stuff to make building windows files on par with
+	linux files.
+
+2018-11-20  dale@health.usf.edu
+
+	* simscene.cpp: Fix several instances where the wrong value was read from
+	or written to the cell and fiber params. Add in experimental support for
+	creating a group, with the intention of exporting the subset as a building
+	block to allow models to be created from already-working subsystems.
+
+2018-11-15  dale@health.usf.edu
+
+	* configure.ac: some problems with initial release. maybe this will fix
+	them.
+
+2018-11-14  dale@health.usf.edu
+
+	* sim2build.cpp: Discovered that the ?_target_nums must be the index of the last 
+	non-zero item in the array that is <= the original target_nums. That is:
+	original target_num is 5 and we see this:  1 2 0 4 9
+	then previous code here counted 4, but 5 is the correct answer. Fixed.
+
+2018-10-12  dale@health.usf.edu
+
+	* spawn_impl.cpp: after consultation, remove the make_spawn external file
+	support. Only someone who knows the source code intimately (which is about
+	2 people) would ever use this.
+
+2018-09-10  dale@health.usf.edu
+
+	* simloop.c: Fix bug on RO's advice. The post-synaptic connetion code
+	around line 
+
+2018-08-31  dale@health.usf.edu
+
+	* README: update for usfsim. This probably needs a lot more added.
+
+2018-08-24  dale@health.usf.edu
+
+	* simulator.h: add in fields to make synapse and cell types explicit.
+	* inode.h: same as above.
+	* read_sim.c: some major surgery. Decided not so directly support old .sim
+	files. Use newsned, or load the .snd file into simgui and make a new
+	version of the .sim file
+
+2018-08-13  dale@health.usf.edu
+
+	* sim2gui.cpp: discover that the current muParse lib no longer supports
+	if(...) statements, so detect the times when the c_injected_expression has
+	an if and turn it into a ? : statement. Warn user on fail to do this. 
+
+2018-08-07  dale@health.usf.edu
+
+	* sim.c: Dr. L says turbo not needed, seldom used, remove from simgui
+	package.
+
+2018-08-01  dale@health.usf.edu
+
+	* build_network.c: comment out a fatal error if cell pop > 52. The code
+	after handles that case, so hard to see it should even be checked for.
+
+2018-05-07  dale@health.usf.edu
+
+	* Makefile.am: Remove newsned building, moving away from existing code.
+	* inode.h: remove X-windows/motif stuff.
+
+2018-05-04  dale@health.usf.edu
+
+	* gen_hash.sh: mods so I can have a guard include in inode.h
+
+2018-03-28  dale@health.usf.edu
+
+	* newsned.c:  This is a fork of the simulator_1.7.24 version of the
+	simulator code. I plan on converting all of the X11/Motif code to Qt5 code.
+	Some C things will remain C, some may be converted to C++ to make use of
+	the STL.
+	* debian/control: add in requirements for qt5 support.
+
+2017-08-17  dshuman@health.usf.edu
+
+	* configure.ac: Bump to 1.7.24
+	* configure.ac: New libgsl-dev breaks package. Rebuild with new libs. No
+	code changes.
+
+2017-04-01  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev tp 1.7.23
+
+	* build_network.c (build_network): use separate RNG seed for each
+	cell population.  Fixes behavior changing when unconnected cell
+	populations are deleted.
+
+2016-01-06  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.22, rebuild with libgsl2
+
+	* debian/control (Build-Depends): add libmuparser-dev, libgsl-dev,
+	and gperf.  Fixes FTBFS.
+
+2015-10-16  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.21
+
+	* util.h:
+	* util.c (die):
+	* Makefile.am (AM_CFLAGS): fix compiler warnings.
+
+2015-03-19  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.20
+
+	* Makefile.am (EXTRA_DIST, sim.pdf): add references.bib to the
+	distribution
+
+	* configure.ac: bump rev to 1.7.19
+
+	* debian/control (Build-Depends): switch from lesstif to motif.
+
+2014-05-28  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* merge.c (main): add " > output.[eb]dt" to usage message.
+
+2014-02-11  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.18
+
+	* spectrum.c (process_file):
+	* wave2ps.c (gen_label, gen_range):
+	* pickwave.c (main):
+	* newsned.c (make_spawn_panel):
+	* lpanel.c (l_update, FI_CB, CI_CB, Launch_CB_2):
+	* filer.c (Load_snd_ok_CB, read_snd_file, Save_snd_ok_CB)
+	(Save_snd_unmap_CB):
+	* cellpanel.c (swap_vals, K_c_CB):
+	* snedskop.c (CreateApplication, PSCB, Scope_CB):
+	* lung.c (update_activation, vab_limit_error):
+	* sample_cells.c (find_sample_cells):
+	* fileio.c (str_char, str_float, str_double, str_int, str_short)
+	(str_long, str_float_star, str_double_star, str_int_star)
+	(str_char_star, str_char_string, print_member, do_save_struct)
+	(print_array, load_struct):
+	* turbo_simloop.c (simoutsned):
+	* update.c (update):
+	* sim.c (main):
+	* simloop.c (mup_eval, mup_error, get_poplist_by_name, )
+	(simloop, simoutsned):
+	* read_sim.c (scanfind, syn_txt, scanfixed, read_sim): Check
+	return value of asprintf, fscanf, system, etc. Silences compiler
+	warnings when built with DEB_BUILD_HARDENING=1.
+
+	* lung.c (get_Vab, bracket_root, solve, lung, main, get_TLC)
+	(vab_limit_error):
+	* simloop.c (mup_error, get_poplist_by_name): change
+	'error(1,0,msg)' to 'error(1,0,"%s",msg)' for security.  Silences
+	error when compiled with -Werror=format-security.
+
+
+2013-11-30  Russell O'Connor  <russ@tampabay.rr.com>
+
+	* configure.ac: bump rev to 1.7.17
+
+	* sim.tex: add required blank lines to slice.sim file example.
+
+	* sim.tex:
+	* simloop.c (simloop): do all the slices in the slice list, not
+	just the first, and document the fact that the slices need to be
+	in stepnum order.
+
+	* sim.c (main): initialize S.cwrit to ensure the the lbl member
+	never has an invalid non-NULL pointer.
+
+	* simulator.h:
+	* build_network.c (attach_to_synapses):
+	* update.c (copy_state): initialize the state of the "disabled"
+	bit to 0 in every Target structure when building the network after
+	reading in the .sim file.  Since this will result in a mid-run
+	update turning off any "disabled" bits that were on, re-run the
+	slices up to the current stepnum to turn on any "disabled" bits
+	that should be.  Fixes mid-run updates affecting things they
+	shouldn't.
+
+2012-09-21  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.16
+
+	* simloop.c (check_lung_used): remove lung model forcing
+
+2012-05-29  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.15
+
+2012-05-01  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* simloop.c (mup_eval): add argument to mupCreate for new version
+	of libmuparser.
+
+2012-02-29  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* lung.c (get_sigma_ab): fix comment cm/m -> m/cm
+
+2012-02-25  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* Makefile.am (dist_doc_DATA): add README
+
+2012-02-23  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* update.c (update):
+	* sim.c (main):
+	* simloop.c (simloop): add experimental automatic mid-run update.
+
+2012-02-22  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* pickwave.c: fix typo in help message (wave number is -w, not -n)
+
+2012-02-16  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.14
+
+	* README:
+	* wave2ps.c (main): implement --start option that skips the
+	specified number of wave.* files.
+
+2012-02-13  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.13
+
+	* wave2ps.c (gen_label): add scale and units for lung model traces
+	in postscript output.
+
+	* simloop.c (simloop): change p-1 to p+1 for the lungmodel traces.
+	Fixes slight error in offset value on snedskop plot.
+
+2012-02-07  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: update my email address
+
+	* newsned.c (CreateHelp): update bug report destination
+
+2012-02-05  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.12
+
+	* lung.c: change Rrc from 0 to 2.7.
+
+	* lung.c (get_sigma_di): increase Rdi from 1.0 to 6
+
+	* lung.c (get_sigma_ab): increase Rab from 1.0 to 1.5
+
+	* lung.c:
+	(paramgen, get_pica, v_zero_fdf): make Pica depend on Phr_d
+	instead of sigma_di.
+
+	* sim.tex: fix 6 typos and 2 citations
+0
+	* newsned.c:
+	(make_spawn_panel):
+	* lung.h:
+	* lung.c:
+	(paramgen):
+	* lpanel.c (Baby_CB):
+	* inode.h:
+	(struct inode_global):
+	* get_cell_coords.c:
+	(get_cell_coords):
+	* filer.c:
+	(Load_snd_ok_CB): Add baby lung feature.
+
+	* lung.c:
+	(TLC_balance, dynamic_solutions, plot_cross, get_Vdi_diff)
+	(static_solution, dVdt, main): changes to debug code
+
+2012-01-17  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* sim.tex: finish Lung Model Internals
+
+	* Makefile.am (EXTRA_DIST): add paramen.pdf (used in sim.tex to
+	generate sim.pdf).
+
+	* lung.c:
+	(paramgen, get_sigma_di): add #ifdef NEW_C1 code, don't initialize
+	static variables computed in paramgen, update comments- no change
+	to default functionality
+
+2012-01-15  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* lung.c (paramgen): corrected the equation for Prc_div.  See
+	notes120115.
+
+2011-11-09  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.10
+
+	* cellpanel.c (Quit_c_CB): don't strdup if string pointer is NULL.
+	Fixes segfault when trying to change the injected current.
+
+	* sim.tex: add PSR example equations.
+
+	* sim.tex: change FRC to RV
+	* lung.c (lung): change FRC in comment to RV
+	lung volume is reported relative to RV, not FRC
+
+2011-11-08  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.9
+
+	* simloop.c (get_GE0): remove broken attempt to cache PSR
+	expression value.  Fixes all PSRs suing using the first PSR's
+	equation.
+
+	* configure.ac: bump rev to 1.7.8
+
+	* cellpanel.c (Quit_c_CB): add strdup.  Fixes new cellpop
+	corrupting existing cellpop injected current equation.
+
+2011-11-04  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.7
+
+	* sim.tex: combine variable description and units tables in
+	3.5.1.4.
+	Expand the Lung Model Internals, promote to a chapter.
+
+	* pickedt.c (process_file): fix signed/unsigned compares.  Fixes
+	"time is not later than previous" errors introduced by a compiler
+	change.
+
+	* Makefile.am (dist_doc_DATA): add latexmk options to clean before
+	make.  Fixes later failures after an error.
+
+	* lung.c: correct comment for Vdi0
+
+2011-10-15  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.6
+
+	* Makefile.am (sim.pdf, EXTRA_DIST, #info_TEXINFOS): switch from
+	texinfo to latex for sim.pdf.
+
+	* simloop.c (spikes_per_s_per_cell): add code to write
+	"phrenic_spike_counts" to generate numbers for figure for MSM
+	talk, disabled.
+
+	* sim.texi (Recruitment Equations): fix typo: find -> finds
+
+	* lung.c (lung): add printf for status at each step, disabled.
+
+	* lung.c (struct Vals, get_fn_fn_t, dynamic_solutions, dVdt): add
+	debug code for failure to converge.
+
+	* lung.c (get_pica, v_zero_fdf, noflow, dVdt): make the noflow
+	calculation consistent with the non-zero flow calculation (change
+	from A to C1).  Fixes non-zero flow when glottis is closed.
+
+	* lung.c:
+	(v_zero_fdf ,paramgen): activate expiratory intercostal and
+	accessory muscles whenever abdominals are activated.  Fixes
+	expansion of rib cage and inspiration at the beginning of cough.
+
+	* simloop.c (struct MotorPops, get_motor_pops, simloop):
+	* lung.h (struct Motor):
+	* lung.c:
+	(lung, update_activation, struct Params): add provision for
+	intercostal populations.  Currently disabled.
+
+2011-09-15  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.5
+
+	* sim.texi (Recruitment Equations):
+	* lung.c (update_activation): Change the default laryngeal motor
+	neuron max firing rate to 40 spikes/sec, and take the value from a
+	file named "lmmax" in the current directory if it exists.
+
+2011-09-14  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.4
+
+	* lung.c (update_activation): set laryngeal motor neuron max
+	firing rate to 100 spikes/sec for scaling laryngeal muscle
+	activation.
+
+	* simloop.c:
+	(simloop):
+	* lung.c:
+	(dVdt)
+	make sure progress messages get printed every couple seconds
+
+	* lung.c (init_spline, get_sigma_ab): use a spline approximation
+	to the curvature instead of the radius of curvature.  Makes it
+	possible to get to Vab = 0 (0 curvature).
+
+2011-09-13  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.3
+
+	* lung.c (init_ode_solver): turn the GSL error handler off so GSL
+	errors won't abort the simulation.
+	(dVdt): set noflow threshold to Rrs0 * 1e8 instead of Rrs0 * 1e9.
+	Fixes a failure to solve.
+
+2011-09-09  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* sim.texi (Recruitment Equations): p0 -> P0
+
+2011-09-08  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.2
+
+	* simloop.c (get_poplist_by_name): use cellpop name when looking
+	for the motor population index, not the base motor population
+	name.  Fixes spurious "more than one population" error.
+
+	* sim.texi (Motor Populations): change "pre-motor" to "motor"
+
+2011-09-07  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.7.1
+
+	* globalpanel.c (G6CB, G5CB): change g1 to g5 and g6 (cut and
+	paste error).  Fixes global comment appearing as recruitment
+	equations after file is saved.
+
+	* configure.ac: bump rev to 1.7.0
+
+	* simloop.c (simloop): initialize next_state.  Fixes valgrind
+	reports of depending on the contents of uninitialized memory.
+
+2011-09-06  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* sim.c (main): initialize plot fields not set from stdin Q/A;
+
+	* fileio.c (maybe_array_size): fix harmless out-of-bounds access.
+	(load_struct): initialize struct before loading it.
+
+	* lung.c:
+	(init_spline, vab_limit_error, get_sigma_ab, init_spline):
+	Give an error message if the abdominal volume goes below the minimum.
+
+	* sim.texi (Variable Plots):
+	* snedskop.c (Scope_CB):
+	* lpanel.c (valid, get_comment1):
+	* sim.c (main):
+	Add truncated versions of Phr_d, u, and lma as plot options.
+
+	* lung.c (lung):
+	* sim.texi (Variable Plots):
+	Plot the flow with expiration positive.
+
+	* simulator.h (struct simulator_global):
+	* sim.texi:
+	(Build Menu, The Lung Model):
+	* simloop.c:
+	(struct PopList, struct MotorPops, mup_error)
+	(mup_eval, get_poplist_by_name)
+	(get_motor_pops, limit, simloop):
+	* node_mgr.c:
+	(NewCB):
+	* newsned.c:
+	(G2val, G5val):
+	* lung.c (update_activation, lung):
+	* inode.h (struct GLOBAL_NETWORK):
+	* globalpanel.c:
+	(G5CB, G6CB):
+	* get_cell_coords.c (get_cell_coords):
+	* filer.c:
+	(Load_snd_ok_CB):
+	Add phrenic and lumbar recruitment.
+
+2011-07-13  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.6.4
+
+	* lung.c (update_activation): really limit activation seen by
+	muscles after integration, instead of limiting instantaneous
+	activation before integration.
+
+	* configure.ac: bump rev to 1.6.3
+
+	* wave2ps.c (main):
+	* snedskop.c (key_press):
+	* snap.c (Vis_colorCB, Vis_docCB, Vis_tabCB):
+	* newsned.c (CreateHelp, CreateFontSample, String_to_Pixel):
+	* lung.c (static_solution, get_Vab): delete unused variables and
+	add initializations to quiet new compiler warnings.
+
+	* lung.c (lung, update_activation, struct): limit activation seen
+	by muscles after integration, instead of limiting instantaneous
+	activation before integration.
+
+	* lung.c (static_solution, bracket_root):
+	* turbo_simloop.c (turbo_simloop): delete unused variables to
+	quiet new compiler warnings.
+
+2010-11-30  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.6.2
+
+	* wave2ps.c (gen_label, gen_ps): add a scale at the right end of
+	the trace.
+
+	* filer.c (write_pop_param_csv): write the population parameters
+	to pop_param.csv.
+
+2010-10-21  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* Makefile.am (dist_doc_DATA): set to sim.pdf so that it will be
+	installed in /usr/local/share/doc.
+
+2010-05-21  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.6.1
+
+	* lung.c (update_activation): limit diaphragm, abdomen, and
+	laryngeal muscle activation to 100%.
+
+	* lung.c (dynamic_solutions, dVdt): pick solution that minimizes
+	change in flow
+
+	* sim.texi (The Lung Model):
+	* snedskop.c (Scope_CB):
+	* simloop.c (simloop):
+	* sim.c (main):
+	* lung.h (struct State):
+	* lung.c (lung):
+	* lpanel.c (valid, get_comment1): Add 10 more display variables.
+
+2010-05-14  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.6.0
+
+	* lung.c:
+	* get_cell_coords.c (get_cell_coords):
+	* snedskop.c (Scope_CB):
+	* simulator.h (struct CellPop):
+	* sim.texi (The Lung Model):
+	* simloop.c (check_lung_used, get_pop_by_name, get_motor_pops)
+	(spikes_per_s_per_cell, get_GE0, simloop):
+	* sim.c (main):
+	* newsned.c (Dc_c_val):
+	* Makefile.am (LDADD, sim_LDADD, sim_SOURCES, sim_CPPFLAGS)
+	(AM_CFLAGS):
+	* lpanel.c (valid, Leu2_CB, Lpnd2_CB, Lmd2_CB, Lvd2_CB)
+	(make_scr2, get_comment1, Launch_CB_2):
+	* inode.h (struct C_NODE):
+	* filer.c (save_table):
+	* editbody.c (EditbodyCB):
+	* cellpanel.c (Dc_c_CB, Dc_c_up_CB, Dc_c_down_CB, Quit_c_CB):
+	Add lung model.
+
+2010-01-21  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: add AM_PROG_CC_C_O to configure.ac.  Fixes error
+	message from latest automake
+
+2007-11-20  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5.10
+
+	* snap.c (Update_docCB):
+	* node_mgr.c (NewCB):
+	* newsned.c (make_doc_panel): change doc_file to D.doc_file
+	fixes failure to save doc changes
+
+2007-07-16  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5.9
+
+	* snedskop.c (CreateApplication): add callbacks for scroll bar
+	movement so display gets updated even when backing store is
+	enabled.
+
+2007-06-25  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5.8
+
+	* read_sim.c (condi): don't exit after condi without doing the
+	simulation.
+
+2007-03-07  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5.7
+
+	* sample_cells.c (pop_trace): skip the targetpop if IRCP == 0.
+	Fixes segfault on some models.
+
+	* configure.ac: bump rev to 1.5.6
+
+	* simloop.c (simloop): set power_spectum stepsize to
+	S.nanlgrate, not S.step.  Fixes misplaced I&E pulses.
+
+2007-02-08  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5.5
+
+2007-02-07  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* sim.texi: update the manual
+
+2007-02-06  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* Makefile.am (make_spawn%): include the rule for the make_spawn*
+	programs
+	(EXTRA_DIST): and include the programs.
+	(bin_PROGRAMS, i_and_e_SOURCES): remove i_and_e, no longer used.
+	(plot_SOURCES, bin_PROGRAMS): remove plot, no longer used
+
+	* configure.ac: bump rev. to 1.5.4
+
+	* sample_cells.c (find_sample_cells): write the seed to
+	sample_cell_seed if it's not already there.
+
+2007-02-05  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* wave2ps.c (MAX_ANLG_CHNL, WN): increase limit to 1000 channels.
+
+	* lpanel.c (make_scr1, make_scr2): use realloc instead of fixed
+	buffers, to avoid crash with many entries in spawn panel.
+
+	* snedskop.c (PSCB): run gv in the background, so snedskop can run
+	while gv is up.
+	(WN): allow 1000 waveforms per wave file.
+
+2007-02-02  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* power_spectrum.sh: use stepsize passed from sim instead of
+	assuming 1, and do a spectrum of the first .512 seconds instead of
+	512 samples.
+
+	* simloop.c (simloop): pass stepsize to power_spectrum.sh.
+
+	* node_mgr.c (Draw): set line width to 1 for +,- in synapses.
+	Fixes fuzzy +,-
+	(Draw): make inhibitory synapses white on the screen, black on
+	PS, and excitatory green on screen, red on PS.
+
+	* configure.ac: bump rev to 1.5.3
+
+	* wave2ps.c (gen_ps): add spikes to postscript output
+
+	* snedskop.c (Scope_CB): double spike length
+
+2007-02-01  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* filer.c (read_scr3, save_scr, load_scr): add the analog panel to
+	the .ols file.
+
+	* lpanel.c: 100 -> MAX_ENTRIES
+
+	* configure.ac: bump rev to 1.5.2
+
+	* sample_cells.c: generate sample_cells.ols with cells for all
+	connections
+
+	* inode.h (MAX_ENTRIES): increase to 1000
+
+	* configure.ac: bump rev to 1.5.1
+
+	* wave2ps.c: use floats, not ints, for plotted values
+
+	* simloop.c (simloop): start cell numbers at 101 in the bdt file
+
+2007-01-31  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* wave2ps.c (main): set ticks_per_second from the wave file's
+	stepsize so the times will be correct
+
+2007-01-30  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* build_network.c (build_network): remove superfluous srand()
+
+	* wave2ps.c (main): initialize spawn_num
+
+	* merge.c (main): initialize f1 to shut up compiler
+
+	* filer.c (Load_snd_ok_CB): remove superfluous "int n;"
+
+	* Makefile.am (dist_bin_SCRIPTS): add renumber
+
+2007-01-25  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.5
+
+	* snedskop.c (PSCB): add postscript view/print routine
+
+	* Makefile.am (wave2ps_SOURCES, bin_PROGRAMS): add wave2ps
+
+	* snedskop.c (CreateApplication): add "Postscript View/Print"
+	button
+
+2007-01-23  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* postscript.c (SetGC):
+	* node_mgr.c (Draw): add + and - to synapses
+
+	* newsned.c (Expose_CB): only redisplay on last expose
+
+	* node_mgr.c (Draw): rewrite rendering code: 1200 lines -> 200
+	lines
+
+	* synapsepanel.c:
+	* snap.c: delete Render_CB declaration - it's in inode.h
+
+	* inode.h: remove BWRender_CB -- it's only in node_mgr.c
+
+2007-01-22  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* snedskop.c (ScaleCB): redo spacing widget code, add new spacings
+	(VScaleCB): redo vscale widget code, add new gains
+	(Scope_CB): make spike length scale with spacing
+
+2007-01-19  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.4
+
+	* inode.h:
+	* node_mgr.c (Render_CB): make dedication string a define
+
+	* Makefile.am (newsned_SOURCES): add postscript.[ch] for
+	postscript view/print
+
+	* newsned.c (make_file_menu): connect "Print" to PSRender
+	include "postscript.h" for PSRender declaration
+
+	* node_mgr.c (ARender_CB, RRender_CB, Render_CB): use DrawFuncs
+	indirection
+
+	* inode.h: add DrawFuncs and X declarations.
+
+2007-01-18  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* lpanel.c (Launch_CB_2): remove line feeds from alert string -
+	they don't work.  Call XmToggleButtonSetState from parent, not
+	child -- fixes blank menus after condi run.
+
+	* cellbody.c, connecter.c, editaxon.c, editaxon.c, editbody.c,
+	editbody.c, editbody.c, editbody.c, fiberbody.c: rewrite to be
+	event-driven.
+
+	* newsned.c: delete unused popup_on and popup_off.
+
+	* inode.h: add RenderMode and render_mode declarations
+
+	* newsned.c (CreateApplication2): intercept expose callback for
+	antero and retro modes.
+
+	* connectpanel.c (Accept_s_CB): zero local_axon.num_coords after
+	copying the coords
+
+	* newsned.c (PostIt): add mouse_mode dispatch
+
+	* inode.h: add MouseMode and mouse_mode declarations
+
+2007-01-17  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* newsned.c:
+	* inode.h: delete unused DrawsynapseCB declaration
+
+	* Makefile.am (newsned_SOURCES): delete unused synapse.c
+
+2006-11-14  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* build_network.c (ran_gaussian): return 0 after setting the
+	seed.
+
+2006-11-13  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* Makefile.am (merge_SOURCES): not merge_SOOURCES
+
+2006-11-01  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* configure.ac: bump rev to 1.3.15
+
+2006-10-31  Russell O'Connor  <roconnor@health.usf.edu>
+
+	* snedskop.c (VM0CB,etc, Scope_CB, CreateApplication): make last
+	voltage marker menu selection turn off voltage markers.
+
+2006-07-26  Russell O'Connor  <roconnor@(none)>
+
+	* configure.ac: bump rev to 1.3.14
+
+2006-07-21  Russell O'Connor  <roconnor@(none)>
+
+	* editbody.c (EditbodyCB):
+	* cellpanel.c (K_c_CB, Mem_c_CB, set_c_panel_labels): make sure
+	cell panel labels are set correctly for normal, burster, and psr.
+
+2006-07-20  Russell O'Connor  <roconnor@(none)>
+
+	* cellpanel.c (Mem_c_CB, K_c_CB): check the labels every time -
+	fixes bug where you don't get the correct labels
+
+2006-07-18  Russell O'Connor  <roconnor@(none)>
+
+	* merge.c (get_code_and_time): arg 4 should be ssize_t, not int
+	(main): initialize time0, time0 to avoid compiler warning
+
+	* Makefile.am (bin_PROGRAMS): add merge
+
+	* power_spectrum.sh: add plotmtv, start gnuplot directly to get
+	mouse features
+
+	* spectrum.c (phase_adjust): add threshold option, get starttime
+	from first float in data, not command line
+	(struct arguments, parse_opt, process_file, main): add spawnnum
+	option for ie.edt.
+
+	* pickedt.c (process_file): add starttime option
+
+2006-07-14  Russell O'Connor  <roconnor@(none)>
+
+	* spectrum.c (process_file, get_envelope): pass &buf instead of
+	buf to get_envelope.
+	(CycleData): add orig_bufsize
+	(get_envelope): pad end of buffer
+	(get_cycles): no cycle if it ends at orig_bufsize
+
+2006-07-12  Russell O'Connor  <roconnor@(none)>
+
+	* spectrum.c (struct arguments, plot_buf, parse_opt, main): add
+	starttime argument for debugging.
+	(process_file): add starttime to output ie.edt file times
+
+	* pickedt.c (process_file): output 0's for the ticks in the .edt
+	file preceding the first spike of the selected spike id.
+
+2006-07-11  Russell O'Connor  <roconnor@(none)>
+
+	* spectrum.c (get_cycles, find_slope_min, get_envelope, fr_diff):
+	disable debug messages
+
+2006-03-16  Russell O'Connor  <roconnor@true>
+
+	* simloop.c (simloop): re-enable spectrum
+
+2006-03-10  Russell O'Connor  <roconnor@true>
+
+	* configure.ac: bump rev to 1.3.13
+
+	* build_network.c (ran_gaussian): use internal random number
+	generator for ran_gaussian for consistent results across systems
+
+	* configure.ac: bump rev to 1.3.12
+
+	* newsned.c (main): remove inode size printf
+
+	* fileio.c (do_save_struct): remove debug printfs
+
+	* filer.c (save_table): remove debug printf
+
+	* fileio.c (FFMT): use %.17g instead of %a for compatibility and
+	legibility
+
+2006-03-09  Russell O'Connor  <roconnor@true>
+
+	* fileio.c: (do_save_struct): define Z for printf using
+	SIZEOF_SIZE_T
+
+	* configure.ac: add AC_CHECK_SIZEOF(size_t) for printf
+
+	* gen_hash.sh: add X_CFLAGS to cpp invocation, add -k "*" to gperf
+	invocation
+
+	* configure.ac: bump rev to 1.3.11
+
+2006-03-08  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* spectrum.c (main, process_file): don't print out fftsz and
+	frequency resolution if there is no data.
+
+	* plot.c (main): exit silently if there is no data.
+
+	* spectrum.c (process_file): exit if there is no data, rather than
+	hanging.
+
+	* simloop.c (simloop): do all calculation in double precision so
+	different compile modes get the same result
+
+2006-03-06  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* simloop.c (simloop): cast c->gnoise_e and c->gnoise_i and c->Vm
+	(in Vt calc) to double so 32- and 64- bit get the same result.
+
+	* simulator.h (struct Syn, struct simulator_global): give q_count
+	and stepnum a state tag so they get saved with the state
+
+	* simulator.h (struct, simulator_global):
+	* simloop.c (simloop): make seed from simloop a global with a
+	state tag so it gets saved with the state
+
+	* fileio.c (ato_float_star, ato_int_star): change
+	malloc_usable_size (ptr) to malloc_usable_size (p) so
+	ato_float_star and ato_int_star will work
+
+	* gen_gperf.pl (push_flds):
+	* tag.pl: add istate to pattern so istate tags on vars will work
+
+	* fileio.c (str_float_star, str_float, str_double): change %g to
+	%a for exact state save
+
+2006-03-02  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.10
+
+	* simloop.c (simloop): add & to power_spectrum invocation so that
+	sim won't hang waiting for it.
+
+2006-03-01  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.9
+
+	* lpanel.c (Launch_CB_2): process signals until killed sim is
+	reaped before changing sim_pid, to avoid creating zombies.
+
+	* newsned.c: make app_context a global.
+
+	* lpanel.c (sigchld_callback): don't reinstall handler now that
+	we're using sigaction without SA_RESETHAND, and die if sigwait
+	gets an error.
+
+	* newsned.c (main): use sigaction instead of signal, in order to
+	specify SA_RESTART and SA_NOCLDSTOP.
+
+2006-02-21  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.8
+
+	* update.c (update): keep most members of S when updating.
+	(copy_state): copy the rest of the state, so update will work.
+
+	* sim.c (main): nonoise got accidentally renamed S.nonoise
+	in 1.3.6.  Fixed.
+
+	* update.c (update): Zero S.net before reading update, so update
+	won't crash, and copy old stepnum to new, so update won't change
+	it.
+
+	* read_sim.c (read_slice): slice.sim got accidentally renamed
+	S.slice.sim in 1.3.6.  Fixed.
+
+2006-02-15  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* pickedt.c (parse_opt): fix spike_id case.
+
+	* util.h: add MAX define
+
+2006-02-13  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* Makefile.am (i_and_e_SOURCES): add i_and_e program
+
+	* i_and_e.c (main): new file - generate I and E pulses from
+	"envelope" file and add to specified .bdt file.
+
+	* spectrum.c (process_file): write envelope to a file named
+	"envelope" for later generation of I and E pulses.
+
+	* configure.ac: bump rev to 1.3.7
+
+	* lpanel.c (Launch_CB_2): put spawn number in snedskop title bar.
+
+	* filer.c (Save_snd_unmap_CB): After launching with spawn number
+	0, launch with every spawn number for which a make_spawn%d exists.
+
+	* lpanel.c (Launch_CB_2): If the spawn number > 0 and there is a
+	program named make_spawn%d in the current directory, use that to
+	create spawn%d.sim instead of using the current model.
+
+2006-02-07  Russell O'Connor  <roconnor@true>
+
+	* configure.ac: bump rev to 1.3.6
+
+	* node_mgr.c (ARender_CB, RRender_CB, Render_CB, BWRender_CB):
+	use asprintf instead of sprintf to write to pop_num.  Fixes
+	infinite display loop.
+
+2006-01-26  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+	* filer.c (save_table): initialize S.Gm0 (was part of global
+	definition)
+
+	* lpanel.c (l_update): declare pixel as Pixel, not unsigned long
+
+	* filer.c (copy_old_inode, copy_inode_2, copy_new_inode)
+	(read_snd_file): change swaptest from long to int
+
+	* newsned.c connectpanel.c editbody.c connecter.c editaxon.c:
+	Change def_seed from long to int.
+
+	* connectpanel.c (Seed_s_CB, Seed_s_up_CB, Seed_s_down_CB):
+	* editaxon.c (EditaxonCB):
+	* newsned.c:
+	* globalpanel.c (G2CB):
+	* filer.c (Load_snd_ok_CB, global_loader, fiber_loader)
+	(cell_loader):
+	* editbody.c (EditbodyCB):
+	* node_mgr.c (ARender_CB, RRender_CB, Render_CB, BWRender_CB):
+	* fiberpanel.c (Begin_f_CB, Begin_f_up_CB, Begin_f_down_CB)
+	(End_f_CB, End_f_up_CB, End_f_down_CB, Seed_f_CB, Seed_f_up_CB)
+	(Seed_f_down_CB, Pop_f_CB, Pop_f_up_CB, Pop_f_down_CB):
+	* cellpanel.c (Pop_c_CB, Pop_c_up_CB, Pop_c_down_CB): change %ld
+	to %d to match arguments.
+
+	* inode_2.h inode.h old_inode.h: change long to int for inode
+	members so the size will be the same on 64 bit.
+
+	* cellbody.c cellpanel.c connecter.c connectpanel.c editaxon.c
+	editbody.c fiberbody.c fiberpanel.c filer.c globalpanel.c lpanel.c
+	newsned.c synapsepanel.c node_mgr.c: delete redundant declarations
+	of what were globals.
+
+	* get_cell_coords.c: delete globals, add "inode_global D;
+
+	* newsned.c: add "inode_global D;"
+
+	* axon.c cellbody.c cellpanel.c connecter.c connectpanel.c
+	editaxon.c editbody.c fiberbody.c fiberpanel.c filer.c
+	get_cell_coords.c globalpanel.c inode.c lpanel.c newsned.c
+	newsned_hash.c node_mgr.c read_snd.c screendump.c snap.c
+	snd_convert.c snedskop.c swap.c synapse.c synapsepanel.c:
+	prepend "D." to what were globals.
+
+	* inode.h (struct): put the globals in a struct.
+
+	* filer.c read_sim.c read_slice.c simloop.c: change
+	address from 0 to &S in calls to load_struct and save_struct
+
+	* filer.c: delete globals, add "simulator_global S;
+
+	* filer.c: (read_fileio_file, read_snd_file, Load_snd_ok_CB, Save_snd_ok_CB):
+	* get_cell_coords.c (read_fileio_file): change snd_file_name to
+	file_name so as to not shadow global.
+
+	* turbo_simloop.c: delete global stepnum declaration
+
+	* sim.c (main): declare tcint locally (no longer global).
+
+	* simloop.c: delete global
+
+	* read_sim.c: delete globals
+
+	* sim.c: delete globals, replace with "simulator_global S;"
+
+	* build_network.c build_turbo_network.c condi.c copy_state.c
+	filer.c firing_rate_spikes.c get_cell_coords.c noise_distrib.c
+	read_sim.c read_slice.c read_snd.c sim.c sim_hash.c simloop.c
+	turbo_simloop.c update.c: prepend "S." to what were globals.
+
+	* gen_gperf.pl: don't print globals
+
+	* simulator.h (struct): put the globals in a struct.  New system
+	can't find the address of a global at compile time.
+
+2006-01-25  Russell O'Connor  <roconnor@cisc1.hscnet.hsc.usf.edu>
+
+
+	* fileio.c (str_char_star, str_char_string, print_array)
+	(do_save_struct): change %ld to %zd to print size_t values,
+	so it will work on 64 bit.
+
+	* gen_gperf.pl (push_flds):
+	* build_network.c (for_cell_targets):
+	* util.h (TMALLOC, TCALLOC, TREALLOC):
+	fileio.c (do_save_struct): cast ptr to long instead of int, so it
+	will work on 64 bit.
+
+2006-01-04  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.5
+
+	* filer.c (cell_loader): initialize c_resting_thresh_sd
+
+	* editbody.c (EditbodyCB): copy c_resting_thresh_sd to def_cell
+	when editing a cell
+
+	* node_mgr.c (free_node): initialize c_resting_thresh_sd when
+	getting a free node
+
+	* cellpanel.c (Quit_c_CB): copy c_resting_thresh_sd to inode when
+	quitting the cell panel to fix threshold SD not getting saved or
+	used.
+
+2006-01-03  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.4
+
+2006-01-03  Russell O'Connor  <russ@tampabay.rr.com>
+
+	* lpanel.c (l_update, Lnu_CB, Lnd_CB, Leu_CB, Led_CB, Lcfu_CB)
+	(Leu2_CB, Led2_CB, Launch_CB_2):
+	* filer.c (load_scr, Load_snd_ok_CB):
+	* snedskop.c (CreateApplication, Scope_CB): replace 0 with NULL in
+	function calls to suppress gcc4 warnings
+
+	* filer.c (load_scr):
+	* snedskop.c (Scope_CB): change buflen declaration from int to size_t to
+	suppress gcc4 warnings
+
+2005-11-09  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.3
+
+	* spectrum.c (get_envelope): don't require that the respiratory
+	frequency is the dominant frequency
+
+2005-10-25  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.2
+
+	* fileio.c (ato_int_star, ato_char, ato_float, ato_double)
+	(ato_int, ato_short, ato_long, ato_float_star, ato_int_star): cast
+	sizeof to int when dividing into an int so we don't lose the
+	sign.  Fixes segfault when reading initial state.
+
+2005-10-20  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* sim.texi (Spawn): document the use of the  Memb # entry as a
+	scaling factor when plotting population activity.
+
+2005-10-19  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.1
+
+	* simloop.c (simloop): close .bdt file before running power
+	spectrum so power spectrum will work
+
+	* sim.texi (Spawn): Document power spectrum settings
+	(Cell Coordinates): Document cell coordinates
+
+2005-10-18  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* read_sim.c (read_sim): set struct_info and struct_members before
+	calling save_struct
+
+	* simloop.c (cut): if a slice goes through a cell, cut all its
+	connections.
+	(simloop): set struct_info and struct_members before calling
+	save_struct_open and load_struct open so end_state.nn gets written
+	and initial_state gets read.
+
+2005-10-14  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 1.3.0
+
+	* Makefile.am (EXTRA_DIST): add sim.pdf and sim.html to the
+	distribution.
+
+	* sim.texi: update the manual
+
+2005-10-13  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop): don't write analog data to .bdt file (and
+	don't calculate power spectrum) unless the user has requested it
+
+2005-10-06  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* Makefile.am (sim_CPPFLAGS, sim_SOURCES): add inode.h to sim
+	sources, and add X_CFLAGS to sim include path so the compiler will
+	find Xm.h to include in inode.h
+
+2005-10-05  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* lpanel.c (sigchld_callback):
+	* newsned.c (sigchld_handler): re-establish the signal handler
+	after reaping the children rather than before, because SIGCHLD is
+	level-triggered on some systems (HP-UX) and not reset until after
+	reaping the children.
+
+2005-10-04  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* fileio.c: access objects as characters (using memcpy and memset)
+	to avoid aliasing issues with compiler optimization.
+
+	* sim.c (delete_newline): stop deleting newlines when the string
+	is empty, so sim won't crash.
+
+	* Makefile.am (install-exec-hook): ignore errors when copying
+	source to /lab/SOURCES, in case user chooses not to overwrite
+	previous sources.
+
+	* filer.c (Load_snd_ok_CB): terminate XtVaSetValues arg list with
+	a 0 so newsned won't crash.
+
+2005-10-03  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* spectrum.c (fit_line): initialize variables
+	(get_envelope): initialize n_at_max
+	(process_file): initialize avg
+
+	* configure.ac: check for argp
+
+2005-09-30  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* malloc.c:
+	* configure.ac:
+	* fileio.h: include Doug Lea's malloc and use it if the native
+	malloc does not have malloc_usable_size
+
+	* fileio.c (ato_float_star, ato_float): use strtod instead of
+	strtof because strtof requires c99
+
+	* inode.h:
+	* simulator.h:
+	* configure.ac: don't use native getline, because HP-UX B.10.20
+	libc has one that is not declared in any include file.
+
+	* inode.h: add declaration of alert function
+
+	* lpanel.c (Launch_CB_2): show message when condi.csv is being
+	written.
+
+2005-09-29  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (save_table): first synapse type is 0 in sim, 1 in
+	newsned.  Value copy fixed accordingly.
+
+	* simulator.h (Network): change syntype from skip to iskip so it
+	will be saved by newsned.
+
+	* Makefile.am (sim_SOURCES, newsned_SOURCES): add fileio.h,
+	hash.h
+	(EXTRA_DIST): add gen_hash.sh, inode_choose.c
+
+2005-09-28  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* read_sim.c (read_sim):
+	* newsned.c:
+	* sim.c:
+	* lpanel.c: add condi flag
+
+	* read_sim.c (condi): new routine
+	(read_sim): call condi
+
+	* build_network.c (build_network): initialize cpidx and cidx in
+	Syn
+
+2005-09-22  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simulator.h (struct): add cpidx and cidx to Syn (not just for
+	debug) for use by cut_connections.
+
+	* simloop.c (list_slice_groups): new routine
+
+	* simulator.h: declare list_slice_groups
+
+	* simloop.c (simloop): skip target if disabled by a slice.
+	(simloop): add code to cut connections
+
+	* get_cell_coords.c (get_cell_coords): new source file
+	implementing get_cell_coords.
+
+	* read_sim.c (read_sim): call get_cell_coords after reading .sim
+	file
+
+	* Makefile.am (sim_SOURCES): add get_cell_coords to sim_SOURCES
+
+	* simulator.h: add get_cell_coords declaration
+
+	* filer.c (save_table): set value of snd_file_name
+
+	* read_sim.c:
+	* filer.c:
+	* simulator.h: add snd_file_name to get it from newsned to sim.
+
+2005-09-16  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simulator.h (struct): add x, y, and z to Cell struct.
+	add Slice struct and slice_count, slice globals
+
+2005-08-23  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* read_sim.c (read_old_sim): initialize TGK from DCG even when
+	DCG=0 to match new sim format
+	(read_old_sim): initialize fr and TGK since they are not specified
+	in the old sim file.
+
+	* filer.c (save_table): copy ispresynaptic from presynaptic_flag
+	for saving.
+
+	* read_sim.c (read_old_sim): initialize Th0_sd, since it is not
+	specified in the old sim file.
+
+	* fileio.c (do_save_struct): don't try to save struct if ptr is
+	0.
+	(make_tagrange_table):  don't add ti->v->offset to ti->base,
+	because it was already added in new_tag.  How did it ever work?
+
+2005-08-22  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simulator.h (struct): mark targetpop iskip
+
+	* gen_gperf.pl (push_flds): clear init bit for skip, set for
+	iskip, set skip bit for iskip
+
+	* sim.c (main): add detail to "bad input data" message
+
+	* simloop.c (simloop): show phrenic power spectrum at end of run
+
+2005-07-27  Russell O'Connor  <roconnor@hsc.usf.edu>
+int ispresynaptic;
+
+	* build_network.c (ran_gaussian):
+	* build_network.c (build_network):
+	* filer.c (save_table):
+	* simulator.h (CellPop): add threshold standard deviation
+
+	* read_sim.c (read_sim): read new style .sim files as well as old
+
+	* fileio.h:
+	* fileio.c (load_struct_open, load_struct_read_version): split
+	load_struct_open to provide load_struct_read_version separately
+
+	* filer.c: also need definitions for input_filename
+	update_interval outsned save_spike_times save_pop_total
+	spawn_number plot_count plot fwrit_count fwrit cwrit_count cwrit
+	nanlgid nanlgpop nanlgrate nanlgrate tcint sclfct dcgint ofile
+	ifile nonoise sigterm stepnum
+
+	* simloop.c (simloop):
+	* filer.c (read_fileio_file, Save_snd_ok_CB, save_table):
+	* gen_gperf.pl (push_flds): change global to hdr_global
+
+	* Makefile.am (newsned_LDADD): add -lm
+	(newsned_SOURCES): add sim_hash.c
+
+	* filer.c: include math.h inode.h util.h fileio.h simulator.h
+	simulator_hash.h, and add net step_count step Gm0 Vm0 Ek globals
+	for new save_table, and replace save_table.
+
+	* swap.c (swap_inode_bytes):
+	* node_mgr.c (get_node, free_node):
+	* inode_choose.c (type_name):
+	* filer.c (copy_old_inode, copy_inode_2, copy_new_inode, fix_burster_cells,
+	zero_rebound_for_noise):
+
+	* inode.h (celL,fibeR): change cell to celL and fiber to fibeR
+
+	* simulator.h: make CellPop noise_seed and FiberPop ifnsed istate
+	instead of state.
+
+	* simloop.c (simloop): set save_state and save_init before calling
+	save_struct
+
+	* fileio.c: define save_state and save_init.  Add state and init
+	to TAGSAVE and REFSAVE
+
+	* fileio.h: add save_init and save_state global declarations
+
+	* hash.h (struct StructInfo): add "init" flag
+
+	* gen_gperf.pl (push_flds): add "init" flag for StructInfo
+
+	* filer.c: include inode_hash.h and define struct_info and
+	struct_members
+	(read_fileio_file, Save_snd_ok_CB): set struct_info
+	and struct_members before calling load_struct or save_struct
+
+	* simloop.c: include simulator_hash.h and define and
+	initialize struct_info and struct_members
+
+	* fileio.h (struct StructInfo *): add declarations of struct_info
+	and struct_members as function pointers.
+
+	* hash.h: remove declarations of struct_info and struct_members
+	(replaced by declarations in hdr_hash.h).
+
+	* gen_hash.sh (nm): give different names to struct_info and
+	struct_members for each header file (hdr_struct_info and
+	hdr_struct_members for hdr.h), so they can be used together
+	in one program, and put the declarations in hdr_hash.h.
+
+2005-07-25  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* gen_gperf.pl (print_vars): fix handling of multi-dimensional
+	array dimension array declarations
+
+	* filer.c (Save_snd_ok_CB): save .snd as fileio file
+
+	* fileio.h (FILEIO_FORMAT_VERSION): set version to 5 so as not to
+	overlap with .snd file versions.
+
+	* inode_2.h:
+	* Makefile.am (newsned_SOURCES):
+	* filer.c (copy_inode_2, read_snd_file): read in to inode_2 and
+	copy to inode so inode can be changed and old formats can still be
+	read.
+
+	* old_inode.h: make old_inode.h independent of inode.h by adding
+	OLD_AXON, OLD_GLOBAL_NETWORK, and OLD_S_NODE
+
+2005-07-22  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (Load_snd_ok_CB, load_snd_file): put .snd file read code
+	in a separate function "load_snd_file"
+	(Load_snd_ok_CB, read_fileio_file, alert): handle fileio format
+	version of .snd file
+
+	* configure.ac: bump rev to 0.1.27
+
+	* filer.c (Save_snd_ok_CB): disable load_struct of newsned.save
+
+2005-07-21  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (Load_snd_ok_CB, Save_snd_ok_CB):
+	* simloop.c (simloop): use new routines for file format version
+
+	* fileio.c (save_struct_open, load_struct_open): add routines to
+	handle file format version
+
+	* fileio.h (FILEIO_FORMAT_VERSION): define as 1
+	(save_struct_open, load_struct_open): add declarations
+
+2005-07-13  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* inode.h:
+	* filer.c: move doc_file declaration to inode.h, so gen_gperf.pl
+	will see it.
+
+	* inode.h: put struct members one to a line for fileio
+
+	* filer.c (Save_snd_ok_CB): load newsned state for debug
+
+	* inode.h: tag string variables
+
+	* fileio.c (do_save_struct): remove some debug code
+
+	* inode.h:
+	* newsned.c:
+	* sim.c:
+	* Makefile.am:
+	* simulator.h:
+	* util.h:
+	* util.c: move *ALLOC, DIE, MIN, stuff to util.*
+
+	* simloop.c: add '#include "fileio.h"'
+
+	* fileio.c: replace '#include "simulator.h"' with
+	'#include "fileio.h"'
+
+	* fileio.h:
+	* simulator.h: move fileio declarations from simulator.h to
+	fileio.h
+
+	* filer.c (Load_snd_ok_CB): save global newsned.save for debug
+	add '#include "fileio.h"'
+
+2005-07-12  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* fileio.c (ato_char_string): new routine for string arrays
+	(print_array): print string value for string-tagged members
+
+	* gen_gperf.pl (print_vars): use ato_char_string for string
+	arrays
+
+	* fileio.c (load_struct): get value for strings
+
+	* tag.pl: handle string tag
+
+	* simulator.h: tag string pointers
+
+	* gen_gperf.pl: initialize string flag
+
+	* hash.h (struct StructInfo): add string flag
+
+	* fileio.c (print_array):
+	(do_save_struct):
+	(load_struct): multidimensional array support
+	(do_save_struct): string should be saved during TAGSAVE, not
+	REFSAVE.
+
+	* newsned.c: add die() and malloc_debug
+
+	* hash.h (struct StructInfo): add "dim" for multidimensional array
+	support
+
+	* gen_gperf.pl: add multidimensional array support
+
+2005-07-11  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop): let initial_state set stepnum, so variables
+	that are reset at stepnum 0 will not be reset.
+
+2005-07-08  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* inode.h: add dimension to inode declaration for gen_gperf.pl
+
+	* hash.h:
+	* fileio.c (ato_long, str_long, ato_short, str_short): add
+	conversion routines
+
+	* fileio.c (do_save_struct): call choose routine for union members
+	(ato_long): add ato_long
+
+	* gen_gperf.pl: add code for choose include file.
+
+	* Makefile.am (newsned_hash.c): add entry to create
+
+	* fileio.h:
+	* hash.h:
+	* gen_gperf.pl:
+	* fileio.c:
+	* Makefile.am: make fileio.c independent of hash.c and the include
+	file for which the hash is being generated, so we can generate
+	multiple hash.c's and use the same fileio.c.
+
+	* Makefile.am (sim_hash.c): name changed from hash.c, use new
+	gen_hash.sh script to generate.
+
+	* gen_hash.sh: script that takes an include file as an argument
+	and generates a hash function, rather than doing it all in the
+	makefile.
+
+2005-07-07  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* gen_gperf.pl (push_flds, print_vars): add choose function for
+	determining the union member
+
+	* fileio.c (do_save_struct): pass parent pointer to determine
+	which member of a union to save.
+
+	* gen_gperf.pl (push_flds): do unions as well as structs
+
+	* old_inode.h:
+	* inode.h: use typedef for unode rather than nesting, for
+	gen_gperf.pl's benefit.
+
+2005-07-06  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.26
+
+	* simloop.c (simloop): remove debugging code that was causing a
+	crash
+
+	* configure.ac: bump rev to 0.1.25
+
+	* lpanel.c (Launch_CB):
+	* filer.c (Save_snd_unmap_CB): bring up save panel before
+	launching
+	(Save_snd_ok_CB):
+	(save_scr): add .snd extension if not already there
+	(Load_snd_ok_CB): copy load file name to save file default
+
+	* filer.c (Load_snd_ok_CB): update launch panel after a loading a
+	.snd file
+
+	* newsned.c (make_spawn_panel):
+	* lpanel.c (CI_CB, l_update): add buttonm to delete "initial_state"
+
+	* simulator.h:
+	* sim.c:
+	(main, sigterm_handler): save initial_state, catch sigterm, quit
+	after current time step, save state to end_state
+
+	* lpanel.c (FI_CB):
+	* newsned.c (make_spawn_panel): add button to rename
+	"end_conditions" file to "initial_conditions"
+
+	* lpanel.c (make_spawn_panel): change label from "UPDATE SIM FILE"
+	to "MID-RUN UPDATE"
+
+	* lpanel.c (MaplCB, Kill_CB):
+	* newsned.c (make_spawn_panel): change now useless sim type
+	indicator to a kill button.
+
+	* lpanel.c (l_update): add yellow background to spawn label to
+	work around lesstif bug that ignores foreground color changes.
+
+2005-07-01  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simulator.h: add save_all
+
+	* newsned.c (main): register SIGCHLD callback
+	(sigchld_handler): relay SIGCHLD to Xt
+
+	* inode.h (sigchld_callback): add declaration
+
+	* lpanel.c (sigchld_callback): add handler for SIGCHLD
+
+	* Makefile.am (hash.c): add entry to create hash.c; dependency for
+	fileio.c; add hash.c gen_gperf.pl and tag.pl to EXTRA_DIST
+
+	* hash.c: generated file for general save and restore
+
+	* tag.pl:
+	* gen_gperf.pl: support for general save and restore
+
+	* simulator.h: add save_struct, change print to print_member
+
+	* simloop.c: use new save and restore functions
+
+	* fileio.c: general save and restore functions
+
+2005-06-21  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* sim.c
+	* turbo_simloop.c:
+	* simulator.h:
+	* simloop.c: put Vm_plot and spike_plot in Plot
+
+	* update.c:
+	* turbo_simloop.c:
+	* simulator.h:
+	* simloop.c:
+	* copy_state.c:
+	* build_turbo_network.c:
+	* build_network.c:
+	* assist.c: change q_size to q_count, syncnt to syn_count
+
+2005-06-20  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c: add save_state and restore_state
+
+	* simulator.h: give each variable its own declaration, on its own
+	line.
+	add print and load_struct
+	(DECLARE_PTR_STR): added
+
+2005-06-10  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* turbo_simloop.c (turbo_simloop):
+	* read_sim.c (turbify_model):
+	* simulator.h (CellPop):
+	make population activity plot in turbo mode work like normal mode.
+	Requires orig_cell_count member in CellPop structure.
+
+	* read_sim.c (read_sim, smooth_fibers):
+	* sim.c (main):
+	* simulator.h:
+	add nonoise option - fibers fire at every step with proportionally
+	reduced strength, and cell noise is set to 0.
+
+2005-06-09  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* turbo_simloop.c (read_firing_rates): added for ASSIST debug mode
+	(turbo_simloop): call read_firing_rates if ASSIST defined and use
+	them instead of real firing rates for input to populations
+
+	* simloop.c (simloop): handle net.cellpop[p].cell_count==0 to
+	avoid divide by zero
+
+2005-06-08  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop):
+	* sim.c (main): skip population id codes that are out of range.
+
+2005-06-06  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.24
+
+	* simloop.c (simloop): put args to memset in the right order.
+	Fixes segfault.
+
+	* turbo_simloop.c: delete global static burster parameters
+	* turbo_simloop.c (turbo_simloop): use burster parameters from
+	CellPop
+
+	* turbo_simloop.c (simoutsned): write step size to wave files
+	add var #, type, and label to wave file.
+
+2005-06-03  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.23
+
+	* snedskop.c (key_press): allow vm to go below 0
+	(Scope_CB): only draw the upper voltage marker
+	show setting of voltage marker in label in appropriate units
+
+	* configure.ac: bump rev to 0.1.22
+
+	* Makefile.am (snedskop_LDADD): add LIBOBJS for getline
+
+	* snedskop.c: add conditional include of getline
+
+	* filer.c (Load_snd_ok_CB): accept version 4
+
+	* simloop.c (simoutsned): write step size to wave files
+
+	* snedskop.c: add show_labels and stepsize globals
+	(key_press): toggle show_labels when "l" is pressed
+	(Scope_CB): show labels only if show_labels is set
+	read stepsize from wave file if present
+
+2005-06-02  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simoutsned): add var #, type, and label to wave file.
+
+	* simulator.h (struct): add type and lbl members to Plot
+	structure.
+
+	* sim.c (main): read label of signals to be plotted, if any.
+
+	* snedskop.c (Scope_CB): look for var #, type, and label in wave
+	file.  Add popvar, poptype, and poplabel arrays.
+
+	* configure.ac: bump rev to 0.1.21
+
+	* lpanel.c (Launch_CB): unlink the wave.* files one-by-one instead
+	of using "rm *" because there can be too many for "rm *".
+
+	* simloop.c (simloop): use burster parameters from CellPop
+	delete global static burster parameters	
+
+	* read_sim.c (read_sim): read in burster parameters
+
+	* simulator.h (struct): add burster parameters to CellPop
+
+2005-06-01  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* editbody.c (EditbodyCB): call K_c_CB to update c_panel labels
+	before displaying c_panel.
+
+	* cellpanel.c (K_c_CB): if widget = 0, unconditionally update
+	panel labels.
+
+	* def_cell.sned:
+	* filer.c (Load_snd_ok_CB, cell_loader, fix_burster_cells): set
+	ex-rebound burster parameters to previous simloop hard-wired
+	values for new populations or when the .snd file version <= 3.
+	(Save_snd_ok_CB): set sndfile_format_version to 4 for new .snd
+	files.
+
+	* newsned.c (change_panel_labels,restore_panel_labels): don't
+	display values or set value changed callback for unlabeled
+	parameters.
+
+	* editbody.c (EditbodyCB): use set_c_panel_param_text to set text
+	from values so that entries without labels don't have text
+	displayed when they are edited.
+
+	* newsned.c (set_c_panel_param_text): added routine to set param
+	text from values unless the entry has no label.
+
+	* inode.h:
+	* newsned.c:
+	* cellpanel.c: delete unused Show_c_panelCB
+
+	* newsned.c (param_entry): don't display values or set value
+	changed callback for unlabeled parameters.
+
+2005-05-27  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop): make var=4 in the launch panel a special
+	case: instantaneous firing rate per step
+
+	* lpanel.c (Turbo_CB): add callback for turbo button
+	(Launch_CB): call sim with turbo option if turbo_flag is set.
+
+	* newsned.c (make_spawn_panel): add turbo button
+
+	* update.c (update): call read_sim with turbo = 0 (hopefully,
+	turbo goes too fast for updates to be useful)
+
+	* read_sim.c (read_sim): call turbify_model if turbo is set
+	(turbify_model): new routine
+	initialize TGK
+
+	* simulator.h: add turbo arg to read_sim, and add turbo_simloop
+	add fr and TGK to CellPop
+
+	* build_network.c (for_terminals): if NT == NCT - MCT, make each
+	terminal a different delay (for turbo)
+
+	* sim.c (main): add turbo option
+
+	* configure.ac: bump rev to 0.1.20
+
+	* time.txt: change spawn0.sim time time.sim
+
+	* Makefile.am (EXTRA_DIST): change script0.scr to time.txt and
+	spawn0.sim to time.sim
+
+	* lpanel.c (Launch_CB): change script0.scr to script0.txt
+
+2005-05-26  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.19
+
+	* simloop.c (simloop): disable printf in PSR model
+
+	* configure.ac: bump rev to 0.1.18
+
+	* inode.h: add include getline.h for getline on Cygwin
+
+	* Makefile.am (newsned_LDADD): add LIBOBJS for getline on Cygwin
+
+2005-05-23  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.17
+
+	* Makefile.am (EXTRA_DIST): remove cof1.62.scr from package so the
+	package file will not be removed as a virus when sent as an email
+	attachment
+
+        * configure.ac: bump rev to 0.1.16
+
+	* cellpanel.c: add "Noise Amplitude" label to cell panel for
+	bursters
+
+	* simloop.c (simloop): plot h from 0 (no offset)
+
+2005-05-19  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* snedskop.c (CreateApplication): make window smaller so as not to
+	overlap taskbar
+	(CreateApplication): default to 1000 unit markers
+	(CreateApplication): default to 64 time compression
+
+	* lpanel.c (l_update): make spawn number red when sim is running
+
+	* newsned.c:
+	* filer.c:
+	* inode.h (MAX_SPAWN): define as 20 and use for appropriate array
+	dimensions
+
+	* lpanel.c (Launch_CB): use fork/execlp instead of "system"
+	kill previous sim and delete previous files when starting a new sim
+
+	* sim.c (main): make it possible to specify a script file as a
+	command-line argument.
+
+	* simloop.c (simloop): make population activity plot look like
+	CTH.
+
+	* newsned.c (make_spawn_panel): make space for 2 digit var number.
+
+2005-05-18  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* snedskop.c (Scope_CB): display voltage marker setting on screen
+	(key_press): up and down keys now control voltage markers
+
+	* configure.ac: bump rev to 0.1.13
+
+	* snedskop.c (key_press, CreateApplication): add handler for key
+	presses
+
+	* simloop.c (simloop): change initial h to .43
+
+	* node_mgr.c (Render_CB):
+	* newsned.c (CreateApplication2): eliminate excessive repaints of
+	screen
+
+	* lpanel.c (make_scr1, make_scr2): make bdt and snedskop list text
+	boxes wide enough for their contents
+
+	* newsned.c:
+	* filer.c (read_scr1, read_scr2, load_scr, Load_snd_ok_CB)
+	(save_scr, Save_snd_ok_CB): save and restore bdt and snedskop
+	lists in .ols file when .snd file is saved or restored
+
+2005-05-06  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop): save all cells from a population to bdt if
+	cell number is 999999999.
+
+2005-05-05  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (Save_snd_ok_CB): change sndfile format version to 3
+	(Load_snd_ok_CB): zero rebound parameter from older snd files
+
+2005-05-04  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (Save_snd_ok_CB, Load_snd_ok_CB): save presynaptic flag
+	to -- and restore from -- last byte of global comment
+
+	* inode.h: declare presynaptic_flag globally
+
+	* globalpanel.c (G1CB): limit global comment to 99 characters to
+	avoid buffer overrun and make room for presynaptic flag
+
+	* simloop.c (simloop): add synaptic noise input
+
+	* simulator.h (struct): add excitatory and inhibitory noise
+	conductances
+
+	* build_network.c (build_network): initialize noise seed for each
+	cell population
+
+2005-05-03  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* read_sim.c (read_sim): read in rebound parameter as noise_amp
+
+	* simulator.h (struct): add noise_amp and noise_seed members to
+	CellPop structure
+
+	* newsned.c: use rebound parameter for Noise Amplitude
+
+	* editbody.c (EditbodyCB): move rebound parameter from ifdef for
+	use as Noise Amplitude
+
+	* cellpanel.c: change burster and psr parameter labels to add room
+	for Noise Amplitude
+
+2005-05-02  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* Makefile.am (newsned_SOURCES): remove axon.c (not used)
+
+	* connecter.c (DrawconnectCB):
+	* editaxon.c (EditaxonCB, KillaxonCB): abort edit if right mouse
+	button is pressed, to avoid hang
+
+2005-04-29  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.12 after changes during Rybak visit
+
+2005-04-28  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simloop.c (simloop): offset synapse equilibrium potential for
+	Hybrid I/F populations.
+	(simloop): change initial value of h to .28
+	(simloop): set Hybrid I/F threshold to -40 instead of a function
+	of h
+	(simloop): reduce dependence of delta_h on h by a factor of 2
+	(simloop): add ability to save whole population activity for
+	display by snedskop (var = 4 in newsned, cell # is multiplier)
+
+	* cellpanel.c (swap_vals,K_c_CB): don't call buggy swap_vals
+	(fixes cell pop parameters changing on their own)
+
+
+2005-04-25  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.11
+
+	* editaxon.c (EditaxonCB, KillaxonCB): if presynaptic is set on
+	spawn panel, edit axon will edit only normal axons, unless the
+	ctrl key is pressed, in which case it will only edit presynaptic
+	axons, or the shift key is pressed, in which case it will edit
+	only postsynaptic axons
+
+2005-04-19  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* filer.c (save_table): store population and terminal counts in
+	longs instead of shorts for sim file, so we can have more than
+	32,767.
+
+	* configure.ac: bump rev to 0.1.10
+
+	* newsned.c (CreateHelp): added PACKAGE_STRING to help display
+
+	* filer.c (Load_snd_ok_CB, fix_burster_cells): if the .snd file
+	format version is less than 2, fix burster cell taubar_h and
+	g_NaP_h values.
+	(Save_snd_ok_CB): change .snd file format version to 2
+
+	* configure.ac: bump rev to 0.1.9
+
+	* inode.h: add includes for asprintf
+
+	* cellpanel.c: add labels for taubar_h and g_NaP_h to
+	burster_labels
+	(K_c_CB): track values as well as labels for taubar_h and g_NaP_h
+
+	* simloop.c (simloop): get taubar_h and g_NaP_h from population
+	instead of constants
+
+	* read_sim.c (read_sim): set taubar_h and g_NaP_h from
+	Accommodation Time and K conductance change if Time constant for
+	potassium conductance == 0 (burster)
+
+	* simulator.h (struct): add taubar_h and g_NaP_h to CellPop
+	structure
+
+2005-04-18  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* simulator.h:
+	* build_network.c (ran): change ran to return double to avoid
+	crash due to ran returning exactly 1
+
+	* configure.ac: bump rev to 0.1.8
+
+	* simulator.h (struct): add var member to Plot structure
+
+	* simloop.c (simoutsned, simloop): write appropriate variable
+	values to wave files depending on the var# parameter
+
+	* sim.c (main): read var# to be plotted from stdin along with pop
+	and unit number
+
+	* newsned.c:
+	* lpanel.c: add "Var #" widget to launch panel
+
+	* configure.ac: bump rev to 0.1.7
+
+	* connectpanel.c (Mincond_s_up_CB, Mincond_s_down_CB, Cond_s_CB):
+	fix conduction time variables def_cond and def_mincond
+
+2005-04-15  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.6
+
+	* snedskop.c (Scope_CB): don't increment pcnt unless pcnt <
+	visible_steps (fixes extraneous lines on trace)
+
+	* configure.ac: bump rev to 0.1.5
+
+	* read_sim.c (read_sim): fix DCTH read-in
+	(scan_targetpop):
+
+	* simloop.c (simloop): fix post-synaptic effect
+
+2005-04-01  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* read_sim.c (scan_targetpop): initialize minimum conduction time
+	when it's not in the .sim file.
+
+	* configure.ac: bump rev to 0.1.4
+
+	* filer.c (Load_snd_ok_CB): swap bytes in sndfile_format_version
+	to avoid "bad .snd file" error
+
+2005-03-31  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.3
+
+	* snedskop.c (Scope_CB): put pcnt++ back outside xloop so multiple
+	traces will display properly
+
+2005-03-30  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.2
+
+	* build_network.c (for_fiber_targets): delete debug printf
+	(check_synapses): allow for synapses initialized to 1 for
+	presynaptic
+
+	* read_sim.c (read_sim): change fscanf to use %s instead of %c so
+	it can read the presynaptic flag
+
+	* sim.c (main): delete debug printf
+
+	* configure.ac: bump rev to 0.1.1
+
+	* build_network.c (for_cell_targets, for_fiber_targets): don't die
+	if a connection has no terminals
+
+2005-03-29  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.1.0
+
+	* README: documented recent changes
+
+	* configure.ac: bump rev to 0.0.9
+
+	* snedskop.c (Time64CB, Scope_CB): provide time compression beyond
+	64
+
+	* simulator.h (struct Cell):  add Vm_prev for spike positioning
+
+	* simloop.c (simloop): don't write to bdt file unless
+	save_spike_times is 'y'
+	- position the spike before the related Vm change in
+	snedskop output
+	- add PSR and burster cell types
+
+	* sim.c: don't look for corrected input unless stdin is a tty
+
+	* read_sim.c (read_sim): handle both spellings of Accom[m]odation
+	add PSR and burster flags
+	(scanfixed): add fscanf %n to (apparently) reset the character
+	count
+
+	* newsned.c: add burster and PSR options to c_panel labels
+	(change_panel_labels): added to support label switching
+	(restore_panel_labels): added to support label switching
+	(change_c_panel_labels): add definition
+	(restore_c_panel_labels): add definition
+
+	* inode.h (DIE): make it exit, not just print a message
+	(change_c_panel_labels): add declaration
+	(restore_c_panel_labels): add declaration
+
+	* configure.ac: change prereq to 2.57 from 2.59
+
+	* cellpanel.c: add c_panel label switching for PSR and bursting
+	population types
+
+	* build_network.c (check_synapses): fixed to check all synapses of
+	a cell, not just the first
+	(build_network): remove debug printfs
+
+2005-03-14    <roconnor@risc2.sys-neuro.local>
+
+	* old_inode.h: added
+	* swap.c:
+	* swap.h: added
+	* node_mgr.c (get_maxes):
+	* inode.h:
+	* filer.c:
+	* connectpanel.c:
+	* editaxon.c:
+	* simulator.h (TargetPop struct):
+	* read_sim.c (scan_targetpop): add minimum conduction time
+
+	* newsned.c: delete unused s_cond_m, s_cond_up, s_cond_down
+
+	* Makefile.am (LDADD): add LIBOBJS for asprintf and getline
+	(EXTRA_DIST): add asprintf.h and getline.h
+	(EXTRA_DIST): add cof1.62.{sim,scr,snd}
+
+	* sim.c (nograph): cast arg of isgraph to unsigned int
+
+	* getline.c, asprintf.c: add for HP-UX
+
+	* configure.ac: add AC_REPLACE_FUNCS asprintf getline
+
+	* simulator.h: add config.h, asprintf, getline
+
+	* simulator.h: ifndef MIN
+
+	* simloop.c: remove include of asm/msr.h
+
+2005-03-11  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev. to 0.0.8
+
+	* lpanel.c (Launch_CB, MaplCB): change sim%dp to sim.  There's
+	just one simulator for all model sizes now.  Also, use sim and
+	snedskop from PATH instead of current directory.
+
+	* Makefile.am, configure.ac: add files for newsned and snedskop
+
+	* filer.c: hard-code default values for when *.sned files are
+	missing.
+
+2005-03-10  Russell O'Connor  <roconnor@hsc.usf.edu>
+
+	* configure.ac: bump rev to 0.0.7
+
+	* added presynaptic functionality
+
+	* configure.ac: bump rev to 0.0.6
+
+	* added update and simoutsned functionality
+

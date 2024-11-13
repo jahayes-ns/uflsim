@@ -1,0 +1,5296 @@
+file_format_version 6
+file_subversion 1
+malloc_debug 0
+doc_file 0
+
+inode 0
+node_type 4
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+global_node 0
+total_populations 7
+total_fibers 2
+total_cells 5
+sim_length 20000
+k_equilibrium -10
+max_conduction_time 51
+num_synapse_types 4
+max_targets 3
+step_size 0.5
+maximum_cells_per_pop 300
+global_comment 0
+
+phrenic_equation 0
+
+lumbar_equation 0
+
+ilm_elm_fr 40
+sim_length_seconds 10
+
+
+
+inode 1
+node_type 2
+node_number 1
+comment1 7
+E DEC P
+comment2 0
+
+unode 0
+cell_node 0
+cell_x 850
+cell_y 711
+cell_axon 0
+num_coords 2
+x_coord 870 924 1580 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 711 361 1020 1040 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 1
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 2
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 3
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 4
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 5
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 6
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 7
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 8
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 9
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 10
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 11
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 12
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 13
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 14
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 15
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 16
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 17
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 18
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 19
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 20
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 21
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 22
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 23
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 24
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 25
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 26
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 27
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 28
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 29
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 30
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 31
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 32
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 33
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 34
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 35
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 36
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 37
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 38
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 39
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 40
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 41
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 42
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 43
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 44
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 45
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 46
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 47
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 48
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 49
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 50
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 51
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 52
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 53
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 54
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 55
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 56
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 57
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 58
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 59
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 60
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 61
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 62
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 63
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 64
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 65
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 66
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 67
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 68
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 69
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 70
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 71
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 72
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 73
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 74
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 75
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 76
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 77
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 78
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 79
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 80
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 81
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 82
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 83
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 84
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 85
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 86
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 87
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 88
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 89
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 90
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 91
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 92
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 93
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 94
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 95
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 96
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 97
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 98
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 99
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+c_accomodation 200
+c_k_conductance 3.7999999523162842
+c_mem_potential 6
+c_resting_thresh 4
+c_resting_thresh_sd 1
+c_ap_k_delta 27
+c_accom_param 0.69999998807907104
+c_pop 300
+c_targets 1
+group 0
+
+c_target_nums 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_min_conduct_time 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_conduction_time 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_terminals 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_type 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_strength 0.0099999997764825821 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_target_seed 5658090 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_rebound_param 0.20000000298023224
+c_rebound_time_k -48
+c_thresh_remove_ika 6
+c_thresh_active_ika -40
+c_max_conductance_ika -6
+c_pro_deactivate_ika -47.359001159667969
+c_pro_activate_ika -40
+c_constant_ika -0.00078000000212341547
+c_dc_injected 0
+c_injected_expression -1
+pop_subtype 2
+
+
+
+inode 2
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 3
+node_type 2
+node_number 3
+comment1 7
+I DEC P
+comment2 0
+
+unode 0
+cell_node 0
+cell_x 393
+cell_y 162
+cell_axon 0
+num_coords 2
+x_coord 680 860 1580 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 400 640 1020 1040 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 1
+num_coords 2
+x_coord 413 924 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 162 341 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 2
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 3
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 4
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 5
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 6
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 7
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 8
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 9
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 10
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 11
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 12
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 13
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 14
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 15
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 16
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 17
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 18
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 19
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 20
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 21
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 22
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 23
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 24
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 25
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 26
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 27
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 28
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 29
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 30
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 31
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 32
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 33
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 34
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 35
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 36
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 37
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 38
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 39
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 40
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 41
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 42
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 43
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 44
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 45
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 46
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 47
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 48
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 49
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 50
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 51
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 52
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 53
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 54
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 55
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 56
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 57
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 58
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 59
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 60
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 61
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 62
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 63
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 64
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 65
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 66
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 67
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 68
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 69
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 70
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 71
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 72
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 73
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 74
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 75
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 76
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 77
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 78
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 79
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 80
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 81
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 82
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 83
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 84
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 85
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 86
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 87
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 88
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 89
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 90
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 91
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 92
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 93
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 94
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 95
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 96
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 97
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 98
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 99
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+c_accomodation 100
+c_k_conductance 366
+c_mem_potential 6
+c_resting_thresh 10
+c_resting_thresh_sd 1
+c_ap_k_delta 25.5
+c_accom_param 0.20000000298023224
+c_pop 300
+c_targets 2
+group 0
+
+c_target_nums 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_min_conduct_time 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_conduction_time 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_terminals 0 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_type 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_strength 0 0.5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_target_seed 0 354654 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_rebound_param 0.30019998550415039
+c_rebound_time_k -48
+c_thresh_remove_ika 6
+c_thresh_active_ika -40
+c_max_conductance_ika -6
+c_pro_deactivate_ika -47.359001159667969
+c_pro_activate_ika -40
+c_constant_ika -0.00078000000212341547
+c_dc_injected 0
+c_injected_expression -1
+pop_subtype 2
+
+
+
+inode 4
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 5
+node_type 2
+node_number 5
+comment1 3
+ELM
+comment2 0
+
+unode 0
+cell_node 0
+cell_x 944
+cell_y 361
+cell_axon 0
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 1
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 2
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 3
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 4
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 5
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 6
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 7
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 8
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 9
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 10
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 11
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 12
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 13
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 14
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 15
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 16
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 17
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 18
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 19
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 20
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 21
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 22
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 23
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 24
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 25
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 26
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 27
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 28
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 29
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 30
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 31
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 32
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 33
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 34
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 35
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 36
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 37
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 38
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 39
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 40
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 41
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 42
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 43
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 44
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 45
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 46
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 47
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 48
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 49
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 50
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 51
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 52
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 53
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 54
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 55
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 56
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 57
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 58
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 59
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 60
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 61
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 62
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 63
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 64
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 65
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 66
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 67
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 68
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 69
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 70
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 71
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 72
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 73
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 74
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 75
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 76
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 77
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 78
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 79
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 80
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 81
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 82
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 83
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 84
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 85
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 86
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 87
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 88
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 89
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 90
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 91
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 92
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 93
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 94
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 95
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 96
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 97
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 98
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+cell_axon 99
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+c_accomodation 500
+c_k_conductance 3.7999999523162842
+c_mem_potential 0.10000000149011612
+c_resting_thresh 4
+c_resting_thresh_sd 1
+c_ap_k_delta 25
+c_accom_param 0.079999998211860657
+c_pop 300
+c_targets 0
+group 0
+
+c_target_nums 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_min_conduct_time 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_conduction_time 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_terminals 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_type 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_synapse_strength 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_target_seed 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+c_rebound_param 0.05000000074505806
+c_rebound_time_k -48
+c_thresh_remove_ika 6
+c_thresh_active_ika -40
+c_max_conductance_ika -6
+c_pro_deactivate_ika -47.359001159667969
+c_pro_activate_ika -40
+c_constant_ika -0.00078000000212341547
+c_dc_injected 0
+c_injected_expression -1
+pop_subtype 12
+
+
+
+inode 6
+node_type 1
+node_number 1
+comment1 16
+tonic excitation
+comment2 0
+
+unode 0
+fiber_node 0
+fiber_x 700
+fiber_y 127
+fiber_axon 0
+num_coords 2
+x_coord 680 413 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 147 147 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 1
+num_coords 2
+x_coord 900 1280 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 100 640 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 2
+num_coords 2
+x_coord 700 850 1400 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 147 691 840 840 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 3
+num_coords 2
+x_coord 920 1260 1400 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 120 640 840 840 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 4
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 5
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 6
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 7
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 8
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 9
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 10
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 11
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 12
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 13
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 14
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 15
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 16
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 17
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 18
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 19
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 20
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 21
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 22
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 23
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 24
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 25
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 26
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 27
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 28
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 29
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 30
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 31
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 32
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 33
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 34
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 35
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 36
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 37
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 38
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 39
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 40
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 41
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 42
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 43
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 44
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 45
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 46
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 47
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 48
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 49
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 50
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 51
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 52
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 53
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 54
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 55
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 56
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 57
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 58
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 59
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 60
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 61
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 62
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 63
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 64
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 65
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 66
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 67
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 68
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 69
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 70
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 71
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 72
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 73
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 74
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 75
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 76
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 77
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 78
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 79
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 80
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 81
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 82
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 83
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 84
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 85
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 86
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 87
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 88
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 89
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 90
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 91
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 92
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 93
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 94
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 95
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 96
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 97
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 98
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 99
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+f_prob 0.05000000074505806
+f_begin 0
+f_end 10000
+f_seed 30388662
+f_pop 100
+f_targets 3
+group 0
+
+f_target_nums 3 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_min_conduct_time 10 0 10 0 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_conduction_time 20 0 50 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_terminals 300 0 300 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_synapse_type 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_synapse_strength 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_target_seed 1212330056 0 9277530 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+pop_subtype 1
+freq_type 0
+frequency 0
+fuzzy_range 0
+
+
+
+inode 7
+node_type 1
+node_number 2
+comment1 8
+fast sln
+comment2 0
+
+unode 0
+fiber_node 0
+fiber_x 353
+fiber_y 587
+fiber_axon 0
+num_coords 2
+x_coord 373 830 1580 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 587 711 1020 1040 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 1
+num_coords 2
+x_coord 373 373 1580 680 0 0 0 0 0 0 0 0 0 0 0
+y_coord 567 162 1020 1040 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 2
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 3
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 4
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 5
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 6
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 7
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 8
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 9
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 10
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 11
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 12
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 13
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 14
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 15
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 16
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 17
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 18
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 19
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 20
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 21
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 22
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 23
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 24
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 25
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 26
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 27
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 28
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 29
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 30
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 31
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 32
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 33
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 34
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 35
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 36
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 37
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 38
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 39
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 40
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 41
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 42
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 43
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 44
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 45
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 46
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 47
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 48
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 49
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 50
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 51
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 52
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 53
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 54
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 55
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 56
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 57
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 58
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 59
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 60
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 61
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 62
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 63
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 64
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 65
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 66
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 67
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 68
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 69
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 70
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 71
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 72
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 73
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 74
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 75
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 76
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 77
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 78
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 79
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 80
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 81
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 82
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 83
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 84
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 85
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 86
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 87
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 88
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 89
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 90
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 91
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 92
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 93
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 94
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 95
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 96
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 97
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 98
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+fiber_axon 99
+num_coords 0
+x_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+y_coord 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+f_prob 0.5
+f_begin 5000
+f_end 5010
+f_seed 30388662
+f_pop 300
+f_targets 2
+group 0
+
+f_target_nums 1 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_min_conduct_time 1 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_conduction_time 1 30 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_terminals 100 100 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_synapse_type 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_synapse_strength 0.004999999888241291 0.004999999888241291 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+f_target_seed 5658090 5658090 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+pop_subtype 1
+freq_type 0
+frequency 0
+fuzzy_range 0
+
+
+
+inode 8
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 9
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 10
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 11
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 12
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 13
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 14
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 15
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 16
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 17
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 18
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 19
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 20
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 21
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 22
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 23
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 24
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 25
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 26
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 27
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 28
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 29
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 30
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 31
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 32
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 33
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 34
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 35
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 36
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 37
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 38
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 39
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 40
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 41
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 42
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 43
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 44
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 45
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 46
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 47
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 48
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 49
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 50
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 51
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 52
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 53
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 54
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 55
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 56
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 57
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 58
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 59
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 60
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 61
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 62
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 63
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 64
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 65
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 66
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 67
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 68
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 69
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 70
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 71
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 72
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 73
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 74
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 75
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 76
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 77
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 78
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 79
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 80
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 81
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 82
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 83
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 84
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 85
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 86
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 87
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 88
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 89
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 90
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 91
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 92
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 93
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 94
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 95
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 96
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 97
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 98
+node_type 0
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+
+
+inode 99
+node_type 3
+node_number 0
+comment1 19
+This node is Unused
+comment2 0
+
+unode 0
+synapse_node 0
+synapse_name 0 0
+
+synapse_name 1 12
+Excitatory_1
+synapse_name 2 12
+Inhibitory_1
+synapse_name 3 11
+Exitatory_2
+synapse_name 4 12
+Inhibitory_2
+synapse_name 5 0
+
+synapse_name 6 0
+
+synapse_name 7 0
+
+synapse_name 8 0
+
+synapse_name 9 0
+
+synapse_name 10 0
+
+synapse_name 11 0
+
+synapse_name 12 0
+
+synapse_name 13 0
+
+synapse_name 14 0
+
+synapse_name 15 0
+
+synapse_name 16 0
+
+synapse_name 17 0
+
+synapse_name 18 0
+
+synapse_name 19 0
+
+synapse_name 20 0
+
+synapse_name 21 0
+
+synapse_name 22 0
+
+synapse_name 23 0
+
+synapse_name 24 0
+
+synapse_name 25 0
+
+synapse_name 26 0
+
+synapse_name 27 0
+
+synapse_name 28 0
+
+synapse_name 29 0
+
+synapse_name 30 0
+
+synapse_name 31 0
+
+synapse_name 32 0
+
+synapse_name 33 0
+
+synapse_name 34 0
+
+synapse_name 35 0
+
+synapse_name 36 0
+
+synapse_name 37 0
+
+synapse_name 38 0
+
+synapse_name 39 0
+
+synapse_name 40 0
+
+synapse_name 41 0
+
+synapse_name 42 0
+
+synapse_name 43 0
+
+synapse_name 44 0
+
+synapse_name 45 0
+
+synapse_name 46 0
+
+synapse_name 47 0
+
+synapse_name 48 0
+
+synapse_name 49 0
+
+synapse_name 50 0
+
+synapse_name 51 0
+
+synapse_name 52 0
+
+synapse_name 53 0
+
+synapse_name 54 0
+
+synapse_name 55 0
+
+synapse_name 56 0
+
+synapse_name 57 0
+
+synapse_name 58 0
+
+synapse_name 59 0
+
+synapse_name 60 0
+
+synapse_name 61 0
+
+synapse_name 62 0
+
+synapse_name 63 0
+
+synapse_name 64 0
+
+synapse_name 65 0
+
+synapse_name 66 0
+
+synapse_name 67 0
+
+synapse_name 68 0
+
+synapse_name 69 0
+
+synapse_name 70 0
+
+synapse_name 71 0
+
+synapse_name 72 0
+
+synapse_name 73 0
+
+synapse_name 74 0
+
+synapse_name 75 0
+
+synapse_name 76 0
+
+synapse_name 77 0
+
+synapse_name 78 0
+
+synapse_name 79 0
+
+synapse_name 80 0
+
+synapse_name 81 0
+
+synapse_name 82 0
+
+synapse_name 83 0
+
+synapse_name 84 0
+
+synapse_name 85 0
+
+synapse_name 86 0
+
+synapse_name 87 0
+
+synapse_name 88 0
+
+synapse_name 89 0
+
+synapse_name 90 0
+
+synapse_name 91 0
+
+synapse_name 92 0
+
+synapse_name 93 0
+
+synapse_name 94 0
+
+synapse_name 95 0
+
+synapse_name 96 0
+
+synapse_name 97 0
+
+synapse_name 98 0
+
+synapse_name 99 0
+
+s_eq_potential 0 115 -25 115 -25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+s_time_constant 0 1.5 1.5 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+syn_type 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+parent 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+
+num_used_nodes 0 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+num_free_nodes 95
+presynaptic_flag 0
+baby_lung_flag 0
+
+inode 0
+unode 0
+global_node 0
+
+
+
+inode 1
+unode 0
+cell_node 0
+cell_axon 0
+
+cell_axon 1
+
+cell_axon 2
+
+cell_axon 3
+
+cell_axon 4
+
+cell_axon 5
+
+cell_axon 6
+
+cell_axon 7
+
+cell_axon 8
+
+cell_axon 9
+
+cell_axon 10
+
+cell_axon 11
+
+cell_axon 12
+
+cell_axon 13
+
+cell_axon 14
+
+cell_axon 15
+
+cell_axon 16
+
+cell_axon 17
+
+cell_axon 18
+
+cell_axon 19
+
+cell_axon 20
+
+cell_axon 21
+
+cell_axon 22
+
+cell_axon 23
+
+cell_axon 24
+
+cell_axon 25
+
+cell_axon 26
+
+cell_axon 27
+
+cell_axon 28
+
+cell_axon 29
+
+cell_axon 30
+
+cell_axon 31
+
+cell_axon 32
+
+cell_axon 33
+
+cell_axon 34
+
+cell_axon 35
+
+cell_axon 36
+
+cell_axon 37
+
+cell_axon 38
+
+cell_axon 39
+
+cell_axon 40
+
+cell_axon 41
+
+cell_axon 42
+
+cell_axon 43
+
+cell_axon 44
+
+cell_axon 45
+
+cell_axon 46
+
+cell_axon 47
+
+cell_axon 48
+
+cell_axon 49
+
+cell_axon 50
+
+cell_axon 51
+
+cell_axon 52
+
+cell_axon 53
+
+cell_axon 54
+
+cell_axon 55
+
+cell_axon 56
+
+cell_axon 57
+
+cell_axon 58
+
+cell_axon 59
+
+cell_axon 60
+
+cell_axon 61
+
+cell_axon 62
+
+cell_axon 63
+
+cell_axon 64
+
+cell_axon 65
+
+cell_axon 66
+
+cell_axon 67
+
+cell_axon 68
+
+cell_axon 69
+
+cell_axon 70
+
+cell_axon 71
+
+cell_axon 72
+
+cell_axon 73
+
+cell_axon 74
+
+cell_axon 75
+
+cell_axon 76
+
+cell_axon 77
+
+cell_axon 78
+
+cell_axon 79
+
+cell_axon 80
+
+cell_axon 81
+
+cell_axon 82
+
+cell_axon 83
+
+cell_axon 84
+
+cell_axon 85
+
+cell_axon 86
+
+cell_axon 87
+
+cell_axon 88
+
+cell_axon 89
+
+cell_axon 90
+
+cell_axon 91
+
+cell_axon 92
+
+cell_axon 93
+
+cell_axon 94
+
+cell_axon 95
+
+cell_axon 96
+
+cell_axon 97
+
+cell_axon 98
+
+cell_axon 99
+
+
+
+
+inode 2
+unode 0
+
+
+inode 3
+unode 0
+cell_node 0
+cell_axon 0
+
+cell_axon 1
+
+cell_axon 2
+
+cell_axon 3
+
+cell_axon 4
+
+cell_axon 5
+
+cell_axon 6
+
+cell_axon 7
+
+cell_axon 8
+
+cell_axon 9
+
+cell_axon 10
+
+cell_axon 11
+
+cell_axon 12
+
+cell_axon 13
+
+cell_axon 14
+
+cell_axon 15
+
+cell_axon 16
+
+cell_axon 17
+
+cell_axon 18
+
+cell_axon 19
+
+cell_axon 20
+
+cell_axon 21
+
+cell_axon 22
+
+cell_axon 23
+
+cell_axon 24
+
+cell_axon 25
+
+cell_axon 26
+
+cell_axon 27
+
+cell_axon 28
+
+cell_axon 29
+
+cell_axon 30
+
+cell_axon 31
+
+cell_axon 32
+
+cell_axon 33
+
+cell_axon 34
+
+cell_axon 35
+
+cell_axon 36
+
+cell_axon 37
+
+cell_axon 38
+
+cell_axon 39
+
+cell_axon 40
+
+cell_axon 41
+
+cell_axon 42
+
+cell_axon 43
+
+cell_axon 44
+
+cell_axon 45
+
+cell_axon 46
+
+cell_axon 47
+
+cell_axon 48
+
+cell_axon 49
+
+cell_axon 50
+
+cell_axon 51
+
+cell_axon 52
+
+cell_axon 53
+
+cell_axon 54
+
+cell_axon 55
+
+cell_axon 56
+
+cell_axon 57
+
+cell_axon 58
+
+cell_axon 59
+
+cell_axon 60
+
+cell_axon 61
+
+cell_axon 62
+
+cell_axon 63
+
+cell_axon 64
+
+cell_axon 65
+
+cell_axon 66
+
+cell_axon 67
+
+cell_axon 68
+
+cell_axon 69
+
+cell_axon 70
+
+cell_axon 71
+
+cell_axon 72
+
+cell_axon 73
+
+cell_axon 74
+
+cell_axon 75
+
+cell_axon 76
+
+cell_axon 77
+
+cell_axon 78
+
+cell_axon 79
+
+cell_axon 80
+
+cell_axon 81
+
+cell_axon 82
+
+cell_axon 83
+
+cell_axon 84
+
+cell_axon 85
+
+cell_axon 86
+
+cell_axon 87
+
+cell_axon 88
+
+cell_axon 89
+
+cell_axon 90
+
+cell_axon 91
+
+cell_axon 92
+
+cell_axon 93
+
+cell_axon 94
+
+cell_axon 95
+
+cell_axon 96
+
+cell_axon 97
+
+cell_axon 98
+
+cell_axon 99
+
+
+
+
+inode 4
+unode 0
+
+
+inode 5
+unode 0
+cell_node 0
+cell_axon 0
+
+cell_axon 1
+
+cell_axon 2
+
+cell_axon 3
+
+cell_axon 4
+
+cell_axon 5
+
+cell_axon 6
+
+cell_axon 7
+
+cell_axon 8
+
+cell_axon 9
+
+cell_axon 10
+
+cell_axon 11
+
+cell_axon 12
+
+cell_axon 13
+
+cell_axon 14
+
+cell_axon 15
+
+cell_axon 16
+
+cell_axon 17
+
+cell_axon 18
+
+cell_axon 19
+
+cell_axon 20
+
+cell_axon 21
+
+cell_axon 22
+
+cell_axon 23
+
+cell_axon 24
+
+cell_axon 25
+
+cell_axon 26
+
+cell_axon 27
+
+cell_axon 28
+
+cell_axon 29
+
+cell_axon 30
+
+cell_axon 31
+
+cell_axon 32
+
+cell_axon 33
+
+cell_axon 34
+
+cell_axon 35
+
+cell_axon 36
+
+cell_axon 37
+
+cell_axon 38
+
+cell_axon 39
+
+cell_axon 40
+
+cell_axon 41
+
+cell_axon 42
+
+cell_axon 43
+
+cell_axon 44
+
+cell_axon 45
+
+cell_axon 46
+
+cell_axon 47
+
+cell_axon 48
+
+cell_axon 49
+
+cell_axon 50
+
+cell_axon 51
+
+cell_axon 52
+
+cell_axon 53
+
+cell_axon 54
+
+cell_axon 55
+
+cell_axon 56
+
+cell_axon 57
+
+cell_axon 58
+
+cell_axon 59
+
+cell_axon 60
+
+cell_axon 61
+
+cell_axon 62
+
+cell_axon 63
+
+cell_axon 64
+
+cell_axon 65
+
+cell_axon 66
+
+cell_axon 67
+
+cell_axon 68
+
+cell_axon 69
+
+cell_axon 70
+
+cell_axon 71
+
+cell_axon 72
+
+cell_axon 73
+
+cell_axon 74
+
+cell_axon 75
+
+cell_axon 76
+
+cell_axon 77
+
+cell_axon 78
+
+cell_axon 79
+
+cell_axon 80
+
+cell_axon 81
+
+cell_axon 82
+
+cell_axon 83
+
+cell_axon 84
+
+cell_axon 85
+
+cell_axon 86
+
+cell_axon 87
+
+cell_axon 88
+
+cell_axon 89
+
+cell_axon 90
+
+cell_axon 91
+
+cell_axon 92
+
+cell_axon 93
+
+cell_axon 94
+
+cell_axon 95
+
+cell_axon 96
+
+cell_axon 97
+
+cell_axon 98
+
+cell_axon 99
+
+
+
+
+inode 6
+unode 0
+fiber_node 0
+fiber_axon 0
+
+fiber_axon 1
+
+fiber_axon 2
+
+fiber_axon 3
+
+fiber_axon 4
+
+fiber_axon 5
+
+fiber_axon 6
+
+fiber_axon 7
+
+fiber_axon 8
+
+fiber_axon 9
+
+fiber_axon 10
+
+fiber_axon 11
+
+fiber_axon 12
+
+fiber_axon 13
+
+fiber_axon 14
+
+fiber_axon 15
+
+fiber_axon 16
+
+fiber_axon 17
+
+fiber_axon 18
+
+fiber_axon 19
+
+fiber_axon 20
+
+fiber_axon 21
+
+fiber_axon 22
+
+fiber_axon 23
+
+fiber_axon 24
+
+fiber_axon 25
+
+fiber_axon 26
+
+fiber_axon 27
+
+fiber_axon 28
+
+fiber_axon 29
+
+fiber_axon 30
+
+fiber_axon 31
+
+fiber_axon 32
+
+fiber_axon 33
+
+fiber_axon 34
+
+fiber_axon 35
+
+fiber_axon 36
+
+fiber_axon 37
+
+fiber_axon 38
+
+fiber_axon 39
+
+fiber_axon 40
+
+fiber_axon 41
+
+fiber_axon 42
+
+fiber_axon 43
+
+fiber_axon 44
+
+fiber_axon 45
+
+fiber_axon 46
+
+fiber_axon 47
+
+fiber_axon 48
+
+fiber_axon 49
+
+fiber_axon 50
+
+fiber_axon 51
+
+fiber_axon 52
+
+fiber_axon 53
+
+fiber_axon 54
+
+fiber_axon 55
+
+fiber_axon 56
+
+fiber_axon 57
+
+fiber_axon 58
+
+fiber_axon 59
+
+fiber_axon 60
+
+fiber_axon 61
+
+fiber_axon 62
+
+fiber_axon 63
+
+fiber_axon 64
+
+fiber_axon 65
+
+fiber_axon 66
+
+fiber_axon 67
+
+fiber_axon 68
+
+fiber_axon 69
+
+fiber_axon 70
+
+fiber_axon 71
+
+fiber_axon 72
+
+fiber_axon 73
+
+fiber_axon 74
+
+fiber_axon 75
+
+fiber_axon 76
+
+fiber_axon 77
+
+fiber_axon 78
+
+fiber_axon 79
+
+fiber_axon 80
+
+fiber_axon 81
+
+fiber_axon 82
+
+fiber_axon 83
+
+fiber_axon 84
+
+fiber_axon 85
+
+fiber_axon 86
+
+fiber_axon 87
+
+fiber_axon 88
+
+fiber_axon 89
+
+fiber_axon 90
+
+fiber_axon 91
+
+fiber_axon 92
+
+fiber_axon 93
+
+fiber_axon 94
+
+fiber_axon 95
+
+fiber_axon 96
+
+fiber_axon 97
+
+fiber_axon 98
+
+fiber_axon 99
+
+
+
+
+inode 7
+unode 0
+fiber_node 0
+fiber_axon 0
+
+fiber_axon 1
+
+fiber_axon 2
+
+fiber_axon 3
+
+fiber_axon 4
+
+fiber_axon 5
+
+fiber_axon 6
+
+fiber_axon 7
+
+fiber_axon 8
+
+fiber_axon 9
+
+fiber_axon 10
+
+fiber_axon 11
+
+fiber_axon 12
+
+fiber_axon 13
+
+fiber_axon 14
+
+fiber_axon 15
+
+fiber_axon 16
+
+fiber_axon 17
+
+fiber_axon 18
+
+fiber_axon 19
+
+fiber_axon 20
+
+fiber_axon 21
+
+fiber_axon 22
+
+fiber_axon 23
+
+fiber_axon 24
+
+fiber_axon 25
+
+fiber_axon 26
+
+fiber_axon 27
+
+fiber_axon 28
+
+fiber_axon 29
+
+fiber_axon 30
+
+fiber_axon 31
+
+fiber_axon 32
+
+fiber_axon 33
+
+fiber_axon 34
+
+fiber_axon 35
+
+fiber_axon 36
+
+fiber_axon 37
+
+fiber_axon 38
+
+fiber_axon 39
+
+fiber_axon 40
+
+fiber_axon 41
+
+fiber_axon 42
+
+fiber_axon 43
+
+fiber_axon 44
+
+fiber_axon 45
+
+fiber_axon 46
+
+fiber_axon 47
+
+fiber_axon 48
+
+fiber_axon 49
+
+fiber_axon 50
+
+fiber_axon 51
+
+fiber_axon 52
+
+fiber_axon 53
+
+fiber_axon 54
+
+fiber_axon 55
+
+fiber_axon 56
+
+fiber_axon 57
+
+fiber_axon 58
+
+fiber_axon 59
+
+fiber_axon 60
+
+fiber_axon 61
+
+fiber_axon 62
+
+fiber_axon 63
+
+fiber_axon 64
+
+fiber_axon 65
+
+fiber_axon 66
+
+fiber_axon 67
+
+fiber_axon 68
+
+fiber_axon 69
+
+fiber_axon 70
+
+fiber_axon 71
+
+fiber_axon 72
+
+fiber_axon 73
+
+fiber_axon 74
+
+fiber_axon 75
+
+fiber_axon 76
+
+fiber_axon 77
+
+fiber_axon 78
+
+fiber_axon 79
+
+fiber_axon 80
+
+fiber_axon 81
+
+fiber_axon 82
+
+fiber_axon 83
+
+fiber_axon 84
+
+fiber_axon 85
+
+fiber_axon 86
+
+fiber_axon 87
+
+fiber_axon 88
+
+fiber_axon 89
+
+fiber_axon 90
+
+fiber_axon 91
+
+fiber_axon 92
+
+fiber_axon 93
+
+fiber_axon 94
+
+fiber_axon 95
+
+fiber_axon 96
+
+fiber_axon 97
+
+fiber_axon 98
+
+fiber_axon 99
+
+
+
+
+inode 8
+unode 0
+
+
+inode 9
+unode 0
+
+
+inode 10
+unode 0
+
+
+inode 11
+unode 0
+
+
+inode 12
+unode 0
+
+
+inode 13
+unode 0
+
+
+inode 14
+unode 0
+
+
+inode 15
+unode 0
+
+
+inode 16
+unode 0
+
+
+inode 17
+unode 0
+
+
+inode 18
+unode 0
+
+
+inode 19
+unode 0
+
+
+inode 20
+unode 0
+
+
+inode 21
+unode 0
+
+
+inode 22
+unode 0
+
+
+inode 23
+unode 0
+
+
+inode 24
+unode 0
+
+
+inode 25
+unode 0
+
+
+inode 26
+unode 0
+
+
+inode 27
+unode 0
+
+
+inode 28
+unode 0
+
+
+inode 29
+unode 0
+
+
+inode 30
+unode 0
+
+
+inode 31
+unode 0
+
+
+inode 32
+unode 0
+
+
+inode 33
+unode 0
+
+
+inode 34
+unode 0
+
+
+inode 35
+unode 0
+
+
+inode 36
+unode 0
+
+
+inode 37
+unode 0
+
+
+inode 38
+unode 0
+
+
+inode 39
+unode 0
+
+
+inode 40
+unode 0
+
+
+inode 41
+unode 0
+
+
+inode 42
+unode 0
+
+
+inode 43
+unode 0
+
+
+inode 44
+unode 0
+
+
+inode 45
+unode 0
+
+
+inode 46
+unode 0
+
+
+inode 47
+unode 0
+
+
+inode 48
+unode 0
+
+
+inode 49
+unode 0
+
+
+inode 50
+unode 0
+
+
+inode 51
+unode 0
+
+
+inode 52
+unode 0
+
+
+inode 53
+unode 0
+
+
+inode 54
+unode 0
+
+
+inode 55
+unode 0
+
+
+inode 56
+unode 0
+
+
+inode 57
+unode 0
+
+
+inode 58
+unode 0
+
+
+inode 59
+unode 0
+
+
+inode 60
+unode 0
+
+
+inode 61
+unode 0
+
+
+inode 62
+unode 0
+
+
+inode 63
+unode 0
+
+
+inode 64
+unode 0
+
+
+inode 65
+unode 0
+
+
+inode 66
+unode 0
+
+
+inode 67
+unode 0
+
+
+inode 68
+unode 0
+
+
+inode 69
+unode 0
+
+
+inode 70
+unode 0
+
+
+inode 71
+unode 0
+
+
+inode 72
+unode 0
+
+
+inode 73
+unode 0
+
+
+inode 74
+unode 0
+
+
+inode 75
+unode 0
+
+
+inode 76
+unode 0
+
+
+inode 77
+unode 0
+
+
+inode 78
+unode 0
+
+
+inode 79
+unode 0
+
+
+inode 80
+unode 0
+
+
+inode 81
+unode 0
+
+
+inode 82
+unode 0
+
+
+inode 83
+unode 0
+
+
+inode 84
+unode 0
+
+
+inode 85
+unode 0
+
+
+inode 86
+unode 0
+
+
+inode 87
+unode 0
+
+
+inode 88
+unode 0
+
+
+inode 89
+unode 0
+
+
+inode 90
+unode 0
+
+
+inode 91
+unode 0
+
+
+inode 92
+unode 0
+
+
+inode 93
+unode 0
+
+
+inode 94
+unode 0
+
+
+inode 95
+unode 0
+
+
+inode 96
+unode 0
+
+
+inode 97
+unode 0
+
+
+inode 98
+unode 0
+
+
+inode 99
+unode 0
+synapse_node 0
+
+
+
+

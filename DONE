@@ -1,0 +1,5 @@
+SIMRUN version 1.0.34
+Using script file
+Reading script
+SIMRUN: Building network. . .
+./simrun: symbol lookup error: /usr/local/lib/libgsl.so.27: undefined symbol: cblas_dcopy

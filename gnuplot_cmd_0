@@ -1,0 +1,2 @@
+plot 'power_spectrum_plot_data_0' with lines title 'POWER SPECTRUM'
+pause mouse close

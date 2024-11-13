@@ -1,0 +1,20 @@
+- install qt5-base (Qt5Core, Qt5Gui, Qt5Widgets Qt5Network Qt5OpenGL and Qt5PrintSupport modules). ./configure uses the following to test that pkg-config can find them:
+   	pkg-config --short-errors --print-errors --cflags --libs "Qt5Core, Qt5Gui, Qt5Widgets Qt5Network Qt5OpenGL Qt5PrintSupport" 2>&1
+- install gperf (needed for build_hash.c)
+- install muparser-dev (needed when muParserDLL.h is called for)
+- install gsl
+- install boost
+- install local-son64-1.0.3
+- install pdflatex (if you want the docs, otherwise 'make' fails after finishing the normal binaries like simbuild, simrun, snd2sim)
+
+In .bashrc or .bash_profile
+- export LD_LIBRARY_PATH should contain all the external .so files from the above installations (easiest was to copy most of the non-Qt5 ones into the uflsim directory [hence the '.' in LD_LIBRARY_PATH])
+e.g., export LD_LIBRARY_PATH=/home/hayesjohn/anaconda3/lib:.
+- export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/home/hayesjohn/anaconda3/lib/pkgconfig/
+should point to the directory of the above libQt5*.so files before running ./configure
+- export the PATH variable so that simbuild picks up simrun when executing it in a separate process
+e.g., export PATH=$PATH:.
+
+- had to modify the Makefile.in to set the DEFAULT_INCLUDES to include
+DEFAULT_INCLUDES = -I. -I/home/hayesjohn/anaconda3/include -I/home/hayesjohn/src/muparser_v2_2_3/include -I/home/hayesjohn/src/local-son64-1.0.3 -I/home/hayesjohn/src/boost_1_81_0
+run ./configure before 'make' after setting these
