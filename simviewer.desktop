@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Name=simviewer
+Exec=/usr/local/bin/simviewer
+Icon=/home/dale/work/usf/src/usfsim/simviewer128.png
+Terminal=false
