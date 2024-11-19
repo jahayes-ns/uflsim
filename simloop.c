@@ -863,6 +863,8 @@ void simloop ()
     {
       mr.phrenic = mup_eval (m.phrenic, S.phrenic_equation, &S.pe_evaluator);
       mr.abdominal = mup_eval (m.abdominal, S.lumbar_equation, &S.le_evaluator);
+      
+      // JAH: lma (laryngeal muscle activation) is defined in lung.c as pca-ta and goes from 1 (open) to -1 (closed)
       mr.pca = mup_eval (m.pca, 0, 0);
       mr.ta = mup_eval (m.ta, 0, 0);
 #ifdef INTERCOSTALS
