@@ -25,7 +25,8 @@ This file is part of the USF Neural Simulator suite.
 #include "simulator.h"
 #include "inode.h"
 #include "simrun_wrap.h"
-
+#include <string.h>
+          
 #define BOUNDS(idx, count) ((idx) >= 0 && (idx) < (count)) || DIE
 #if 0
 // hard to breakpoing macros, use function for debugging
@@ -75,36 +76,37 @@ for_terminals (int iseed, Target *target, int target_count, TargetPop *tp, int t
           void (*func)(TargetPop*, CellPop*, Target*, int, int, int))
 {
   int tidx;
-  for (tidx = 0; tidx < tp->NT; tidx++) 
-  {
+  for (tidx = 0; tidx < tp->NT; tidx++) {
      if(Debug) printf ("for_terminals:  tidx0 %d, tp->NT %d, tidx %d, target_count %d cell pop count %d\n", tidx0, tp->NT, tidx, target_count,S.net.cellpop_count);
 
      if ((tp->IRCP) > 0) {
-       int tcpidx = tp->IRCP - 1;
-       CellPop *tcp = S.net.cellpop + tcpidx;
-         // tcidx is rand #0-1 * number of cells
-       int tcidx = (int)(ran(&iseed) * tcp->cell_count);
+        int tcpidx = tp->IRCP - 1;
+        CellPop *tcp = S.net.cellpop + tcpidx;
+        // tcidx is rand #0-1 * number of cells
+        int tcidx = (int)(ran(&iseed) * tcp->cell_count);
    
         // quidx is min cond time + random #0-1 * (cond time - min cond time)
-       //int qidx = tp->MCT + (int)(ran(&iseed) * (tp->NCT - tp->MCT));
-       double r0 = ran(&iseed);
+        //int qidx = tp->MCT + (int)(ran(&iseed) * (tp->NCT - tp->MCT));
+        double r0 = ran(&iseed);
         // this is how to original code did this. Why calculate qidx
         // then do it again with a different random number?
-       int qidx = tp->MCT + (int)(r0 * (tp->NCT - tp->MCT));
-       if(Debug)
-       {
+        int qidx = tp->MCT + (int)(r0 * (tp->NCT - tp->MCT));
+        // JAH:   tp->MCT - target population minimum condition time
+        //        tp->NCT - target population condition time
+        //        tp->NT  - target population number of terminals
+        if(Debug) {
           printf("seed:%d rand: %lf  NCT: %d MCT: %d\n",iseed,r0,tp->NCT, tp->MCT);
           printf("qidx#1: %d\n",qidx);
-       }
-         // if number of terminals == max cond time - min cond time
-       if (tp->NT == tp->NCT - tp->MCT)
-         qidx = tp->MCT + tidx;     // qidx is min time plus current terminal index
-       else
+        }
+        // if number of terminals == max cond time - min cond time
+        if (tp->NT == tp->NCT - tp->MCT)
+           qidx = tp->MCT + tidx;     // qidx is min time plus current terminal index
+        else
            // else repeat the calculation above (huh?)
-         qidx = tp->MCT + (int)(ran(&iseed) * (tp->NCT - tp->MCT));
+           qidx = tp->MCT + (int)(ran(&iseed) * (tp->NCT - tp->MCT));
    
-      // qidx seems to be determined by how long the max-min conductance time is
-      // larger diffs means more elements in the q array
+        // qidx seems to be determined by how long the max-min conductance time is
+        // larger diffs means more elements in the q array
         if(Debug) printf("qidx#2: %d\n",qidx);
         if(Debug) fflush(stdout);
    
@@ -134,6 +136,13 @@ for_terminals (int iseed, Target *target, int target_count, TargetPop *tp, int t
 static inline void
 attach_to_synapses (TargetPop *tp, CellPop *tcp, Target* t, int tcpidx, int tcidx, int qidx)
 {
+  // JAH:
+  // tp - target population
+  // tcp - target cell population
+  // t - target
+  // tcpidx - target cell population index
+  // tcidx - target cell index
+  // qidx - queue (slot) index (aka delay)
   BOUNDS (tcpidx, S.net.cellpop_count);
   BOUNDS (tcidx, S.net.cellpop[tcpidx].cell_count);
   BOUNDS (tp->TYPE - 1, S.net.syntype_count);
@@ -143,7 +152,6 @@ attach_to_synapses (TargetPop *tp, CellPop *tcp, Target* t, int tcpidx, int tcid
   t->disabled = 0;
   t->syn->initial_strength = tp->STR;
   t->syn->lrn_strength = tp->STR;
-
 
 //  if(Debug) printf("attach syn ptr %p to synapse[%d][%d][%d]  vals: delay (qidx):%d str:%f disabled:%d\n", t->syn, tcpidx,tcidx,tp->TYPE-1, t->delay, t->strength, t->disabled);
   if(Debug) printf("attach synapse[%d][%d][%d]  vals: delay (qidx):%d str:%f disabled:%d\n", tcpidx,tcidx,tp->TYPE-1, t->delay, t->strength, t->disabled);
@@ -168,14 +176,13 @@ count_to_synapses (TargetPop *tp, CellPop *tcp, Target *target, int tcpidx, int 
   BOUNDS (tcidx, S.net.cellpop[tcpidx].cell_count);
   BOUNDS (tp->TYPE - 1, S.net.syntype_count);
 
-  if (synapse[tcpidx][tcidx][tp->TYPE-1].ptr == 0) 
-  {
-    synapse[tcpidx][tcidx][tp->TYPE-1].ptr++; // used as NZ flag, later replaced by real ptr
-    tc->syn_count++;
+  if (synapse[tcpidx][tcidx][tp->TYPE-1].ptr == 0) {
+     synapse[tcpidx][tcidx][tp->TYPE-1].ptr++; // used as NZ flag, later replaced by real ptr
+     tc->syn_count++;
   }
   if (qidx > synapse[tcpidx][tcidx][tp->TYPE-1].maxqidx)
-    synapse[tcpidx][tcidx][tp->TYPE-1].maxqidx = qidx;
-   if (Debug) printf("count_to_synapses: ptr, maxqidx for synapse[%d][%d][%d] is %p %d\n",tcpidx,tcidx,tp->TYPE-1, synapse[tcpidx][tcidx][tp->TYPE-1].ptr, synapse[tcpidx][tcidx][tp->TYPE-1].maxqidx);
+     synapse[tcpidx][tcidx][tp->TYPE-1].maxqidx = qidx;
+  if (Debug) printf("count_to_synapses: ptr, maxqidx for synapse[%d][%d][%d] is %p %d\n",tcpidx,tcidx,tp->TYPE-1, synapse[tcpidx][tcidx][tp->TYPE-1].ptr, synapse[tcpidx][tcidx][tp->TYPE-1].maxqidx);
 }
 
 
@@ -196,7 +203,7 @@ for_cell_targets (void (*func)(TargetPop*, CellPop*, Target*, int, int, int))
     {
       Cell *c = cp->cell + cidx;
       int tpidx, tidx0 = 0;
-      for (tpidx = 0; tpidx < cp->targetpop_count; tpidx++)  // for each target
+      for (tpidx = 0; tpidx < cp->targetpop_count; tpidx++)  // for each target population
       {
         TargetPop *tp = cp->targetpop + tpidx;
         int iseed = (cidx + 1) * tp->INSED;
@@ -254,8 +261,12 @@ if(Debug) printf("   for_fiber_targets\n");
   }
 }
 
-int
-st (float eq, float dcs)
+int row_order_offset(int i, int j, int numberOfColumns) {
+   int offset = i * numberOfColumns + j;
+   return offset;
+}
+
+int st (float eq, float dcs)
 {
   if (eq == 115 && fabs (dcs - 0.71653131057378925043) < .000001) return 1;
   if (eq == -25 && fabs (dcs - 0.71653131057378925043) < .000001) return 2;
@@ -264,11 +275,176 @@ st (float eq, float dcs)
   return 99999999;
 }
 
+// JAH: Writes out the adjacency matrices for the instantiated network in 
+//      separate files based on excitatory vs. inhibitory connections
+void writeAdjacencyMatrices (void)
+{
+  //fprintf(ofile, "cell pop count1: %d\n", sizeof(S.net.cellpop));
+  //fprintf(ofile, "cell pop count1: %d\n", sizeof(S.net.cellpop[0]));
+  /*fprintf(ofile, "cell pop count2: %d\n", S.net.cellpop_count);
+  fprintf(ofile, "cell syn count2: %d\n", S.net.syntype_count);
+  fprintf(ofile, "cell pop #1, target pop count: %d\n", S.net.cellpop[0].targetpop_count);
+  fprintf(ofile, "cell pop #1, target pop: %d\n", S.net.cellpop[0].targetpop[0]);
+  fprintf(ofile, "cell pop #1, cell #1, syn count: %d\n", S.net.cellpop[0].cell[0].syn_count);
+  */
+  
+  // iterate over cell populations to get total number of cells in network
+  fprintf(stderr, "start writeAdjacencyMatrices\n");
+  
+  int totalCellsInNetwork = 0;
+  int cellPopulationSizes[S.net.cellpop_count];
+  
+  for (int cpidx = 0; cpidx < S.net.cellpop_count; cpidx++) {
+     CellPop *cp = S.net.cellpop + cpidx;
+     cellPopulationSizes[cpidx] = cp->cell_count;
+     totalCellsInNetwork += cp->cell_count;
+  }
+  fprintf(stderr, "totalCellsInNetwork: %d\n", totalCellsInNetwork);
+  
+  // initialize adjacency matrices full of zeros the size of the network
+  fprintf(stderr, "sizeof(int): %zu\n", sizeof(short));
+//  short excitatoryAdjacencyMatrix[totalCellsInNetwork][totalCellsInNetwork];
+  int *excitatoryAdjacencyMatrix = (int *)malloc(totalCellsInNetwork * totalCellsInNetwork * sizeof(int));
+  
+  fprintf(stderr, "middle writeAdjacencyMatrices\n");
+  memset(excitatoryAdjacencyMatrix, 0, totalCellsInNetwork*totalCellsInNetwork*sizeof(int));
+
+  fprintf(stderr, "middle2 writeAdjacencyMatrices\n");
+  //short inhibitoryAdjacencyMatrix[totalCellsInNetwork][totalCellsInNetwork];
+  int *inhibitoryAdjacencyMatrix = (int *)malloc(totalCellsInNetwork * totalCellsInNetwork * sizeof(int));
+  memset(inhibitoryAdjacencyMatrix, 0, totalCellsInNetwork*totalCellsInNetwork*sizeof(int));
+
+  int previousCellPopCounts = 0;
+  for (int cpidx = 0; cpidx < S.net.cellpop_count; cpidx++) {
+     CellPop *cp = S.net.cellpop + cpidx;
+     //fprintf(ofile, "cell pop #1, cell count: %d\n", cp->cell_count);
+     //fprintf(ofile, "cell pop #1, cell #1, target count: %d\n", cp->cell[0].target_count);
+     Syn *syn = NULL;
+     
+     // int i = 0, source cells, also rows
+     for (int i = 0; i < cp->cell_count; i++) {
+     	Cell *c = cp->cell + i;
+      
+        //syn->cidx // target cells, also columns
+        for (int j = 0; j < c->target_count; j++) {
+           syn = c->target[j].syn;
+           
+           // This block to calculate targetPopulationOffset is to correct for 
+           //    the preceding columns in the adjacency matrix from other cell populations
+           int targetPopulationOffset = 0;
+           for (int k = 0; k < syn->cpidx; k++) {
+              targetPopulationOffset += cellPopulationSizes[k];
+           }
+           // excitatory connections
+           if (syn->stidx == 0) {
+           	  excitatoryAdjacencyMatrix[row_order_offset(previousCellPopCounts + i, targetPopulationOffset + syn->cidx, totalCellsInNetwork)] += 1;
+//              excitatoryAdjacencyMatrix[previousCellPopCounts + i][targetPopulationOffset + syn->cidx] += 1;
+           }
+           // inhibitory connections
+           else if (syn->stidx == 1) {
+           	  inhibitoryAdjacencyMatrix[row_order_offset(previousCellPopCounts + i, targetPopulationOffset + syn->cidx, totalCellsInNetwork)] += 1;
+//              inhibitoryAdjacencyMatrix[previousCellPopCounts + i][targetPopulationOffset + syn->cidx] += 1;
+           }
+           //fprintf(ofile, "cell pop #1, cell #%d, target #%d, syn#1, cidx: %d\n", i, j, syn->cidx);
+           //fprintf(ofile, "cell pop #1, cell #%d, target #%d, syn#1, stidx: %d\n", i, j, syn->stidx);
+         //  fprintf(ofile, "cell pop #1, cell #1, target #1, syn#%d, cpidx: %d\n", i, syn->cpidx);
+           //fprintf(ofile, "cell pop #1, cell #1, target #1, syn#%d, syntype: %d\n", i, syn->syntype);
+        }
+     }
+     previousCellPopCounts += cp->cell_count;
+  }
+  
+  // Get filename basename
+//  char *tmp = basename(S.snd_file_name);
+ // fprintf(stderr, tmp);
+ // char basefilename[sizeof(tmp)+22];
+ // strcpy(basefilename, tmp);
+  
+  // write out excitatory adjacency matrix
+  FILE *ofile;
+  ofile = fopen("Excitatory.adjMatrix", "w");
+  
+  for (int i = 0; i < totalCellsInNetwork; i++) {
+     for (int j = 0; j < totalCellsInNetwork; j++) {
+        fprintf(ofile, "%d ", excitatoryAdjacencyMatrix[row_order_offset(i, j, totalCellsInNetwork)]);
+     }
+     fprintf(ofile, "\n");
+  }
+  fclose(ofile);
+  free(excitatoryAdjacencyMatrix);
+  
+  // write out inhibitory adjacency matrix
+  ofile = fopen("Inhibitory.adjMatrix", "w");
+  
+  for (int i = 0; i < totalCellsInNetwork; i++) {
+     for (int j = 0; j < totalCellsInNetwork; j++) {
+     //   fprintf(ofile, "%d ", inhibitoryAdjacencyMatrix[i][j]);
+        fprintf(ofile, "%d ", inhibitoryAdjacencyMatrix[row_order_offset(i, j, totalCellsInNetwork)]);
+     }
+     fprintf(ofile, "\n");
+  }
+  fclose(ofile);
+  free(inhibitoryAdjacencyMatrix);
+  
+ // fprintf(ofile, "cell pop #1: %d\n", S.net.cellpop[0]);
+ // fprintf(ofile, "cell pop #2: %d\n", S.net.cellpop[1]);
+/*  fprintf(ofile, "cell pop count1: %d\n", array_length(S.net.cellpop, sizeof(int)));
+  fprintf(ofile, "pop #1 number of cells1: %d\n", S.net.cellpop[0].cell_count);
+  fprintf(ofile, "pop #1 number of cells2: %d\n", array_length(S.net.cellpop[0].cell, sizeof(int)));
+  fprintf(ofile, "\n");
+  fprintf(ofile, "%d\n", array_length(synapse[0], sizeof(int)));
+*/                                      
+//  fprintf(ofile, "%zu\n", array_length(synapse[0][0], sizeof(int)));
+//  fprintf(ofile, "\n");
+/*  int rowIndex_fromNeuron = 0;
+  int columnIndex_toNeuron = 0;
+  for (cpidx = 0; cpidx < S.net.cellpop_count; cpidx++) {
+    CellPop *cp = S.net.cellpop + cpidx;
+    int totalSynapses = 0;
+    int totalTargets = 0;
+    fprintf(ofile, "cell pop counter #%d\n", (cpidx+1));
+    for (int cidx = 0; cidx < cp->cell_count; cidx++) {
+      Cell *c = cp->cell + cidx;
+      fprintf(ofile, "\tcell counter #%d\n", (cidx+1));
+      for (int sn = 0; sn < c->syn_count; sn++) {
+        fprintf(ofile, "\t\tsynapse counter #%d\n", (sn+1));
+        totalSynapses += c->syn_count;
+        for (int qn = 0; qn < c->syn[sn].q_count; qn++) { 
+           fprintf(ofile, "\t\tq counter #%d\n", (qn+1));
+        /*
+          if(Debug) printf("cell->syn[%d].q[%d] = %lf\n", sn,qn,c->syn[sn].q[qn]);
+          if (!(c->syn[sn].q[qn] == 0 || (c->syn[sn].q[qn] == 1 && S.ispresynaptic))) 
+          {
+            printf ("transmit: cell %d pop %d syn %d qval %d of %d is %a\n",
+               cidx, cpidx, sn, qn, c->syn->q_count, c->syn[sn].q[qn]);
+            fflush(stdout);
+            DIE; // todo this should not be a fatal error
+          }*/
+   //     }
+      //    fprintf(ofile, "1 ");
+    /*      columnIndex_toNeuron++;
+        
+      }
+      for (int tn = 0; tn < c->target_count; tn++) {
+        fprintf(ofile, "\t\ttarget counter #%d\n", (tn+1));
+        totalTargets += c->target_count;
+        
+      }
+      if (c->syn_count == 0) {
+      //  fprintf(ofile, "0 ");
+      }
+      //fprintf(ofile, "\n");
+      rowIndex_fromNeuron++;
+    }
+    fprintf(ofile, "Total synapse count for cell population #%d: %d\n", (cpidx+1), totalSynapses);
+    fprintf(ofile, "Total target count for cell population #%d: %d\n", (cpidx+1), totalTargets);
+  }*/
+}
+
 // This checks the allocated q arrays to be 0 if normal
 // or 1 if presynaptic modifiers are being used.
 // Exits on error. This, of course, should "never" happen
-void
-check_synapses (void)
+void check_synapses (void)
 {
   int cpidx;
   for (cpidx = 0; cpidx < S.net.cellpop_count; cpidx++) 
@@ -299,8 +475,7 @@ check_synapses (void)
 }
 
 /* Polar (Box-Mueller) method; See Knuth v2, 3rd ed, p122 */
-static double
-ran_gaussian (int seed)
+static double ran_gaussian (int seed)
 {
   double x, y, r2;
   static int irand = 38986022; //randomly chosen seed
@@ -326,10 +501,10 @@ ran_gaussian (int seed)
   return y * sqrt (-2.0 * log (r2) / r2);
 }
 
-void
-build_network ()
+void build_network ()
 {
-  int cpidx, fpidx;
+  int cpidx; // JAH: cell population index
+  int fpidx; // JAH: fiber population index 
 
   static int seed[] = {2,3,7,12,14,15,16,17,19,20,22,23,24,25,26,29,35,36,39,
              42,45,47,48,49,50,51,52,53,54,56,57,59,61,63,64,66,67,
@@ -349,7 +524,10 @@ build_network ()
   int seed_size = (sizeof seed / sizeof seed[0])-1;
   int last_seed = seed[seed_size];
 
- if(Debug) printf("allocate array of ptrs for %d pops\n",S.net.cellpop_count);
+  Debug = false;
+ 
+  printf("blah build_network.c\n");
+  if(Debug) printf("allocate array of ptrs for %d pops\n",S.net.cellpop_count);
 
   TMALLOC (synapse, S.net.cellpop_count);
 
@@ -438,9 +616,11 @@ build_network ()
       if (Debug)printf("call for_fiber_targets, fnc is count_to_synapses\n");
   for_fiber_targets (count_to_synapses);
 
+  printf("JAH: cell point count %d\n", S.net.cellpop_count);
    /* Allocate synapses */
   for (cpidx = 0; cpidx < S.net.cellpop_count; cpidx++) 
   {
+  	printf("JAH: allocating synapses\n");
     CellPop *cp = S.net.cellpop + cpidx;
     if (Debug)printf("cell count: %d\n",cp->cell_count);
     int cidx;
@@ -526,15 +706,24 @@ build_network ()
 
   if (Debug) printf("call for_cell_targets, fnc is attacth_to_synapses\n");
   for_cell_targets (attach_to_synapses);
-  if (Debug) printf("call for_fiber_targets, fnc is attach_to_synapses\n");
+  if (Debug) printf("call for_fiber_targets, JAH fnc is attach_to_synapses\n");
   for_fiber_targets (attach_to_synapses);
   check_synapses ();
+  
+  writeAdjacencyMatrices();
+  printf("JAH: exiting build_network\n");
+  fflush(stdout);
+  //exit(0);
 }
 
 
 /* The synapse variable is a 3D dynamically allocated set of arrays 
+   JAH edits (12/28/2024): Previously, the comment said the synapse matrix was as follows:
+      "It is used used like so:
+       synapse[cellpop][cell][SynInfo]."
+   when in fact it seems to be like the following (and "synapse" is of struct SynInfo):
    It is used used like so:
-   synapse[cellpop][cell][SynInfo].
+   synapse[cellpop][cell][SynType].
 
    slots are like this:
    First index: synapse[pop], array size is # of cell pops, each slot holds a pointer to:
@@ -545,18 +734,18 @@ build_network ()
    synapse[1]-> [ptr, ptr, ptr, . . .  ]
      These point to:
 
-     Third index, an array of pointers to a SynInfo struct, one
-     for each cell synapse target.
+     Third index, an array of pointers to a SynType struct, one
+     for each cell synapse target type.
 
    So, something like this:
 
-   synapse [0][0][0]   cell pop 0, cell 0, SynInfo 0
-   synapse [0][0][1]                       SynInfo 1
-   synapse [0][1][0]               cell 1, SynInfo 0
-   synapse [0][1][1]                       SynInfo 1
-   synapse [0][1][2]               cell 1, SynInfo 2
+   synapse [0][0][0]   cell pop 0, cell 0, SynType 0
+   synapse [0][0][1]                       SynType 1
+   synapse [0][1][0]               cell 1, SynType 0
+   synapse [0][1][1]                       SynType 1
+   synapse [0][1][2]               cell 1, SynType 2
 
-   synapse [1][0][0]   cell pop 1, cell 0, SynInfo 0
+   synapse [1][0][0]   cell pop 1, cell 0, SynType 0
     . . .
 
    There is a parallel set of arrays in the global S array that was 
@@ -569,7 +758,7 @@ build_network ()
    It took me a while to figure out how the q and q_count vars were used.
    In the original Fortran code, the G array was a 4D array, and the last item
    was a fixed size array that was the synapse delay array.  The port to C put
-   the array inside the synapse  struct in the q array.  The max conduction
+   the array inside the synapse struct in the q array.  The max conduction
    time determines the size of the array.  The minimum conduction time
    determines how much of the array will be used.
    So, if the min is 3 and the max is 8, we have something like this:

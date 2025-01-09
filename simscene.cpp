@@ -1192,15 +1192,16 @@ bool SimScene::fileChkDirty()
 {
    if (!fileDirty || par->warningsOff)
       return false;
-   QMessageBox msgBox;
-   msgBox.setIcon(QMessageBox::Question);
-   msgBox.setWindowTitle("Save File");
-   msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
-   msgBox.setText("There have been changes to the simulation parameters, the model drawing, or launch parameters that have not been saved.\nDo you want to create/update a file?");
-   if (msgBox.exec() == QMessageBox::Yes)
+   // JAH: this is so annoying
+   //QMessageBox msgBox;
+   //msgBox.setIcon(QMessageBox::Question);
+   //msgBox.setWindowTitle("Save File");
+   //msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
+   //msgBox.setText("There have been changes to the simulation parameters, the model drawing, or launch parameters that have not been saved.\nDo you want to create/update a file?");
+   //if (msgBox.exec() == QMessageBox::Yes)
       return true;
-   else
-      return false;
+   //else
+   //   return false;
 }
 
 

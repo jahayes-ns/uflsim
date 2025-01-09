@@ -277,6 +277,7 @@ condi (void)
       int n;
       termtally_count = 0;
       for (tidx = 0; tidx < c->target_count; tidx++) {
+         // JAH: This may break things, but hopefully just condi stuff.
          Target *target = c->target + tidx;
          Syn *syn = target->syn;
          Term newterm = {syn->cpidx, syn->cidx, syn->stidx};
@@ -308,7 +309,7 @@ condi (void)
          else if (explicit_syn_type == SYN_POST)
             fprintf (f, "post %d\n", t->stidx + 1);
          else if (explicit_syn_type == SYN_NOT_USED)
-           fprintf(f,"not used");  // this is probably a bug
+            fprintf(f,"not used");  // this is probably a bug
       }
     }
   }

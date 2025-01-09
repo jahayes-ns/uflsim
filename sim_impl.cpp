@@ -589,6 +589,8 @@ void SimWin::saveSnd()
    
    scene->chkControlsDirty();
 
+   //QString fName = currSndFile;
+   
    QFileDialog openDlg(this,"Save The Current Model");
    openDlg.setAcceptMode(QFileDialog::AcceptMode::AcceptSave);
    openDlg.setNameFilter(tr(".snd (*.snd )"));
@@ -628,11 +630,13 @@ void SimWin::saveSnd()
          }
          else if (field.length() >= 2 && field[1].toInt() >= FILEIO_FORMAT_VERSION6)
          {
-            if (QMessageBox::warning(this, windowTitle(),
+             // JAH: this is so annoying
+             /*if (QMessageBox::warning(this, windowTitle(),
                 tr("%1 already exists.\nDo you want to replace it?")
                 .arg(info.fileName()),
                 QMessageBox::Yes | QMessageBox::No, QMessageBox::No) == QMessageBox::No)
                   return;
+                  */
          }
       }
       // If a new .snd file, create initial change log file.  If existing file
@@ -650,15 +654,18 @@ void SimWin::saveSnd()
             updLog->newChangeLog(currSndFile);
          else 
          {
-            msgBox.setIcon(QMessageBox::Question);
+            // JAH: this is so annoying
+            /*msgBox.setIcon(QMessageBox::Question);
             msgBox.setWindowTitle("Update The Change Log File");
             msgBox.setStandardButtons(QMessageBox::Yes | QMessageBox::No);
             msgBox.setText("Do you want to update " + logName + "?\n\nIf Yes, the current model will be compared with the current file and changes will be added to " + logName + ".\n\nThe " + logName + "file will then be opened in the default text editor. You can simply close the window, or make additional notes in the file.");
             if (msgBox.exec() == QMessageBox::Yes)
-            {
-               updLog->updateChangeLog(currSndFile);
-               on_actionView_Change_Log_triggered();
-            }
+            {*/
+            updLog->updateChangeLog(currSndFile);
+            
+            // JAH: this is so annoying   
+            // on_actionView_Change_Log_triggered();
+            //}
          }
       }
       QDir::setCurrent(info.path());

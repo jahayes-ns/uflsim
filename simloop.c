@@ -561,7 +561,10 @@ get_motor_pops (void)
   m.phrenic = get_poplist_by_name ("phrenic", "\"phrenic\"", "P");
   m.abdominal = get_poplist_by_name ("lumbar", "\"lumbar\"", "L");
   m.pca = get_poplist_by_name ("(PCA|ILM)", "\"PCA\" or \"ILM\"", "");
+  fprintf(stderr, "pca %0.1f\n", *m.pca.rate);
+  
   m.ta = get_poplist_by_name ("(TA|ELM)", "\"TA\" or \"ELM\"", "");
+  fprintf(stderr, "ta %0.1f\n", *m.ta.rate);
 #ifdef INTERCOSTALS
   m.expic = get_poplist_by_name ("int", "\"int\"", "");
   m.inspic = get_poplist_by_name ("ext", "\"ext\"", "");
@@ -1753,9 +1756,10 @@ void simloop ()
   if (have_data_socket())
     waitForDone();
 
+/*
 #if __linux__
   /* TODO no shell for windows, create a function that does what .sh file does. */
-  if (write_analog && access("/usr/local/bin/simpower_spectrum.sh", X_OK) == 0)
+/*  if (write_analog && access("/usr/local/bin/simpower_spectrum.sh", X_OK) == 0)
   {
      char *cmd;
      if (isedt)
@@ -1772,7 +1776,7 @@ void simloop ()
      if (system (cmd)){} 
         free(cmd);
   }
-#endif
+#endif*/
   fprintf(stdout,"simloop function returning\n");
   fflush(stdout);
 }

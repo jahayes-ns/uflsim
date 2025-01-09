@@ -377,7 +377,7 @@ void openSpikeWave()
          Sib.insert(pair(chan,next));
          ++real_chan;
       }
-      else if (plot_type == -1 || plot_type == -2) // JAH: lung mechanics
+      else if (plot_type <= -1 && plot_type >= -16) // JAH: lung mechanics
        {
           res = sFileWave->SetWaveChan(real_chan,sampIntv,ceds64::TDataKind::RealWave,tickSize,chan);
           if (res != S64_OK)

@@ -18,11 +18,11 @@ This file is part of the USF Neural Simulator suite.
 typedef struct
 {
   double phrenic;         /* JAH: diaphragm activation?, 0->1 */
-  double abdominal;       /* JAH: laryngeal muscle activation?, 0->1 */
-  double pca;
-  double ta;
-  double expic;
-  double inspic;
+  double abdominal;       /* JAH: abdominal muscle activation?, 0->1 */
+  double pca;             /* JAH: posterior cricoarytenoid */
+  double ta;              /* JAH: thyroarytenoid */
+  double expic;           /* JAH: expiratory intercostals */
+  double inspic;          /* JAH: inspiratory intercostals */
 } Motor;
 
 typedef struct

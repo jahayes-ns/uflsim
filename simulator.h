@@ -72,9 +72,9 @@ typedef struct
   float DCS;
   int q_count;//state
   float *q;//state
-  int cpidx;
-  int cidx;
-  int stidx;
+  int cpidx; // JAH: target cell population index
+  int cidx;  // JAH: target cell index
+  int stidx; // JAH: SynType index? But this doesn't match syntype(!)
   int syntype;
   int synparent;
   float initial_strength;
@@ -129,7 +129,7 @@ typedef struct
   int IRCP;  // target nums
   int INSED; // target seed
   int TYPE;     // this is index into syn array, not really an explicit type
-  float STR;  // synaps strength
+  float STR;  // synapse strength
 } TargetPop;
 
 typedef struct
