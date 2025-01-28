@@ -17,7 +17,7 @@ global_node 0
 total_populations 58
 total_fibers 11
 total_cells 47
-sim_length 30000
+sim_length 300000
 k_equilibrium -10
 max_conduction_time 11
 num_synapse_types 30
